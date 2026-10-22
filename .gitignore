@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# Secrets —— 任何情况下不提交
+.env
+*.key
+
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.db
+.pytest_cache/
+.ruff_cache/
+
+# Flutter / Dart
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/.packages
+app/build/
+app/.idea/
+app/*.iml
+app/ios/Pods/
+app/android/.gradle/
+app/android/local.properties
+
+# 编辑器
+.vscode/
+.idea/
