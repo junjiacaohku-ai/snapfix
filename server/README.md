@@ -14,7 +14,7 @@ uvicorn main:app --reload
 
 - [x] PRD 第 10 节 v1 契约全部端点(mock 实现,内存存储)
 - [x] mock 场景:Bosch E24(可自修)/ 微波炉(安全门拒答)
-- [ ] SQLite 持久化(PRPD 第 9 节数据模型)— BE-2
+- [ ] SQLite 持久化(PRD 第 9 节数据模型)— BE-2
 - [ ] 手册语料切块 + BM25 检索 — BE-2 / D
 - [ ] 真实 vision(Gemini)+ provider 故障转移 — BE-1
 - [ ] 规则安全门完整类目表(12 类)— BE-1
