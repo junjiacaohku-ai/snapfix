@@ -49,6 +49,32 @@ cd app && flutter run
 - 每天下班前 push;改 `pubspec.yaml` / 路由 / API 契约前群里喊
 - commit 前缀:`feat:` / `fix:` / `docs:` / `chore:`
 
+## 协作流程(每人每天的循环)
+
+```bash
+git checkout main && git pull          # ① 开工前:同步最新 main
+git checkout -b feature/档案页列表      # ② 开短分支(自己的名字自己看得懂就行)
+# …写代码…
+git add -A && git commit -m "feat: 档案页列表接 /api/sessions"
+git push -u origin feature/档案页列表   # ③ 下班前必 push,没做完也推(WIP 不丢人,丢代码才丢人)
+gh pr create --fill                    # ④ 功能完成后发 PR(也可以在网页点 Compare & pull request)
+```
+
+PR 发出后:
+
+- **描述写两行**:做了什么 + 怎么验证(截图/录屏),review 的人 24h 内看
+- **review 对子**:曹峻嘉 ↔ 史珺瑛(BE 互审)、朱雨泰民 ↔ 杨蕊嘉(FE 互审)、张帆的 PR 曹峻嘉审
+- **review 只看三件事**:能跑吗?契约变了吗?有没有把 key/.env 提交进来?——4 周冲刺,不逐行抠风格
+- 通过后在网页点 **Squash and merge**,删分支,本地切回 main 重新 ①
+
+## 避坑清单(新人最容易踩的)
+
+1. **误推 main 了**:群里说一声就行,**别 force push 掩盖**,别人可能已基于它开发
+2. **冲突了别慌**:`git checkout main && git pull`,回自己分支 `git merge main`,逐个文件解冲突。分支活得越久冲突越多——所以分支活不过 3 天
+3. **`.env` / API key 永远不提交**(已被 .gitignore 拦着;review 时再人工兜底一眼)
+4. **改公共文件前群里喊**:`server/main.py` 的 API 结构、`app/pubspec.yaml`、路由表——别人正在依赖它们
+5. **合并前本地跑通**:后端 `uvicorn main:app` 起得来,前端 `flutter run` 不崩——main 的"永远可演示"靠这最后一眼
+
 ## 压缩时间线(原计划已落后,按 4 周冲刺重排)
 
 | 周 | 目标 |
