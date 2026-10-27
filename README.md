@@ -8,7 +8,7 @@ HKU COMP7506A Group Project · Flutter + FastAPI · 演示 2026-11-19 · 交付 
 ## 目录结构
 
 ```
-/app      ← Flutter 双端 App(待 flutter create 初始化,见 app/README.md)
+/app      ← Flutter 双端 App(W1 骨架已初始化,见 app/README.md)
 /server   ← FastAPI 后端(mock 管线已可跑,见 server/README.md)
 /docs     ← 任务书、调研、PRD、执行包、会议纪要、最终交付文档
 /landing  ← 项目展示页(静态 HTML,可直接开浏览器看)

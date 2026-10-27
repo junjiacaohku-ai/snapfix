@@ -29,3 +29,6 @@ app/android/local.properties
 # 编辑器
 .vscode/
 .idea/
+
+# Local validation screenshots
+artifacts/
