@@ -54,21 +54,14 @@ DB: dict[str, Session] = {}
 def _mock_e24() -> Session:
     return Session(
         id=str(uuid.uuid4()),
-        device_category="washing_machine",
+        device_category="dishwasher",
         brand="Bosch", model=None, error_code="E24",
-        decision="diy",
-        decision_reason="排水泵滤网堵塞,非破坏性操作,工具只需一枚硬币,约 15 分钟。",
-        steps=[
-            Step(id=str(uuid.uuid4()), idx=1,
-                 content="断电并关闭水龙头,在机器右下角找到排水泵检修口。",
-                 citation_manual="Bosch 洗衣机用户手册", citation_section="§7.2"),
-            Step(id=str(uuid.uuid4()), idx=2,
-                 content="用硬币逆时针旋开滤网盖,垫毛巾接住残水。",
-                 citation_manual="Bosch 洗衣机用户手册", citation_section="§7.3"),
-            Step(id=str(uuid.uuid4()), idx=3,
-                 content="取出滤网清除异物,装回后通电试运行脱水程序。",
-                 citation_manual="Bosch 洗衣机用户手册", citation_section="§7.4"),
-        ],
+        decision="professional",
+        decision_reason="Bosch E24 演示：洗碗机排水异常。请先核对完整型号；未匹配具体手册前联系专业人员，不提供拆机指导。",
+        steps=[Step(id=str(uuid.uuid4()), idx=1,
+                    content="记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
+                    citation_manual="PRD 合成演示数据，非官方手册",
+                    citation_section="验收场景 2（待核验）")],
         created_at=datetime.now(timezone.utc).isoformat(),
     )
 
@@ -82,6 +75,32 @@ def _mock_microwave() -> Session:
         created_at=datetime.now(timezone.utc).isoformat(),
     )
 
+def _mock_named(category, brand, reason, instructions, tools="无需工具"):
+    return Session(
+        id=str(uuid.uuid4()), device_category=category, brand=brand,
+        decision="diy", decision_reason=reason + " 工具：" + tools,
+        steps=[Step(id=str(uuid.uuid4()), idx=i, content=text,
+                    citation_manual="演示用合成内容（未核验官方手册）",
+                    citation_section=f"mock step {i}")
+               for i, text in enumerate(instructions, 1)],
+        created_at=datetime.now(timezone.utc).isoformat())
+
+
+def _mock_router():
+    return _mock_named("router", "TP-Link", "红灯可能表示上游连接异常；此为演示数据。", [
+        "检查外置电源与网线是否插牢，不拆机。",
+        "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
+        "如仍红灯，记录指示灯状态并联系网络运营商。"])
+
+
+def _mock_billy():
+    return _mock_named("furniture", "IKEA", "BILLY 组装检查演示，须以实际型号说明书为准。", [
+        "核对实际型号、板材和配件，查看该型号官方组装说明。",
+        "依说明核对板材方向，不强行敲入或替换连接件。",
+        "请另一人协助立起，并按墙体类型选择固定件完成防倾倒固定。"],
+        "实际型号说明书列出的螺丝刀及墙体适用固定件")
+
+
 # ---------- API v1 契约(PRD 第 10 节) ----------
 
 @app.get("/api/health")
@@ -94,7 +113,17 @@ async def analyze_image(file: UploadFile):
     # mock:按文件名关键词路由到场景;真实管线:质量门→vision→检索→安全门→生成
     name = (file.filename or "").lower()
     await file.read()  # 隐私:照片处理后即删,不持久化
-    if "microwave" in name:
+    if any(token in name for token in ("blur", "dark", "blurry")):
+        raise HTTPException(status_code=422, detail="照片模糊或过暗，请补光、对焦后重拍。")
+    if "router" in name or "tp-link" in name:
+        session = _mock_router()
+    elif "billy" in name or "ikea" in name:
+        session = _mock_billy()
+    elif "report" in name:
+        session = _mock_e24()
+        session.decision = "landlord"
+        session.decision_reason = "演示报修：租住房屋设备问题，请联系房东安排处理。"
+    elif "microwave" in name:
         session = _mock_microwave()
     else:
         session = _mock_e24()
@@ -107,7 +136,7 @@ def diagnose_manual(req: ManualDiagnoseRequest):
     if req.brand.lower() in {"bosch", "博世"} and code == "E24":
         session = _mock_e24()
     else:
-        session = _mock_e24()  # mock 兜底,真实管线走检索
+        raise HTTPException(status_code=404, detail="mock 暂无该品牌和错误码，请核对设备型号或联系专业人员。")
     DB[session.id] = session
     return session
 

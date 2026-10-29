@@ -1,0 +1,93 @@
+[
+  {
+    "file": "manuals/bosch-washer.pdf",
+    "source_url": "https://media3.bosch-home.com/Documents/9000656120_A.pdf",
+    "brand": "Bosch",
+    "device_category": "washing_machine",
+    "title": "Bosch washer instructions 9000656120"
+  },
+  {
+    "file": "manuals/billy.pdf",
+    "source_url": "https://www.ikea.com/us/en/assembly_instructions/billy-bookcase-white__AA-2289105-4-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "BILLY AA-2289105-4"
+  },
+  {
+    "file": "manuals/tplink-wr940n.pdf",
+    "source_url": "https://static.tp-link.com/2019/201903/20190320/1910012391_TL-WR940N(EU)_UG_REV6.0.2.pdf",
+    "brand": "TP-Link",
+    "device_category": "router",
+    "title": "tplink-wr940n"
+  },
+  {
+    "file": "manuals/bosch-washer-1078547.pdf",
+    "source_url": "https://media3.bosch-home.com/Documents/9001078547_A.pdf",
+    "brand": "Bosch",
+    "device_category": "washing_machine",
+    "title": "bosch-washer-1078547"
+  },
+  {
+    "file": "manuals/billy-2287622.pdf",
+    "source_url": "https://www.ikea.com/ca/en/assembly_instructions/billy-bookcase-white__AA-2287622-4-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "billy-2287622"
+  },
+  {
+    "file": "manuals/billy-2545292.pdf",
+    "source_url": "https://www.ikea.com/be/en/assembly_instructions/billy-bookcase-white__AA-2545292-1-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "billy-2545292"
+  },
+  {
+    "file": "manuals/kallax-2335189.pdf",
+    "source_url": "https://www.ikea.com/ie/en/assembly_instructions/kallax-shelving-unit-black-brown__AA-2335189-6-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "kallax-2335189"
+  },
+  {
+    "file": "manuals/kallax-2334145.pdf",
+    "source_url": "https://www.ikea.com/ie/en/assembly_instructions/kallax-shelving-unit-white__AA-2334145-5-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "kallax-2334145"
+  },
+  {
+    "file": "manuals/malm-bed.pdf",
+    "source_url": "https://www.ikea.com/us/en/assembly_instructions/malm-seng__AA-772566-12_pub.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "malm-bed"
+  },
+  {
+    "file": "manuals/malm-drawers.pdf",
+    "source_url": "https://www.ikea.com/th/th/assembly_instructions/malm-chest-of-6-drawers-white__AA-1972341-8-2.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "malm-drawers"
+  },
+  {
+    "file": "manuals/tplink-wr740n-v5.pdf",
+    "source_url": "https://static.tp-link.com/res/down/doc/TL-WR740N_V5_UG.pdf",
+    "brand": "TP-Link",
+    "device_category": "router",
+    "title": "tplink-wr740n-v5"
+  },
+  {
+    "file": "manuals/bosch-microwave-hmt84.pdf",
+    "source_url": "https://media3.bosch-home.com/Documents/9000696150_A.pdf",
+    "brand": "Bosch",
+    "device_category": "microwave",
+    "title": "bosch-microwave-hmt84"
+  },
+  {
+    "file": "manuals/panasonic-gm333w.pdf",
+    "source_url": "https://home.panasonic.cn/support/attachments/microwave/NN-GT353M.pdf",
+    "brand": "Panasonic",
+    "device_category": "microwave",
+    "title": "panasonic-gm333w"
+  }
+]

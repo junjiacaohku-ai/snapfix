@@ -1,0 +1,4 @@
+product,primary_source,verified_2026_10_30,design_implication,limits
+ iFixit,https://www.ifixit.com/Guide,Step-by-step repair guides and repair community,retain manual provenance and model-specific references,no live app feature audit; cannot claim missing features
+ FixIt Lens engineering,https://github.com/rakexhs/fixit-lens,README describes cited retrieval safety gate and evaluation scripts,provide independent retrieval and safety evaluation,no execution or source-code copying; README claims not independent certification
+ FixIt Lens AI original,https://github.com/sheikh-mohammad-rakib/Fixit-Lens-Ai,prior project research only; current fetch failed,retain as provisional comparison,do not claim verified current functionality

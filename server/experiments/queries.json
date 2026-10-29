@@ -1,0 +1,342 @@
+[
+  {
+    "id": "q01",
+    "query": "orange power light no internet",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      8
+    ],
+    "group": "intent1"
+  },
+  {
+    "id": "q02",
+    "query": "TP-Link orange power light no internet",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      8
+    ],
+    "group": "intent1"
+  },
+  {
+    "id": "q03",
+    "query": "green LED router mode internet",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      8
+    ],
+    "group": "intent2"
+  },
+  {
+    "id": "q04",
+    "query": "TP-Link green LED router mode internet",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      8
+    ],
+    "group": "intent2"
+  },
+  {
+    "id": "q05",
+    "query": "LED indicator status meaning",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      8,
+      9
+    ],
+    "group": "intent3"
+  },
+  {
+    "id": "q06",
+    "query": "TP-Link LED indicator status meaning",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      8,
+      9
+    ],
+    "group": "intent3"
+  },
+  {
+    "id": "q07",
+    "query": "WPS blinking quickly connection",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      9
+    ],
+    "group": "intent4"
+  },
+  {
+    "id": "q08",
+    "query": "TP-Link WPS blinking quickly connection",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      9
+    ],
+    "group": "intent4"
+  },
+  {
+    "id": "q09",
+    "query": "reset button factory default settings",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      9
+    ],
+    "group": "intent5"
+  },
+  {
+    "id": "q10",
+    "query": "TP-Link reset button factory default settings",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      9
+    ],
+    "group": "intent5"
+  },
+  {
+    "id": "q11",
+    "query": "Wi-Fi WPS button five seconds",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      9
+    ],
+    "group": "intent6"
+  },
+  {
+    "id": "q12",
+    "query": "TP-Link Wi-Fi WPS button five seconds",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      9
+    ],
+    "group": "intent6"
+  },
+  {
+    "id": "q13",
+    "query": "position router moisture heat",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      11
+    ],
+    "group": "intent7"
+  },
+  {
+    "id": "q14",
+    "query": "TP-Link position router moisture heat",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      11
+    ],
+    "group": "intent7"
+  },
+  {
+    "id": "q15",
+    "query": "connect WAN port modem Ethernet cable",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      11,
+      12
+    ],
+    "group": "intent8"
+  },
+  {
+    "id": "q16",
+    "query": "TP-Link connect WAN port modem Ethernet cable",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      11,
+      12
+    ],
+    "group": "intent8"
+  },
+  {
+    "id": "q17",
+    "query": "SSID wireless password label bottom",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      12
+    ],
+    "group": "intent9"
+  },
+  {
+    "id": "q18",
+    "query": "TP-Link SSID wireless password label bottom",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      12
+    ],
+    "group": "intent9"
+  },
+  {
+    "id": "q19",
+    "query": "log in tplinkwifi.net web browser",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      14
+    ],
+    "group": "intent10"
+  },
+  {
+    "id": "q20",
+    "query": "TP-Link log in tplinkwifi.net web browser",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      14
+    ],
+    "group": "intent10"
+  },
+  {
+    "id": "q21",
+    "query": "WPS client PIN connection",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      20,
+      21,
+      22
+    ],
+    "group": "intent11"
+  },
+  {
+    "id": "q22",
+    "query": "TP-Link WPS client PIN connection",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      20,
+      21,
+      22
+    ],
+    "group": "intent11"
+  },
+  {
+    "id": "q23",
+    "query": "firmware upgrade system tools",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      71
+    ],
+    "group": "intent12"
+  },
+  {
+    "id": "q24",
+    "query": "TP-Link firmware upgrade system tools",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      71
+    ],
+    "group": "intent12"
+  },
+  {
+    "id": "q25",
+    "query": "backup configuration bin file restore",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      72
+    ],
+    "group": "intent13"
+  },
+  {
+    "id": "q26",
+    "query": "TP-Link backup configuration bin file restore",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      72
+    ],
+    "group": "intent13"
+  },
+  {
+    "id": "q27",
+    "query": "change web management password",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      73
+    ],
+    "group": "intent14"
+  },
+  {
+    "id": "q28",
+    "query": "TP-Link change web management password",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      73
+    ],
+    "group": "intent14"
+  },
+  {
+    "id": "q29",
+    "query": "modem restart one minute",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      121,
+      122
+    ],
+    "group": "intent15"
+  },
+  {
+    "id": "q30",
+    "query": "TP-Link modem restart one minute",
+    "category": "router",
+    "brand": "TP-Link",
+    "title": "tplink-wr940n",
+    "pages": [
+      121,
+      122
+    ],
+    "group": "intent15"
+  }
+]

@@ -1,0 +1,6 @@
+product,evidence,comparison_focus,limitation_of_evidence,proposed_SnapFix_improvement
+ iFixit FixBot,2026-09-17 市场调研与竞品分析 第1节,repair guides and camera assistance,repository research; not independently re-tested on 2026-10-29,explicit rental repair handoff and bilingual report
+ FixIt Lens AI,2026-09-17 市场调研与竞品分析 第2节,photo diagnosis and structured steps,repository research; product absence claims need source audit,manual provenance and saved repair sessions
+ rakexhs/fixit-lens,2026-09-17 市场调研与竞品分析 第3节,retrieval and safety architecture,repository research; no copied implementation,local rental workflow and repair reporting
+ General visual assistants,2026-09-17 市场调研与竞品分析 第4节,general image and dialogue interface,do not interpret as proof of missing safety or memory features,focused device workflow with explicit model validation
+ Repair marketplaces,2026-09-17 市场调研与竞品分析 第5节,service booking,platform-specific claims need current verification,diagnosis before repair request

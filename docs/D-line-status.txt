@@ -1,0 +1,36 @@
+张帆 D 线交付与组长审核清单 — 2026-10-30
+
+本次完成：
+- 13份厂家公开PDF，2343块；CID乱码采用PyMuPDF恢复；来源、页数、SHA256见inventory.csv。
+- PDF逐页清洗、启发式章节、500字切块、稳定ID、来源追踪、JSON导出。扫描件无可提取文字时明确失败，未暗称OCR已完成。
+- 14张Commons授权外观照片，四类各至少3张；作者和许可逐图记录。另有1张AI编辑质量示意。
+- 六场景mock API及反馈/双语报修验收；7项自动测试通过。公开图片不等于真实故障验证。
+- 20条安全期望标签（高危10+正常10），供BE-1安全门接入；生产安全门验收仍待联调。
+- 30条英文查询（15组成对意图）检索实验，完整逐条结果可复现。
+- 竞品表及主来源复核；无法访问的原作如实标为未核验。
+
+最新实验指标（替代早期记录）：
+lexical: Hit@3=30.0%, MRR=0.341
+bm25: Hit@3=66.7%, MRR=0.526
+bm25_metadata: Hit@3=66.7%, MRR=0.526
+bm25_exact_manual: Hit@3=80.0%, MRR=0.671
+
+精确手册过滤使用标签中已知正确手册，相当于假设型号已核验的上限对照，不能称自动型号识别成绩。
+13份语料比早期10份更容易出现近似型号混淆，故旧83.3%不可沿用。
+
+需组长确认/其他组员配合（未冒称完成）：
+1. E24改为dishwasher，professional；未知品牌/错误码404，质量mock422。接口字段不变但语义改变需审核。
+2. PRD仍写洗衣机E24，建议组长统一文档与演示。无具体型号时不输出拆机指导。
+3. 真视觉、App、SQLite和生产安全门是BE/FE联调项；这些不在此数据分支伪造实现。
+4. 外观图只支持设备输入展示。未拍摄真实红灯/E24/故障图，不承诺达到“真实故障照片”验收条件。
+5. 照片的硬件修订号、BILLY商品编号尚不确定；系列对应的手册不能自动视为精确匹配。
+6. 没有本周例会原始材料，不编造会议纪要；此清单是工作记录。
+
+复现：server目录 pip install -r requirements.txt -r requirements-dev.txt
+python corpus.py data/manifest.json data/chunks.json
+python -m pytest tests -q
+pip install -r experiments/requirements.txt
+python experiments/run_retrieval.py
+uvicorn main:app --host 127.0.0.1 --port 8765
+
+测试通过不代表完整App/真实故障诊断通过。D线可独立交付的数据工具、样本与记录已准备，最终验收需组长复核上述条目。
