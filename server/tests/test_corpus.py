@@ -31,7 +31,6 @@ def test_real_manual_provenance_and_stable_ids():
 
 def test_undecoded_font_manual_fallback():
     import json
-    import pytest
     from pathlib import Path
     from corpus import extract
     root = Path(__file__).resolve().parents[1] / 'data'
@@ -40,3 +39,12 @@ def test_undecoded_font_manual_fallback():
     rows = extract(path, metadata)
     assert rows and all('(cid:' not in r['content'] for r in rows)
     assert any('washing' in r['content'].lower() for r in rows)
+
+
+def test_visual_correction_is_source_bound():
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]/'data'
+    rows = json.loads((root/'chunks.json').read_text())
+    e24 = [r for r in rows if r['manual_id']=='bosch-dishwasher-9001014024' and 'E:24' in r['content']]
+    assert e24 and all(r['page']==35 and r['visual_correction'] for r in e24)

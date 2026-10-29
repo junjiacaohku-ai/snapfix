@@ -1,0 +1,166 @@
+{
+  "scope": "4 evidence retrievals, 2 retrieval-bypass workflows, 4 abstention controls; not 6/6 live end-to-end",
+  "cases": [
+    {
+      "id": "S1",
+      "kind": "retrieval",
+      "query": "TP-Link orange LED internet connection",
+      "category": "router",
+      "brand": "TP-Link",
+      "expected_manual": "tplink-wr940n",
+      "pages": [
+        8
+      ],
+      "passed": true,
+      "top3": [
+        {
+          "id": "2028445f5fbc2457840b4783",
+          "manual_id": "tplink-wr940n",
+          "page": 8,
+          "score": 25.97836578267982
+        },
+        {
+          "id": "86bc6ce5cf06f68290dd1bd1",
+          "manual_id": "tplink-wr940n",
+          "page": 13,
+          "score": 15.1182924529223
+        },
+        {
+          "id": "74807cd6c60ec240f30f9ab1",
+          "manual_id": "tplink-wr740n-v5",
+          "page": 2,
+          "score": 14.15013340448035
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "kind": "retrieval",
+      "query": "博世 E:24 排水",
+      "category": "dishwasher",
+      "brand": "博世",
+      "error_code": "E:24",
+      "expected_manual": "bosch-dishwasher-9001014024",
+      "pages": [
+        35
+      ],
+      "passed": true,
+      "top3": [
+        {
+          "id": "1324e7018ef515ebfc74b08e",
+          "manual_id": "bosch-dishwasher-9001014024",
+          "page": 35,
+          "score": 24.572361397521913
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "kind": "retrieval",
+      "query": "BILLY wall attachment tip over",
+      "category": "furniture",
+      "brand": "IKEA",
+      "manual_id": "billy",
+      "expected_manual": "billy",
+      "pages": [
+        2
+      ],
+      "assumption": "AA-2289105-4 explicitly chosen demo manual, not recognized from image",
+      "passed": true,
+      "top3": [
+        {
+          "id": "7f43a58c676cd3ee5933b278",
+          "manual_id": "billy",
+          "page": 2,
+          "score": 21.906075987051512
+        },
+        {
+          "id": "3ab71fc4a4180a23b7e5ebfa",
+          "manual_id": "billy",
+          "page": 1,
+          "score": 9.767325029649038
+        },
+        {
+          "id": "7e9455d54df70505712928a8",
+          "manual_id": "billy",
+          "page": 2,
+          "score": 4.353142296622051
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "kind": "safety_reference",
+      "query": "微波炉 修理 禁止分解",
+      "category": "microwave",
+      "brand": "Panasonic",
+      "expected_manual": "panasonic-gm333w",
+      "pages": [
+        3
+      ],
+      "assumption": "Safety evidence lookup only; production must refuse before generating repair steps",
+      "passed": true,
+      "top3": [
+        {
+          "id": "18f6525b08dee9b7197e2eeb",
+          "manual_id": "panasonic-gm333w",
+          "page": 3,
+          "score": 43.84894469124452
+        },
+        {
+          "id": "b056e6113282c71bb68510ef",
+          "manual_id": "panasonic-gm333w",
+          "page": 4,
+          "score": 32.222898874299005
+        },
+        {
+          "id": "272a4749d5128b73790a576e",
+          "manual_id": "panasonic-gm333w",
+          "page": 3,
+          "score": 28.52642594685814
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "kind": "quality_bypass",
+      "expected": "retake image; no retrieval",
+      "status": "mock API only; real image quality gate pending BE-1"
+    },
+    {
+      "id": "S6",
+      "kind": "report_bypass",
+      "expected": "report from saved diagnosis and feedback; no new retrieval",
+      "status": "API text tested; actual photo attachment and App sharing pending FE/BE"
+    },
+    {
+      "id": "N1",
+      "query": "E240 drain",
+      "category": "dishwasher",
+      "brand": "Bosch",
+      "error_code": "E240",
+      "passed": true,
+      "top3": []
+    },
+    {
+      "id": "N2",
+      "query": "E999",
+      "error_code": "E999",
+      "passed": true,
+      "top3": []
+    },
+    {
+      "id": "N3",
+      "query": "internet",
+      "manual_id": "missing-manual",
+      "passed": true,
+      "top3": []
+    },
+    {
+      "id": "N4",
+      "query": "zqxwunrelatedtoken",
+      "passed": true,
+      "top3": []
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 """SnapFix FastAPI 后端骨架。
 
-当前为 mock 确定性模式:不设 API key 即可跑通 PRD 第 10 节的全部 v1 契约,
+当前为 mock 确定性模式:不设 API key 即可运行六场景接口演示,
 供前端并行开发与课堂演示兜底。真实管线(vision/RAG/安全门)按 PRD 第 8 节
 在 pipeline.py 中逐步实现,接口保持不变。
 """
-import os
+import re
 import uuid
 from datetime import datetime, timezone
 
@@ -13,7 +13,7 @@ from pydantic import BaseModel
 
 app = FastAPI(title="SnapFix API", version="0.1.0")
 
-MOCK_MODE = not os.environ.get("GEMINI_API_KEY")
+MOCK_MODE = True  # This branch has no live provider; keys must not change reported status.
 
 # ---------- 数据模型(对齐 PRD 第 9 节,先内存实现,BE-2 负责落 SQLite) ----------
 
@@ -49,7 +49,7 @@ class ReportRequest(BaseModel):
 
 DB: dict[str, Session] = {}
 
-# ---------- mock 场景(验收场景 2 与 4,D 线后续扩充为 6 个) ----------
+# ---------- 六场景 mock 数据；文件名路由不代表真实图像识别 ----------
 
 def _mock_e24() -> Session:
     return Session(
@@ -60,8 +60,8 @@ def _mock_e24() -> Session:
         decision_reason="Bosch E24 演示：洗碗机排水异常。请先核对完整型号；未匹配具体手册前联系专业人员，不提供拆机指导。",
         steps=[Step(id=str(uuid.uuid4()), idx=1,
                     content="记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
-                    citation_manual="PRD 合成演示数据，非官方手册",
-                    citation_section="验收场景 2（待核验）")],
+                    citation_manual="Bosch dishwasher SM/SB 9001014024 B",
+                    citation_section="PDF p.35（故障表；演示，未确认用户型号）")],
         created_at=datetime.now(timezone.utc).isoformat(),
     )
 
@@ -75,13 +75,13 @@ def _mock_microwave() -> Session:
         created_at=datetime.now(timezone.utc).isoformat(),
     )
 
-def _mock_named(category, brand, reason, instructions, tools="无需工具"):
+def _mock_named(category, brand, reason, instructions, tools="无需工具", citation="演示用合成内容（未核验官方手册）", sections=None):
     return Session(
         id=str(uuid.uuid4()), device_category=category, brand=brand,
         decision="diy", decision_reason=reason + " 工具：" + tools,
         steps=[Step(id=str(uuid.uuid4()), idx=i, content=text,
-                    citation_manual="演示用合成内容（未核验官方手册）",
-                    citation_section=f"mock step {i}")
+                    citation_manual=citation,
+                    citation_section=sections[i-1] if sections else f"mock step {i}")
                for i, text in enumerate(instructions, 1)],
         created_at=datetime.now(timezone.utc).isoformat())
 
@@ -90,15 +90,18 @@ def _mock_router():
     return _mock_named("router", "TP-Link", "红灯可能表示上游连接异常；此为演示数据。", [
         "检查外置电源与网线是否插牢，不拆机。",
         "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
-        "如仍红灯，记录指示灯状态并联系网络运营商。"])
+        "如仍无法联网，记录指示灯状态并联系网络运营商。"],
+        citation="TP-Link TL-WR940N REV6.0.2（演示型号）",
+        sections=["PDF p.11–12", "PDF p.121", "PDF p.120–122"])
 
 
 def _mock_billy():
     return _mock_named("furniture", "IKEA", "BILLY 组装检查演示，须以实际型号说明书为准。", [
-        "核对实际型号、板材和配件，查看该型号官方组装说明。",
-        "依说明核对板材方向，不强行敲入或替换连接件。",
-        "请另一人协助立起，并按墙体类型选择固定件完成防倾倒固定。"],
-        "实际型号说明书列出的螺丝刀及墙体适用固定件")
+        "先确认实际型号，阅读并遵循该型号说明书的每一步要求。",
+        "使用说明书要求的防倾倒连接件；墙体固定螺钉和膨胀件须适配墙体。",
+        "无法确定墙体材料或固定方法时，请寻求专业人员建议。"],
+        "适配墙体的螺钉和膨胀件；其他工具以实际型号说明书为准",
+        citation="IKEA BILLY AA-2289105-4", sections=["PDF p.2", "PDF p.2", "PDF p.2"])
 
 
 # ---------- API v1 契约(PRD 第 10 节) ----------
@@ -125,15 +128,17 @@ async def analyze_image(file: UploadFile):
         session.decision_reason = "演示报修：租住房屋设备问题，请联系房东安排处理。"
     elif "microwave" in name:
         session = _mock_microwave()
-    else:
+    elif "e24" in name:
         session = _mock_e24()
+    else:
+        raise HTTPException(status_code=422, detail="未匹配演示场景，请使用文档约定的 mock 文件名；当前未启用真实识别。")
     DB[session.id] = session
     return session
 
 @app.post("/api/diagnose/manual", response_model=Session)
 def diagnose_manual(req: ManualDiagnoseRequest):
-    code = req.error_code.strip().upper()
-    if req.brand.lower() in {"bosch", "博世"} and code == "E24":
+    code = re.sub(r'^E\s*[:：]?\s*(\d+)$', r'E\1', req.error_code.strip().upper())
+    if req.brand.strip().lower() in {"bosch", "博世"} and code == "E24":
         session = _mock_e24()
     else:
         raise HTTPException(status_code=404, detail="mock 暂无该品牌和错误码，请核对设备型号或联系专业人员。")
@@ -174,11 +179,11 @@ def generate_report(session_id: str, req: ReportRequest):
         content = (f"Repair request: {s.device_category}"
                    f"{f' ({s.brand})' if s.brand else ''}"
                    f"{f', error code {s.error_code}' if s.error_code else ''}. "
-                   f"Steps already tried: {tried}. Photos attached. Please advise.")
+                   f"Steps already tried: {tried}. Please attach a photo when sending this request. Please advise.")
     else:
         tried = "、".join(f"步骤{st.idx}" for st in s.steps if st.feedback == "done") or "无"
         content = (f"报修申请:{s.device_category}"
                    f"{f'({s.brand})' if s.brand else ''}"
                    f"{f',错误码 {s.error_code}' if s.error_code else ''}。"
-                   f"已尝试步骤:{tried}。照片见附件,烦请安排处理,谢谢。")
+                   f"已尝试步骤:{tried}。发送时请另附照片,烦请安排处理,谢谢。")
     return {"lang": req.lang, "content": content}

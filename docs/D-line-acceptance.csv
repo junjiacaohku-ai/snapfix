@@ -1,9 +1,9 @@
 scenario,input,expected,observed,status,scope
-1 router,router.jpg filename,TP-Link steps and citation labels,API test passes,PASS,mock only; synthetic citation labels
+1 router,router.jpg filename,TP-Link steps and citation labels,API test passes,PASS,mock only; cited manufacturer pages; actual model unverified
 2 Bosch E24,manual Bosch E24,dishwasher professional referral,API regression test,PASS,corrected device class; exact model unknown
 3 BILLY,billy.jpg filename,tools and anti-tip guidance,API test passes,PASS,mock only; exact article unknown
 4 microwave,microwave.jpg filename,refused and no procedural steps,API test passes,PASS,mock category gate only
 5 dark image,dark.jpg filename,422 retake message,API test passes,PASS,filename mock; real quality gate not tested
-6 report,report.jpg plus done feedback,Chinese and English reports contain tried step,API test passes,PASS,text mentions photos but no actual attachment
+6 report,report.jpg plus done feedback,Chinese and English reports contain tried step,API test passes,PASS,explicitly asks user to attach photo; no attachment implementation
 real vision,public photos,real device detection,not implemented by this change,PENDING,BE-1 integration
 App end-to-end,Flutter app,six scenarios usable on phone,not run,PENDING,FE integration

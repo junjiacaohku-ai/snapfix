@@ -1,0 +1,218 @@
+{
+  "scope": "In-process mock API; filenames are routing fixtures; no real photos processed",
+  "cases": [
+    {
+      "scenario": "S1",
+      "input": "router.jpg",
+      "status": 200,
+      "checks": {
+        "http_status": true,
+        "router_steps": true
+      },
+      "passed": true,
+      "elapsed_ms": 7.23,
+      "response": {
+        "id": "e3c39852-1343-46e4-9f39-7ee04655395b",
+        "device_category": "router",
+        "brand": "TP-Link",
+        "model": null,
+        "error_code": null,
+        "decision": "diy",
+        "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
+        "steps": [
+          {
+            "id": "ed7787ae-4667-43f4-9af5-d1ff6202daec",
+            "idx": 1,
+            "content": "检查外置电源与网线是否插牢，不拆机。",
+            "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+            "citation_section": "PDF p.11–12",
+            "feedback": null
+          },
+          {
+            "id": "9c29fb8c-1d5a-41da-87e5-1c3583eefb38",
+            "idx": 2,
+            "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
+            "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+            "citation_section": "PDF p.121",
+            "feedback": null
+          },
+          {
+            "id": "896abe44-926f-48e2-ae08-30448753d5a1",
+            "idx": 3,
+            "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
+            "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+            "citation_section": "PDF p.120–122",
+            "feedback": null
+          }
+        ],
+        "safety_refused": false,
+        "created_at": "2026-10-29T16:42:54.480007+00:00"
+      },
+      "reports": {}
+    },
+    {
+      "scenario": "S2",
+      "input": "manual Bosch E:24",
+      "status": 200,
+      "checks": {
+        "http_status": true,
+        "model_uncertainty": true,
+        "e24_referral": true
+      },
+      "passed": true,
+      "elapsed_ms": 1.38,
+      "response": {
+        "id": "1e441c66-a838-402a-bb52-87edc7b1d95c",
+        "device_category": "dishwasher",
+        "brand": "Bosch",
+        "model": null,
+        "error_code": "E24",
+        "decision": "professional",
+        "decision_reason": "Bosch E24 演示：洗碗机排水异常。请先核对完整型号；未匹配具体手册前联系专业人员，不提供拆机指导。",
+        "steps": [
+          {
+            "id": "16b312fa-8b61-4314-888b-a2fdd6c2d2f0",
+            "idx": 1,
+            "content": "记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
+            "citation_manual": "Bosch dishwasher SM/SB 9001014024 B",
+            "citation_section": "PDF p.35（故障表；演示，未确认用户型号）",
+            "feedback": null
+          }
+        ],
+        "safety_refused": false,
+        "created_at": "2026-10-29T16:42:54.481792+00:00"
+      },
+      "reports": {}
+    },
+    {
+      "scenario": "S3",
+      "input": "billy.jpg",
+      "status": 200,
+      "checks": {
+        "http_status": true,
+        "billy_guidance": true
+      },
+      "passed": true,
+      "elapsed_ms": 1.0,
+      "response": {
+        "id": "45de6fbf-b556-477b-90ba-e456f5c4330d",
+        "device_category": "furniture",
+        "brand": "IKEA",
+        "model": null,
+        "error_code": null,
+        "decision": "diy",
+        "decision_reason": "BILLY 组装检查演示，须以实际型号说明书为准。 工具：适配墙体的螺钉和膨胀件；其他工具以实际型号说明书为准",
+        "steps": [
+          {
+            "id": "4793e128-3cf5-4a15-90ff-2384b635f601",
+            "idx": 1,
+            "content": "先确认实际型号，阅读并遵循该型号说明书的每一步要求。",
+            "citation_manual": "IKEA BILLY AA-2289105-4",
+            "citation_section": "PDF p.2",
+            "feedback": null
+          },
+          {
+            "id": "665e69ab-7b26-4e84-ae05-f22958ee0132",
+            "idx": 2,
+            "content": "使用说明书要求的防倾倒连接件；墙体固定螺钉和膨胀件须适配墙体。",
+            "citation_manual": "IKEA BILLY AA-2289105-4",
+            "citation_section": "PDF p.2",
+            "feedback": null
+          },
+          {
+            "id": "43164fd9-f504-4953-b587-9268d94e91bd",
+            "idx": 3,
+            "content": "无法确定墙体材料或固定方法时，请寻求专业人员建议。",
+            "citation_manual": "IKEA BILLY AA-2289105-4",
+            "citation_section": "PDF p.2",
+            "feedback": null
+          }
+        ],
+        "safety_refused": false,
+        "created_at": "2026-10-29T16:42:54.482911+00:00"
+      },
+      "reports": {}
+    },
+    {
+      "scenario": "S4",
+      "input": "microwave.jpg",
+      "status": 200,
+      "checks": {
+        "http_status": true,
+        "refusal": true
+      },
+      "passed": true,
+      "elapsed_ms": 0.87,
+      "response": {
+        "id": "49101f82-9672-4786-baac-37a556adb269",
+        "device_category": "microwave",
+        "brand": null,
+        "model": null,
+        "error_code": null,
+        "decision": "refused",
+        "decision_reason": "微波炉内部高压电容断电后仍可致命,属于高危类目,不提供任何拆解步骤。",
+        "steps": [],
+        "safety_refused": true,
+        "created_at": "2026-10-29T16:42:54.483814+00:00"
+      },
+      "reports": {}
+    },
+    {
+      "scenario": "S5",
+      "input": "dark.jpg",
+      "status": 422,
+      "checks": {
+        "http_status": true,
+        "retake": true
+      },
+      "passed": true,
+      "elapsed_ms": 0.91,
+      "response": {
+        "detail": "照片模糊或过暗，请补光、对焦后重拍。"
+      },
+      "reports": {}
+    },
+    {
+      "scenario": "S6",
+      "input": "report.jpg",
+      "status": 200,
+      "checks": {
+        "http_status": true,
+        "reports": true
+      },
+      "passed": true,
+      "elapsed_ms": 3.92,
+      "response": {
+        "id": "228da155-5026-4297-bb74-127c3a4bbfd9",
+        "device_category": "dishwasher",
+        "brand": "Bosch",
+        "model": null,
+        "error_code": "E24",
+        "decision": "landlord",
+        "decision_reason": "演示报修：租住房屋设备问题，请联系房东安排处理。",
+        "steps": [
+          {
+            "id": "aba123c3-cda3-4d78-9c45-fd31c81f0dac",
+            "idx": 1,
+            "content": "记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
+            "citation_manual": "Bosch dishwasher SM/SB 9001014024 B",
+            "citation_section": "PDF p.35（故障表；演示，未确认用户型号）",
+            "feedback": null
+          }
+        ],
+        "safety_refused": false,
+        "created_at": "2026-10-29T16:42:54.485604+00:00"
+      },
+      "reports": {
+        "zh": {
+          "lang": "zh",
+          "content": "报修申请:dishwasher(Bosch),错误码 E24。已尝试步骤:步骤1。发送时请另附照片,烦请安排处理,谢谢。"
+        },
+        "en": {
+          "lang": "en",
+          "content": "Repair request: dishwasher (Bosch), error code E24. Steps already tried: step 1. Please attach a photo when sending this request. Please advise."
+        }
+      }
+    }
+  ]
+}

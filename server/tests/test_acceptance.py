@@ -15,6 +15,9 @@ def test_six_scenarios():
     manual = client.post('/api/diagnose/manual', json={'brand': '博世', 'error_code': ' e24 '}).json()
     assert manual['error_code'] == 'E24' and manual['device_category'] == 'dishwasher'
     assert manual['decision'] == 'professional'
+    for code in ['E:24', ' E：24 ', 'e24']:
+        normalized = client.post('/api/diagnose/manual', json={'brand': ' Bosch ', 'error_code': code})
+        assert normalized.status_code == 200 and normalized.json()['error_code'] == 'E24'
     billy = image('billy.jpg').json()
     assert billy['brand'] == 'IKEA' and '工具' in billy['decision_reason']
     refused = image('microwave.jpg').json()
@@ -27,7 +30,7 @@ def test_six_scenarios():
     zh = client.post(url + '/report', json={'lang': 'zh'}).json()['content']
     en = client.post(url + '/report', json={'lang': 'en'}).json()['content']
     assert '步骤1' in zh and 'step 1' in en
-    assert '照片' in zh and 'Photos' in en
+    assert '照片' in zh and 'photo' in en
 
 
 def test_unknown_manual_does_not_invent_e24():
@@ -41,3 +44,14 @@ def test_health_and_session_lifecycle():
     assert client.get(url).status_code == 200
     assert client.delete(url).status_code == 200
     assert client.get(url).status_code == 404
+
+
+def test_unknown_images_do_not_invent_diagnosis():
+    assert image('random.jpg').status_code == 422
+
+
+def test_reports_do_not_claim_nonexistent_attachment():
+    session = image('report.jpg').json()
+    result = client.post(f'/api/sessions/{session["id"]}/report', json={'lang':'en'}).json()
+    assert 'Photos attached' not in result['content']
+    assert 'attach a photo' in result['content']

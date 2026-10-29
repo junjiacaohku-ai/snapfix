@@ -1,0 +1,9 @@
+{
+  "health": {
+    "status": "ok",
+    "mock": true,
+    "provider": "mock"
+  },
+  "docs_http_status": 200,
+  "scope": "Local Uvicorn HTTP smoke test; not live vision"
+}

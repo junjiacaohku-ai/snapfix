@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bosch-washer",
+    "title": "Bosch washer instructions 9000656120",
+    "source": "https://media3.bosch-home.com/Documents/9000656120_A.pdf",
+    "category": "washing_machine"
+  },
+  {
+    "id": "billy",
+    "title": "BILLY AA-2289105-4",
+    "source": "https://www.ikea.com/us/en/assembly_instructions/billy-bookcase-white__AA-2289105-4-100.pdf",
+    "category": "furniture"
+  },
+  {
+    "id": "tplink-wr940n",
+    "title": "tplink-wr940n",
+    "source": "https://static.tp-link.com/2019/201903/20190320/1910012391_TL-WR940N(EU)_UG_REV6.0.2.pdf",
+    "category": "router"
+  },
+  {
+    "id": "bosch-washer-1078547",
+    "title": "bosch-washer-1078547",
+    "source": "https://media3.bosch-home.com/Documents/9001078547_A.pdf",
+    "category": "washing_machine"
+  },
+  {
+    "id": "billy-2287622",
+    "title": "billy-2287622",
+    "source": "https://www.ikea.com/ca/en/assembly_instructions/billy-bookcase-white__AA-2287622-4-100.pdf",
+    "category": "furniture"
+  },
+  {
+    "id": "billy-2545292",
+    "title": "billy-2545292",
+    "source": "https://www.ikea.com/be/en/assembly_instructions/billy-bookcase-white__AA-2545292-1-100.pdf",
+    "category": "furniture"
+  },
+  {
+    "id": "kallax-2335189",
+    "title": "kallax-2335189",
+    "source": "https://www.ikea.com/ie/en/assembly_instructions/kallax-shelving-unit-black-brown__AA-2335189-6-100.pdf",
+    "category": "furniture"
+  },
+  {
+    "id": "kallax-2334145",
+    "title": "kallax-2334145",
+    "source": "https://www.ikea.com/ie/en/assembly_instructions/kallax-shelving-unit-white__AA-2334145-5-100.pdf",
+    "category": "furniture"
+  },
+  {
+    "id": "malm-bed",
+    "title": "malm-bed",
+    "source": "https://www.ikea.com/us/en/assembly_instructions/malm-seng__AA-772566-12_pub.pdf",
+    "category": "furniture"
+  },
+  {
+    "id": "malm-drawers",
+    "title": "malm-drawers",
+    "source": "https://www.ikea.com/th/th/assembly_instructions/malm-chest-of-6-drawers-white__AA-1972341-8-2.pdf",
+    "category": "furniture"
+  },
+  {
+    "id": "tplink-wr740n-v5",
+    "title": "tplink-wr740n-v5",
+    "source": "https://static.tp-link.com/res/down/doc/TL-WR740N_V5_UG.pdf",
+    "category": "router"
+  },
+  {
+    "id": "bosch-microwave-hmt84",
+    "title": "bosch-microwave-hmt84",
+    "source": "https://media3.bosch-home.com/Documents/9000696150_A.pdf",
+    "category": "microwave"
+  },
+  {
+    "id": "panasonic-gm333w",
+    "title": "panasonic-gm333w",
+    "source": "https://home.panasonic.cn/support/attachments/microwave/NN-GT353M.pdf",
+    "category": "microwave"
+  },
+  {
+    "id": "bosch-dishwasher-9001014024",
+    "title": "Bosch dishwasher SM/SB instruction manual 9001014024 B",
+    "source": "https://media3.bosch-home.com/Documents/9001014024_B.pdf",
+    "category": "dishwasher"
+  },
+  {
+    "id": "emsd-gas-appliances",
+    "title": "EMSD Domestic Gas Appliances Safety",
+    "source": "https://www.emsd.gov.hk/filemanager/en/content_284/gas_appliance.pdf",
+    "category": "gas_water_heater"
+  },
+  {
+    "id": "rheem-hybrid-water-heater",
+    "title": "Rheem Electric Residential Hybrid Water Heater Use & Care AP23657 Rev04",
+    "source": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Use-Care-Manual.pdf",
+    "category": "electric_water_heater"
+  }
+]

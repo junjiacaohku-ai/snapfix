@@ -1,42 +1,42 @@
-# SnapFix Server(FastAPI)
+# SnapFix Server
 
-## 运行
+Python 3.11+. From this directory:
 
-```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt -r requirements-dev.txt
+python -m pytest tests -q
 uvicorn main:app --reload
 ```
 
-交互式接口文档:http://127.0.0.1:8000/docs
+Swagger UI: http://127.0.0.1:8000/docs
 
-## 当前状态
+## Runtime status
 
-- [x] PRD 第 10 节 v1 契约全部端点(mock 实现,内存存储)
-- [x] mock 场景:Bosch E24(可自修)/ 微波炉(安全门拒答)
-- [ ] SQLite 持久化(PRD 第 9 节数据模型)— BE-2
-- [ ] 手册语料切块 + BM25 检索 — BE-2 / D
-- [ ] 真实 vision(Gemini)+ provider 故障转移 — BE-1
-- [ ] 规则安全门完整类目表(12 类)— BE-1
-- [ ] 引用校验(步骤必须对应检索到的手册片段)— BE-1
+This branch always reports mock mode, including when an API key is present. It does not invoke a live vision provider. Sessions are in memory. SQLite and real provider integration are owned by BE-2 and BE-1.
 
-## 约定
+Image fixture names: `router.jpg`, `e24.jpg`, `billy.jpg`, `microwave.jpg`, `dark.jpg`/`blur.jpg`, `report.jpg`. Arbitrary bytes are accepted for these mock fixtures; filenames route responses, not pixels. Unknown names return 422. Manual `Bosch`/`博世` + `E24`/`E:24` returns the corrected dishwasher scenario; unknown brand/code returns 404. E24 is not a verified washing-machine diagnosis.
 
-- API key 只放 `.env`,任何代码、日志、commit 中不得出现 key
-- mock 模式永远可用:`pytest` 与课堂演示不依赖网络与 key
-- 照片处理后即删,不持久化原图(隐私红线,见 PRD 第 11 节)
+Photos are not persisted. Report text asks the sender to attach a photo; the API has no attachment capability. These limitations must remain explicit during demonstrations.
 
-## D 线离线数据工具
+## D-line tools
 
-安装 `pip install -r requirements.txt -r requirements-dev.txt`，在 server 目录执行
-`python -m pytest tests -q`。PDF 提取运行 `python corpus.py manifest.json chunks.json`。
-manifest 为对象数组，每项包含 `file`（相对 manifest 的 PDF 路径）、
-`source_url`、`brand`、`device_category`、`title`。输出保留来源、页码和稳定块 ID；
-每页切为最多 500 字的块。扫描件无文本时明确失败，需另行 OCR；CID乱码自动尝试PyMuPDF，仍不可读则失败；按编号或 Chapter 标题做启发式分节，未识别时标为 unclassified，须人工复核。
-`weighted_matches` 提供类别 +3、品牌别名 +2、精确错误码 +5 的词法基线，供 BE-2 集成对比。
+```sh
+python corpus.py data/manifest.json data/chunks.json
+python experiments/run_retrieval.py
+python experiments/evaluate_scenarios.py
+python experiments/run_acceptance.py
+```
 
-Mock 图片文件名路由：router、billy、microwave、dark/blur、report；其他文件名维持 E24。
-质量门仅按文件名模拟，绝非真实图片检测。家具及路由器步骤为明确标记的合成内容，
-不冒充官方手册；原 E24 示例引用也尚待真实手册核验。
-第六场景通过 report 图片创建会话，再调用 feedback 与中英 report 端点完成。
-未知品牌/错误码现返回 404，不再返回不相关的 Bosch 建议。
+Extraction exports `manuals.json`, `chunks.json`, and `extraction-audit.json`. There are 15 manufacturer PDFs plus one government safety leaflet; they are not 16 unique supported models. Sparse/diagram-heavy pages require visual inspection. Unreadable pages are excluded and recorded. PDFium handles CID font fallback; one source-bound display-code correction was visually checked. No OCR engine or automatic diagram understanding is claimed.
+
+BM25 reference retrieval is in `retrieval.py`; the original `weighted_matches` is retained as a lexical baseline for comparison. Full handoff instructions: `../docs/data-handoff.md`. Current evidence, limitations and team dependencies: `../docs/review-audit.md`.
+
+The safety evaluator requires a separately supplied, reviewed BE-1 module:
+
+```sh
+python experiments/evaluate_safety.py --gate /path/to/safety_gate.py --revision COMMIT_SHA --output experiments/safety-results.json
+```
+
+It exits nonzero on failed cases. The committed results are an audit of the stated BE-1 revision, not a claim that the production pipeline is safe or that this branch implements the safety gate.
