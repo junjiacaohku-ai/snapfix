@@ -18,7 +18,7 @@ Source quality is a practical design constraint. Our audit found both PDF font d
 
 Evaluation should distinguish evidence retrieval, safety policy, image quality and reporting. A successful mock response does not validate the live visual model. A correct manual page does not establish that a repair is safe. Public device photographs can support demonstrations, but photographs of working appliances do not become labelled fault examples merely because their filenames contain a scenario name.
 
-The D-line deliverables include corpus provenance, repeatable extraction, labelled evaluation cases, source-attributed public photographs and reproducible results. Live vision, production safety decisions, persistent sessions and mobile sharing require integration with the BE and FE owners. Team acceptance remains open where these dependencies are untested or failing.
+The D-line deliverables include corpus provenance, repeatable extraction, labelled evaluation cases, source-attributed public photographs and reproducible results. The branch now includes rule-based safety checks, pixel-quality checks and persistent sessions. Live vision and mobile sharing still need end-to-end evaluation.
 
 ## Primary sources
 

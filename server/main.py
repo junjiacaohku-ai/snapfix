@@ -6,16 +6,22 @@
 """
 import re
 import uuid
+import os
+from pathlib import Path
+from typing import Literal
 from datetime import datetime, timezone
 
 from fastapi import FastAPI, HTTPException, UploadFile
 from pydantic import BaseModel
+from safety_gate import check as check_safety
+from image_quality import MAX_BYTES, check_image
+from session_store import SessionStore
 
 app = FastAPI(title="SnapFix API", version="0.1.0")
 
 MOCK_MODE = True  # This branch has no live provider; keys must not change reported status.
 
-# ---------- 数据模型(对齐 PRD 第 9 节,先内存实现,BE-2 负责落 SQLite) ----------
+# ---------- 数据模型（PRD 第 9 节） ----------
 
 class Step(BaseModel):
     id: str
@@ -42,12 +48,23 @@ class ManualDiagnoseRequest(BaseModel):
     error_code: str
 
 class FeedbackRequest(BaseModel):
-    feedback: str  # done / not_useful / skipped
+    feedback: Literal['done', 'not_useful', 'skipped']
 
 class ReportRequest(BaseModel):
-    lang: str = "zh"  # zh / en
+    lang: Literal['zh', 'en'] = 'zh'
 
-DB: dict[str, Session] = {}
+DB = SessionStore(os.environ.get('SNAPFIX_DB', str(Path(__file__).parent / 'data/snapfix.db')),
+                  Session.model_validate)
+
+
+def _apply_safety(session: Session) -> Session:
+    verdict = check_safety(session.device_category, session.brand, session.model, session.error_code)
+    if verdict.refused:
+        session.decision = 'refused'
+        session.decision_reason = verdict.reason + ' ' + verdict.advice
+        session.safety_refused = True
+        session.steps = []
+    return session
 
 # ---------- 六场景 mock 数据；文件名路由不代表真实图像识别 ----------
 
@@ -113,11 +130,13 @@ def health():
 
 @app.post("/api/analyze/image", response_model=Session)
 async def analyze_image(file: UploadFile):
-    # mock:按文件名关键词路由到场景;真实管线:质量门→vision→检索→安全门→生成
+    # Quality reads pixels; the offline scenario is still selected by filename.
     name = (file.filename or "").lower()
-    await file.read()  # 隐私:照片处理后即删,不持久化
-    if any(token in name for token in ("blur", "dark", "blurry")):
-        raise HTTPException(status_code=422, detail="照片模糊或过暗，请补光、对焦后重拍。")
+    data = await file.read(MAX_BYTES + 1)
+    await file.close()
+    quality = check_image(data)
+    if not quality.accepted:
+        raise HTTPException(status_code=422, detail=quality.reason)
     if "router" in name or "tp-link" in name:
         session = _mock_router()
     elif "billy" in name or "ikea" in name:
@@ -132,13 +151,20 @@ async def analyze_image(file: UploadFile):
         session = _mock_e24()
     else:
         raise HTTPException(status_code=422, detail="未匹配演示场景，请使用文档约定的 mock 文件名；当前未启用真实识别。")
+    session = _apply_safety(session)
     DB[session.id] = session
     return session
 
 @app.post("/api/diagnose/manual", response_model=Session)
 def diagnose_manual(req: ManualDiagnoseRequest):
     code = re.sub(r'^E\s*[:：]?\s*(\d+)$', r'E\1', req.error_code.strip().upper())
-    if req.brand.strip().lower() in {"bosch", "博世"} and code == "E24":
+    verdict = check_safety(req.brand, req.error_code)
+    if verdict.refused:
+        session = Session(id=str(uuid.uuid4()), device_category='unknown',
+                          brand=req.brand.strip() or None, error_code=req.error_code.strip() or None,
+                          decision='refused', decision_reason=verdict.reason + ' ' + verdict.advice,
+                          safety_refused=True, steps=[], created_at=datetime.now(timezone.utc).isoformat())
+    elif req.brand.strip().lower() in {"bosch", "博世"} and code == "E24":
         session = _mock_e24()
     else:
         raise HTTPException(status_code=404, detail="mock 暂无该品牌和错误码，请核对设备型号或联系专业人员。")
@@ -164,11 +190,9 @@ def delete_session(session_id: str):
 
 @app.post("/api/sessions/{session_id}/steps/{step_id}/feedback", response_model=Session)
 def step_feedback(session_id: str, step_id: str, req: FeedbackRequest):
-    session = get_session(session_id)
-    for step in session.steps:
-        if step.id == step_id:
-            step.feedback = req.feedback
-            return session
+    get_session(session_id)
+    if DB.set_feedback(session_id, step_id, req.feedback):
+        return get_session(session_id)
     raise HTTPException(status_code=404, detail="step not found")
 
 @app.post("/api/sessions/{session_id}/report")
@@ -186,4 +210,5 @@ def generate_report(session_id: str, req: ReportRequest):
                    f"{f'({s.brand})' if s.brand else ''}"
                    f"{f',错误码 {s.error_code}' if s.error_code else ''}。"
                    f"已尝试步骤:{tried}。发送时请另附照片,烦请安排处理,谢谢。")
+    DB.save_report(session_id, req.lang, content)
     return {"lang": req.lang, "content": content}

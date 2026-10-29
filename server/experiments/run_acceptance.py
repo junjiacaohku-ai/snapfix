@@ -2,21 +2,27 @@
 import json
 import sys
 import time
+import os
+from tempfile import TemporaryDirectory
 from pathlib import Path
 from fastapi.testclient import TestClient
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+_temp_database = TemporaryDirectory(prefix='snapfix-acceptance-')
+os.environ['SNAPFIX_DB'] = str(Path(_temp_database.name)/'acceptance.db')
 from main import app, DB
 
 root=Path(__file__).resolve().parents[1]
 client=TestClient(app)
 DB.clear()
 results=[]
-for scenario,name in [('S1','router.jpg'),('S2','e24.jpg'),('S3','billy.jpg'),('S4','microwave.jpg'),('S5','dark.jpg'),('S6','report.jpg')]:
+for scenario,name in [('S1','router.jpg'),('S2','e24.jpg'),('S3','billy.jpg'),('S4','microwave.jpg'),('S5','dark.jpg'),('S6','router.jpg')]:
     start=time.perf_counter()
     if scenario=='S2':
         response=client.post('/api/diagnose/manual',json={'brand':'博世','error_code':'E:24'})
     else:
-        response=client.post('/api/analyze/image',files={'file':(name,b'mock fixture; not an image','image/jpeg')})
+        source_name={'S1':'public-01.jpg','S3':'public-03.jpg','S4':'public-05.jpg','S5':'public-09.jpg','S6':'public-01.jpg'}[scenario]
+        picture=(root.parent/'docs/demo-assets/public'/source_name).read_bytes()
+        response=client.post('/api/analyze/image',files={'file':(name,picture,'image/jpeg')})
     data=response.json()
     extra={}
     if scenario=='S6' and response.status_code==200:
@@ -43,7 +49,7 @@ for scenario,name in [('S1','router.jpg'),('S2','e24.jpg'),('S3','billy.jpg'),('
     results.append(dict(scenario=scenario,input='manual Bosch E:24' if scenario=='S2' else name,status=response.status_code,
                         checks=checks,passed=all(checks.values()),elapsed_ms=round((time.perf_counter()-start)*1000,2),
                         response=data,reports=extra))
-(root/'experiments/acceptance-results.json').write_text(json.dumps(dict(scope='In-process mock API; filenames are routing fixtures; no real photos processed',cases=results),ensure_ascii=False,indent=2)+'\n')
+(root/'experiments/acceptance-results.json').write_text(json.dumps(dict(scope='Real image quality and safety checks; offline diagnosis selected by filename; no live vision or mobile UI test',cases=results),ensure_ascii=False,indent=2)+'\n')
 print(f'{sum(r["passed"] for r in results)}/6 mock response checks completed')
 if not all(r['passed'] for r in results):
     raise SystemExit(1)

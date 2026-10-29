@@ -1,5 +1,5 @@
 {
-  "scope": "In-process mock API; filenames are routing fixtures; no real photos processed",
+  "scope": "Real image quality and safety checks; offline diagnosis selected by filename; no live vision or mobile UI test",
   "cases": [
     {
       "scenario": "S1",
@@ -10,9 +10,9 @@
         "router_steps": true
       },
       "passed": true,
-      "elapsed_ms": 7.23,
+      "elapsed_ms": 21.78,
       "response": {
-        "id": "e3c39852-1343-46e4-9f39-7ee04655395b",
+        "id": "fffc250c-3271-49b6-8a9e-5082d7d9bbaa",
         "device_category": "router",
         "brand": "TP-Link",
         "model": null,
@@ -21,7 +21,7 @@
         "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
         "steps": [
           {
-            "id": "ed7787ae-4667-43f4-9af5-d1ff6202daec",
+            "id": "3bd4647b-892f-4c23-a41b-8843dfc88921",
             "idx": 1,
             "content": "检查外置电源与网线是否插牢，不拆机。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -29,7 +29,7 @@
             "feedback": null
           },
           {
-            "id": "9c29fb8c-1d5a-41da-87e5-1c3583eefb38",
+            "id": "1fa0b922-6210-4755-a8d2-4761199f9ede",
             "idx": 2,
             "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -37,7 +37,7 @@
             "feedback": null
           },
           {
-            "id": "896abe44-926f-48e2-ae08-30448753d5a1",
+            "id": "cad57d7d-7a4e-4840-ab1e-a9d1ff7a83d8",
             "idx": 3,
             "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -46,7 +46,7 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-10-29T16:42:54.480007+00:00"
+        "created_at": "2026-10-29T17:06:54.060134+00:00"
       },
       "reports": {}
     },
@@ -60,9 +60,9 @@
         "e24_referral": true
       },
       "passed": true,
-      "elapsed_ms": 1.38,
+      "elapsed_ms": 2.15,
       "response": {
-        "id": "1e441c66-a838-402a-bb52-87edc7b1d95c",
+        "id": "f8b354c0-3f71-4281-a410-bc4c2bb92b55",
         "device_category": "dishwasher",
         "brand": "Bosch",
         "model": null,
@@ -71,7 +71,7 @@
         "decision_reason": "Bosch E24 演示：洗碗机排水异常。请先核对完整型号；未匹配具体手册前联系专业人员，不提供拆机指导。",
         "steps": [
           {
-            "id": "16b312fa-8b61-4314-888b-a2fdd6c2d2f0",
+            "id": "6ed6b7ad-f904-40bb-918d-951600f39ee0",
             "idx": 1,
             "content": "记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
             "citation_manual": "Bosch dishwasher SM/SB 9001014024 B",
@@ -80,7 +80,7 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-10-29T16:42:54.481792+00:00"
+        "created_at": "2026-10-29T17:06:54.064589+00:00"
       },
       "reports": {}
     },
@@ -93,9 +93,9 @@
         "billy_guidance": true
       },
       "passed": true,
-      "elapsed_ms": 1.0,
+      "elapsed_ms": 8.24,
       "response": {
-        "id": "45de6fbf-b556-477b-90ba-e456f5c4330d",
+        "id": "b038decd-6b18-4575-a1c2-243fc929494b",
         "device_category": "furniture",
         "brand": "IKEA",
         "model": null,
@@ -104,7 +104,7 @@
         "decision_reason": "BILLY 组装检查演示，须以实际型号说明书为准。 工具：适配墙体的螺钉和膨胀件；其他工具以实际型号说明书为准",
         "steps": [
           {
-            "id": "4793e128-3cf5-4a15-90ff-2384b635f601",
+            "id": "822f2fb2-007c-4911-9aa5-0e2af471cf93",
             "idx": 1,
             "content": "先确认实际型号，阅读并遵循该型号说明书的每一步要求。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -112,7 +112,7 @@
             "feedback": null
           },
           {
-            "id": "665e69ab-7b26-4e84-ae05-f22958ee0132",
+            "id": "2198b4ad-02cb-4060-95b8-78dc674bfaea",
             "idx": 2,
             "content": "使用说明书要求的防倾倒连接件；墙体固定螺钉和膨胀件须适配墙体。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -120,7 +120,7 @@
             "feedback": null
           },
           {
-            "id": "43164fd9-f504-4953-b587-9268d94e91bd",
+            "id": "83c53970-58f5-43ae-b74a-660666975f16",
             "idx": 3,
             "content": "无法确定墙体材料或固定方法时，请寻求专业人员建议。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -129,7 +129,7 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-10-29T16:42:54.482911+00:00"
+        "created_at": "2026-10-29T17:06:54.072029+00:00"
       },
       "reports": {}
     },
@@ -142,18 +142,18 @@
         "refusal": true
       },
       "passed": true,
-      "elapsed_ms": 0.87,
+      "elapsed_ms": 4.13,
       "response": {
-        "id": "49101f82-9672-4786-baac-37a556adb269",
+        "id": "cddd0efa-d6e5-4bf9-9d49-349c737a0085",
         "device_category": "microwave",
         "brand": null,
         "model": null,
         "error_code": null,
         "decision": "refused",
-        "decision_reason": "微波炉内部高压电容断电后仍可致命,属于高危类目,不提供任何拆解步骤。",
+        "decision_reason": "微波炉内部可能保留危险电量。 停止自行检修，联系品牌售后或合资格维修人员。如有烟火或泄漏危险，先远离现场并联系当地紧急服务。",
         "steps": [],
         "safety_refused": true,
-        "created_at": "2026-10-29T16:42:54.483814+00:00"
+        "created_at": "2026-10-29T17:06:54.076930+00:00"
       },
       "reports": {}
     },
@@ -166,51 +166,67 @@
         "retake": true
       },
       "passed": true,
-      "elapsed_ms": 0.91,
+      "elapsed_ms": 5.71,
       "response": {
-        "detail": "照片模糊或过暗，请补光、对焦后重拍。"
+        "detail": "照片过暗，请补光后重拍。"
       },
       "reports": {}
     },
     {
       "scenario": "S6",
-      "input": "report.jpg",
+      "input": "router.jpg",
       "status": 200,
       "checks": {
         "http_status": true,
         "reports": true
       },
       "passed": true,
-      "elapsed_ms": 3.92,
+      "elapsed_ms": 10.1,
       "response": {
-        "id": "228da155-5026-4297-bb74-127c3a4bbfd9",
-        "device_category": "dishwasher",
-        "brand": "Bosch",
+        "id": "d9d1d998-822e-4bac-9cd5-81d8d08433b1",
+        "device_category": "router",
+        "brand": "TP-Link",
         "model": null,
-        "error_code": "E24",
-        "decision": "landlord",
-        "decision_reason": "演示报修：租住房屋设备问题，请联系房东安排处理。",
+        "error_code": null,
+        "decision": "diy",
+        "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
         "steps": [
           {
-            "id": "aba123c3-cda3-4d78-9c45-fd31c81f0dac",
+            "id": "7e277cf9-c820-4ce0-b53e-6a6bf97d32cf",
             "idx": 1,
-            "content": "记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
-            "citation_manual": "Bosch dishwasher SM/SB 9001014024 B",
-            "citation_section": "PDF p.35（故障表；演示，未确认用户型号）",
+            "content": "检查外置电源与网线是否插牢，不拆机。",
+            "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+            "citation_section": "PDF p.11–12",
+            "feedback": null
+          },
+          {
+            "id": "07da9425-b104-4779-9e5a-89fa09060e01",
+            "idx": 2,
+            "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
+            "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+            "citation_section": "PDF p.121",
+            "feedback": null
+          },
+          {
+            "id": "01959749-c391-4033-8990-0e717a10ddbf",
+            "idx": 3,
+            "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
+            "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+            "citation_section": "PDF p.120–122",
             "feedback": null
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-10-29T16:42:54.485604+00:00"
+        "created_at": "2026-10-29T17:06:54.087234+00:00"
       },
       "reports": {
         "zh": {
           "lang": "zh",
-          "content": "报修申请:dishwasher(Bosch),错误码 E24。已尝试步骤:步骤1。发送时请另附照片,烦请安排处理,谢谢。"
+          "content": "报修申请:router(TP-Link)。已尝试步骤:步骤1。发送时请另附照片,烦请安排处理,谢谢。"
         },
         "en": {
           "lang": "en",
-          "content": "Repair request: dishwasher (Bosch), error code E24. Steps already tried: step 1. Please attach a photo when sending this request. Please advise."
+          "content": "Repair request: router (TP-Link). Steps already tried: step 1. Please attach a photo when sending this request. Please advise."
         }
       }
     }

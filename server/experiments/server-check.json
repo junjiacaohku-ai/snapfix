@@ -5,5 +5,13 @@
     "provider": "mock"
   },
   "docs_http_status": 200,
-  "scope": "Local Uvicorn HTTP smoke test; not live vision"
+  "imported": {
+    "manuals": 16,
+    "chunks": 2032
+  },
+  "restart_preserves_feedback": true,
+  "restart_preserves_report": true,
+  "deletion_cascades": true,
+  "sqlite_retrieval_page": 35,
+  "scope": "Real Uvicorn HTTP and SQLite restart; diagnosis still offline; no phone UI test"
 }

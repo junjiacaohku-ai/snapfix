@@ -11,7 +11,8 @@
     "numpy": "2.5.4",
     "pytest": "9.2.0",
     "httpx": "0.28.1",
-    "python-multipart": "0.0.32"
+    "python-multipart": "0.0.32",
+    "Pillow": "13.0.0"
   },
   "scope": "Versions used for local offline verification; no model API calls"
 }

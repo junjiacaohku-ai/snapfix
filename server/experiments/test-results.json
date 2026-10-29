@@ -1,0 +1,16 @@
+{
+  "tests": 43,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 7.513,
+  "tested_sources": {
+    "main.py": "9a70a51c7c5a22b4c0378f41d88944a00cb9826ace7ee0b829e1d34a6df5c62b",
+    "safety_gate.py": "4952c5c0b23fb25b42d8a627ec407ab811ffad047997d10cea12b1dce0d07411",
+    "image_quality.py": "edc48bc132fbb03166da8087a9a8c0a3ac116eb00dd4599769e887cb6ad38721",
+    "session_store.py": "761fa4aac523bcf136ddff500343ec277140ede1a85b7b00f5ef97c385233c7f",
+    "corpus_store.py": "94917e268916b416ae86b1a0acba4ad90aedde137807f4e8794ce4cab33e5f66",
+    "retrieval.py": "858706236fa9711f661de47c94419349ccb2b59eb0eda2196cee6673551b063c"
+  },
+  "warning": "Starlette TestClient deprecates httpx; no failing tests"
+}
