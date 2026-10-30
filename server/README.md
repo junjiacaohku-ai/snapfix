@@ -26,6 +26,8 @@ python corpus.py data/manifest.json data/chunks.json
 python experiments/run_retrieval.py
 python experiments/evaluate_scenarios.py
 python experiments/evaluate_quality.py
+python experiments/build_quality_variants.py
+python experiments/evaluate_quality_variants.py
 python experiments/evaluate_safety.py --gate safety_gate.py --revision local --output experiments/safety-results.json
 python experiments/run_acceptance.py
 python experiments/run_server_checks.py
