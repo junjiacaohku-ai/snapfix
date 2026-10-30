@@ -11,8 +11,8 @@ CASES = [
     dict(id='S2', kind='retrieval', query='博世 E:24 排水', category='dishwasher', brand='博世', error_code='E:24', expected_manual='bosch-dishwasher-9001014024', pages=[35]),
     dict(id='S3', kind='retrieval', query='BILLY wall attachment tip over', category='furniture', brand='IKEA', manual_id='billy', expected_manual='billy', pages=[2], assumption='AA-2289105-4 explicitly chosen demo manual, not recognized from image'),
     dict(id='S4', kind='safety_reference', query='微波炉 修理 禁止分解', category='microwave', brand='Panasonic', expected_manual='panasonic-gm333w', pages=[3], assumption='Safety evidence lookup only; production must refuse before generating repair steps'),
-    dict(id='S5', kind='quality_bypass', expected='retake image; no retrieval', status='mock API only; real image quality gate pending BE-1'),
-    dict(id='S6', kind='report_bypass', expected='report from saved diagnosis and feedback; no new retrieval', status='API text tested; actual photo attachment and App sharing pending FE/BE'),
+    dict(id='S5', kind='quality_bypass', expected='retake image; no retrieval', status='Pixel-quality gate verified in acceptance-results.json and quality-variant-results.json; mobile retake UI still pending'),
+    dict(id='S6', kind='report_bypass', expected='report from saved diagnosis and feedback; no new retrieval', status='Reports and feedback persist in SQLite; verified in server-check.json; photo attachment and App sharing still pending'),
 ]
 NEGATIVES = [
     dict(id='N1', query='E240 drain', category='dishwasher', brand='Bosch', error_code='E240'),

@@ -125,13 +125,13 @@
       "id": "S5",
       "kind": "quality_bypass",
       "expected": "retake image; no retrieval",
-      "status": "mock API only; real image quality gate pending BE-1"
+      "status": "Pixel-quality gate verified in acceptance-results.json and quality-variant-results.json; mobile retake UI still pending"
     },
     {
       "id": "S6",
       "kind": "report_bypass",
       "expected": "report from saved diagnosis and feedback; no new retrieval",
-      "status": "API text tested; actual photo attachment and App sharing pending FE/BE"
+      "status": "Reports and feedback persist in SQLite; verified in server-check.json; photo attachment and App sharing still pending"
     },
     {
       "id": "N1",
