@@ -8,6 +8,9 @@ import os
 import uuid
 from datetime import datetime, timezone
 
+from pathlib import Path
+from session_store import SessionStore
+
 from fastapi import FastAPI, HTTPException, UploadFile
 from pydantic import BaseModel
 
@@ -47,7 +50,13 @@ class FeedbackRequest(BaseModel):
 class ReportRequest(BaseModel):
     lang: str = "zh"  # zh / en
 
-DB: dict[str, Session] = {}
+DB = SessionStore(
+    os.environ.get(
+        "SNAPFIX_DB",
+        str(Path(__file__).parent / "data" / "snapfix.db"),
+    ),
+    Session.model_validate,
+)
 
 # ---------- mock 场景(验收场景 2 与 4,D 线后续扩充为 6 个) ----------
 
@@ -129,13 +138,23 @@ def delete_session(session_id: str):
     return {"deleted": True}
 
 @app.post("/api/sessions/{session_id}/steps/{step_id}/feedback", response_model=Session)
-def step_feedback(session_id: str, step_id: str, req: FeedbackRequest):
-    session = get_session(session_id)
-    for step in session.steps:
-        if step.id == step_id:
-            step.feedback = req.feedback
-            return session
-    raise HTTPException(status_code=404, detail="step not found")
+def step_feedback(
+    session_id: str,
+    step_id: str,
+    req: FeedbackRequest,
+):
+    get_session(session_id)
+    updated = DB.set_feedback(
+        session_id,
+        step_id,
+        req.feedback,
+    )
+    if not updated:
+        raise HTTPException(
+            status_code=404,
+            detail="step not found",
+        )
+    return get_session(session_id)
 
 @app.post("/api/sessions/{session_id}/report")
 def generate_report(session_id: str, req: ReportRequest):
@@ -145,11 +164,13 @@ def generate_report(session_id: str, req: ReportRequest):
         content = (f"Repair request: {s.device_category}"
                    f"{f' ({s.brand})' if s.brand else ''}"
                    f"{f', error code {s.error_code}' if s.error_code else ''}. "
-                   f"Steps already tried: {tried}. Photos attached. Please advise.")
+                   f"Steps already tried: {tried}. "
+                   f"Please attach a photo when sending this request. Please advise.")
     else:
         tried = "、".join(f"步骤{st.idx}" for st in s.steps if st.feedback == "done") or "无"
         content = (f"报修申请:{s.device_category}"
                    f"{f'({s.brand})' if s.brand else ''}"
                    f"{f',错误码 {s.error_code}' if s.error_code else ''}。"
-                   f"已尝试步骤:{tried}。照片见附件,烦请安排处理,谢谢。")
+                   f"已尝试步骤:{tried}。发送时请另附照片,烦请安排处理,谢谢。")
+    DB.save_report(session_id, req.lang, content)
     return {"lang": req.lang, "content": content}
