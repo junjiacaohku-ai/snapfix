@@ -6,7 +6,7 @@
 
 | 尚未完成 | 现状和下一步 |
 |---|---|
-| 每场景3–5张真实照片 | 外观图和处理图齐备，但缺红灯、洗碗机E24、BILLY组装过程等真实样本。可由队友提供已有照片；没有设备时，需组长认可课堂演示改用外观图、手动错误码和处理图。未经确认不把原要求勾成完成。 |
+| 每场景3–5张真实照片 | 已备好[替代素材](demo-assets/alternatives/README.md)：四类设备各3张公开照片、6张处理图和手动E24输入，26项后端检查通过。仍缺红灯、E24显示和BILLY组装过程实拍；请组长确认课堂演示采用替代方案，原实拍指标暂不勾选。 |
 | 与BE-2／前端联调 | 本分支语料入库、检索和存储已测通。需合并双方接口后再跑；当前PR #2仍是拍摄／预览骨架和档案占位页。 |
 | 手机截图与全流程耗时 | 等可安装的完整App，按[六场景清单](demo-runbook.md)操作；包括拍摄、重拍、反馈、档案、复制与系统分享。 |
 | 例会纪要和贡献确认 | 已引用FE-1的平台确认记录。请提供其他真实组会的日期、参加人、决定，及GitHub以外的工作；报告贡献节再由成员核对。 |
@@ -15,6 +15,6 @@
 
 ## 可继续使用的信息源
 
-- [Bosch官方E24说明](https://www.bosch-home.co.uk/customer-service/get-support/dishwashers/e24)：可核对错误码和展示示意图，但不等于3–5张独立故障实拍；未把官网图片重新打包或当作开放许可素材。
+- [Bosch官方E24说明](https://www.bosch-home.com/us/owner-support/dishwashers/error-codes/e24)：可核对错误码和展示示意图，但不等于3–5张独立故障实拍；未把官网图片重新打包或当作开放许可素材。
 - [iFixit E24资料](https://www.ifixit.com/Troubleshooting/Bosch_Dishwasher/E24%2BCode/509243)：辅助理解场景，具体机型仍以厂家手册为准。
 - [Frontdoor](https://www.frontdoor.com/member-support)：补足第三款市面应用的对比。FixIt Lens保留为工程参考。

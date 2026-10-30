@@ -38,3 +38,10 @@ python experiments/run_server_checks.py
 语料包括15份厂家说明书和1份安全资料；来源、页码和排除页面都有记录。格式与接口细节见 [交接说明](../docs/data-handoff.md)，本次结果见 [完成情况](../docs/review-audit.md)。
 
 换电脑演示和手机验收步骤见[演示清单](../docs/demo-runbook.md)。
+
+替代素材检查及给队友的图片包（含来源和许可）：
+
+```sh
+python experiments/evaluate_demo_alternatives.py
+python experiments/package_demo_assets.py --output ../snapfix-demo-inputs.zip
+```
