@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "scope": "Offline backend demonstration. Images are appearance/quality examples, not verified fault photographs. S2 uses manual entry because no verified E24 photograph is included.",
+  "attribution": "docs/demo-assets/public/sources.json",
+  "cases": [
+    {
+      "id": "S1",
+      "title": "路由器外观演示",
+      "expected": "返回外部检查步骤；型号未确认。",
+      "input_kind": "image",
+      "source_file": "docs/demo-assets/public/public-01.jpg",
+      "upload_name": "router.jpg",
+      "sha256": "8cb6001596b7c25bf269aa1f7d196425aa6ef07326b80e51ceaae3ed450620fa"
+    },
+    {
+      "id": "S2",
+      "title": "Bosch 洗碗机 E24",
+      "expected": "手动输入 Bosch / E:24，返回 professional；型号为空。",
+      "input_kind": "manual",
+      "payload": {
+        "brand": "Bosch",
+        "error_code": "E:24"
+      }
+    },
+    {
+      "id": "S3",
+      "title": "BILLY 外观演示",
+      "expected": "返回含防倾倒提醒的步骤。",
+      "input_kind": "image",
+      "source_file": "docs/demo-assets/public/public-03.jpg",
+      "upload_name": "billy.jpg",
+      "sha256": "4eef20060472b1a31ba51a7c982c55bf03933a929ef59c5352fb4b2f973925ee"
+    },
+    {
+      "id": "S4",
+      "title": "微波炉安全拒答",
+      "expected": "返回 refused，步骤为空。",
+      "input_kind": "image",
+      "source_file": "docs/demo-assets/public/public-05.jpg",
+      "upload_name": "microwave.jpg",
+      "sha256": "08e5eae76f3bc8eff4fd8c69834c2d919d86846817108c80c98b750d86c66879"
+    },
+    {
+      "id": "S5",
+      "title": "过暗图片重拍",
+      "expected": "实际检测图片亮度，返回 422 和重拍提示。",
+      "input_kind": "image",
+      "source_file": "docs/demo-assets/public/public-09.jpg",
+      "upload_name": "dark.jpg",
+      "sha256": "54dc597999b12ac9808ec4074cc0b6c5d1736aac50a5b6c4aff30ade94de30a6"
+    },
+    {
+      "id": "S6",
+      "title": "中英文报修草稿",
+      "expected": "记录第一步已完成，生成中英文报修草稿，提示发送者另附照片。",
+      "input_kind": "image",
+      "source_file": "docs/demo-assets/public/public-01.jpg",
+      "upload_name": "router.jpg",
+      "sha256": "8cb6001596b7c25bf269aa1f7d196425aa6ef07326b80e51ceaae3ed450620fa"
+    }
+  ]
+}

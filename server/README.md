@@ -30,7 +30,11 @@ python experiments/build_quality_variants.py
 python experiments/evaluate_quality_variants.py
 python experiments/evaluate_safety.py --gate safety_gate.py --revision local --output experiments/safety-results.json
 python experiments/run_acceptance.py
+# 备用机可指定名称和输出文件，避免覆盖已有记录
+python experiments/run_acceptance.py --label demo-backup --output ../demo-backup.json
 python experiments/run_server_checks.py
 ```
 
 语料包括15份厂家说明书和1份安全资料；来源、页码和排除页面都有记录。格式与接口细节见 [交接说明](../docs/data-handoff.md)，本次结果见 [完成情况](../docs/review-audit.md)。
+
+换电脑演示和手机验收步骤见[演示清单](../docs/demo-runbook.md)。

@@ -1,9 +1,9 @@
 {
-  "tests": 45,
+  "tests": 47,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
-  "seconds": 31.329,
+  "seconds": 31.422,
   "tested_sources": {
     "main.py": "9a70a51c7c5a22b4c0378f41d88944a00cb9826ace7ee0b829e1d34a6df5c62b",
     "safety_gate.py": "4952c5c0b23fb25b42d8a627ec407ab811ffad047997d10cea12b1dce0d07411",
@@ -13,8 +13,11 @@
     "retrieval.py": "858706236fa9711f661de47c94419349ccb2b59eb0eda2196cee6673551b063c",
     "experiments/build_quality_variants.py": "4f6586d1a4d09978d1f2f810f94d3325b146e1101d900fa3024588daa8a60086",
     "experiments/evaluate_quality_variants.py": "27ff1e0e17704354c0e80e8641b4fa6f2e144f1ffcd152d0aa70c9f7e28b0012",
-    "tests/test_quality_variants.py": "876e63f305922db752c83c469763755fb7167b3f9f16d359e97e889212da517a"
+    "tests/test_quality_variants.py": "876e63f305922db752c83c469763755fb7167b3f9f16d359e97e889212da517a",
+    "experiments/run_acceptance.py": "e98116cd24599e463bdd532281854965db9eb123f2f99fbba06bf4a4b748336a",
+    "tests/test_demo_replay.py": "0161144875187fba0ff59f7b9998e2ee5d953f16482093bac6572bd391f0663b"
   },
   "warning": "Starlette TestClient deprecates httpx; no failing tests",
-  "quality_manifest_sha256": "abca1c942eef2a860f9739ce8c78c06ebd53cfd0aeeb3357e935f4afe02c1d15"
+  "quality_manifest_sha256": "abca1c942eef2a860f9739ce8c78c06ebd53cfd0aeeb3357e935f4afe02c1d15",
+  "demo_manifest_sha256": "c2f8e3c6a61d9ee55e015bc84ed6211ff7d0dca8a33027eef9579d7acaf7168f"
 }

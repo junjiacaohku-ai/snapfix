@@ -2,13 +2,15 @@
 
 Reviewed on 30 October 2026. This section distinguishes documented capabilities from the team's proposed design. It is based on primary-source documentation, not a hands-on comparative product test.
 
-## Comparable applications
+## Three applications available to users
 
 | Application | Documented capabilities | Limitation or question relevant to SnapFix | Implication for our design |
 |---|---|---|---|
 | iFixit / FixBot | Step-by-step repair guidance, visual assistance and a repair knowledge base. Its announcement acknowledges uneven guidance for less well-covered products. [1] | A guide or answer must still be checked against the exact device. We have not verified whether every rental handoff requirement is supported. | Preserve device identity and evidence; present uncertainty before giving procedural guidance. |
-| FixIt Lens (rakexhs implementation) | The repository describes vision/OCR, retrieval over manuals, safety checks, source citations and evaluation scripts. [2] | These are author-documented capabilities. We have not independently validated its reliability or all mobile workflows. | Treat a cited, safety-checked pipeline as the baseline; evaluate retrieval and refusal separately. |
+| Frontdoor | Its mobile app connects users to repair experts by video, keeps call notes and recommends local professionals. [2] | A live consultation requires connectivity and an available expert. Service availability must be checked for the user's region; we have not tested it in Hong Kong. | Let users prepare device details and a bilingual repair request before contacting someone. |
 | Google Lens | Image-based search can return information about objects, similar images, related websites and AI overviews. [3] | Visual similarity alone does not establish a model-specific fault or a validated repair procedure. This is a scope distinction, not a claim that the product lacks all safety or memory features. | Confirm model and error code before retrieval; use visual search only as supporting evidence. |
+
+FixIt Lens remains an additional engineering reference: its repository describes vision/OCR, manual retrieval, safety checks and evaluation scripts. It is not counted among the three market applications above. [5]
 
 ## Motivation and proposed contribution
 
@@ -23,8 +25,10 @@ The D-line deliverables include corpus provenance, repeatable extraction, labell
 ## Primary sources
 
 1. iFixit, “Introducing FixBot,” 9 December 2025: https://www.ifixit.com/News/114700/introducing-fixbot
-2. FixIt Lens repository README: https://github.com/rakexhs/fixit-lens
+2. Frontdoor app support and FAQ: https://www.frontdoor.com/member-support; app listing: https://play.google.com/store/apps/details?id=com.frontdoor.app.prod
 3. Google Search Help, “Search with an image on Google”: https://support.google.com/websearch/answer/1325808?hl=en
 4. Bosch dishwasher instructions, document 9001014024 B, physical PDF page 35: https://media3.bosch-home.com/Documents/9001014024_B.pdf
 
-The earlier project's unsupported claims that competing products have no safety controls, no memory, or no repair handoff are not adopted by this section. The unavailable original FixIt Lens project is not counted as a newly verified comparator.
+5. FixIt Lens repository README, engineering reference: https://github.com/rakexhs/fixit-lens
+
+The comparison does not assume that competitors lack safety controls, memory or repair handoff. Capabilities were checked in their published documentation; no hands-on comparative test was performed.
