@@ -27,7 +27,9 @@ uvicorn main:app --reload   # → http://127.0.0.1:8000/docs 可调式全部接�
 cd app && flutter run
 ```
 
-无 API key 时后端自动走 **mock 确定性模式**,全流程可演示——这是课堂演示的兜底。
+本分支后端使用 **mock 确定性模式**，不会调用真实视觉模型。六场景接口可离线演示；手机完整流程需与前端联调。
+
+张帆的数据交付、验证和剩余事项见 [完成记录](docs/review-audit.md)。
 
 ## 分工(详见 docs/2026-09-17 SnapFix 执行包)
 

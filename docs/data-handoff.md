@@ -1,0 +1,36 @@
+# 数据和接口说明
+
+在 `server/` 安装依赖后运行：
+
+```sh
+python corpus.py data/manifest.json data/chunks.json
+python corpus_store.py --database data/snapfix.db
+python -m pytest tests -q
+python experiments/run_acceptance.py
+python experiments/run_server_checks.py
+uvicorn main:app --reload
+```
+
+`manuals.json` 和 `chunks.json` 对应PRD的手册表和切块表，来源、页码等附加信息存在 `chunk_metadata`。重复导入会更新本批手册，保留其他手册。数据默认写入 `data/snapfix.db`，可用 `SNAPFIX_DB` 指定其他文件。诊断、反馈、报修草稿都保留在同一数据库，照片不保存。
+
+检索可用 `Retriever(read_chunks(database)).search(...)`。支持类别、品牌别名、错误码和已核实的手册ID；E:24与E24等价，E240不同。章节名是规则识别的，原页码可回查；45个稀疏页、6个解码失败页记录在 `extraction-audit.json`，没有把这些页面当作完整可用文本。
+
+接口约定：
+- Bosch E24：洗碗机排水场景，型号未知时转专业处理。
+- 高危描述：返回 `refused`，步骤为空。安全规则保留BE-1的 `check/SafetyVerdict` 接口；合并BE-1分支时需保留本次新增规则和回归测试。
+- 无效、过暗、模糊或过小的图片返回422；未知演示文件名也返回422。设备识别暂按文件名选场景。
+- 未知品牌/错误码返回404。反馈仅接受 `done/not_useful/skipped`，报修语言仅接受 `zh/en`。
+- 报修草稿保存到数据库，照片由发送者另附。
+
+图片阈值是演示版启发式检查，不是已经完成手机端标定的识别模型。当前实测记录见 `experiments/acceptance-results.json`、`safety-results.json` 和 `server-check.json`。
+
+## 下一阶段对接
+
+截至2026-10-30，PR #1、#2、#3均未合并。现有资料和离线接口可以先用来开发，尚未跑过三条分支合并后的手机全流程。
+
+- **BE-2（史珺瑛）**：接收 `data/manuals.json`、`data/chunks.json` 和导入脚本，核对最终表结构与字段；把 `Retriever.search()` 接入正式管线。当前 `main.py` 的诊断仍是预设答案，并未调用检索器生成回答。
+- **BE-1（曹峻嘉）**：PR #1与本分支都有 `safety_gate.py`，需保留本分支新增的漏拦修复和回归用例。PR #1的契约示例仍写 `washing_machine`，E24需按已确认的 `dishwasher` 同步。真实provider接通后重跑安全与检索检查。
+- **FE-1／FE-2（朱雨泰民、杨蕊嘉）**：PR #2的预览页“开始诊断”仍是占位提示，质量检查也固定显示通过。接入后应显示后端真实结果，处理重拍、型号为空、安全拒答和未知错误码；mock上传保留场景文件名。档案、反馈、报修接口已可接，复制、系统分享与照片附件需手机端验证。
+- **张帆**：联调时按 `demo-runbook.md` 补手机截图和实际耗时；补真实会议与贡献记录，更新报告。替代照片可以用于流程演示，能否替代原实拍指标需组长确认。
+
+SQLite和安全规则中有本次为完成验收而补的实现，涉及队友负责范围，合并时先确认最终采用的版本，不直接整文件覆盖。

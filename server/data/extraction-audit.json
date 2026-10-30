@@ -1,0 +1,4788 @@
+[
+  {
+    "manual_id": "bosch-washer",
+    "page": 1,
+    "chars": 14836,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 2,
+    "chars": 11929,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 3,
+    "chars": 5339,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 4,
+    "chars": 3078,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 5,
+    "chars": 4397,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 6,
+    "chars": 2977,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 7,
+    "chars": 4060,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 8,
+    "chars": 3895,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 9,
+    "chars": 4219,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer",
+    "page": 10,
+    "chars": 196,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 1,
+    "chars": 38,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 2,
+    "chars": 4276,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 3,
+    "chars": 3719,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 4,
+    "chars": 3643,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 5,
+    "chars": 2286,
+    "extractor": "pdfium-font-fallback",
+    "status": "excluded_undecoded_glyphs"
+  },
+  {
+    "manual_id": "billy",
+    "page": 6,
+    "chars": 47,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 7,
+    "chars": 125,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 8,
+    "chars": 68,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 9,
+    "chars": 44,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 10,
+    "chars": 58,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 11,
+    "chars": 35,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 12,
+    "chars": 70,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 13,
+    "chars": 55,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 14,
+    "chars": 61,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 15,
+    "chars": 48,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy",
+    "page": 16,
+    "chars": 90,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 1,
+    "chars": 66,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 2,
+    "chars": 4159,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 3,
+    "chars": 5211,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 4,
+    "chars": 5241,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 5,
+    "chars": 2061,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 6,
+    "chars": 1792,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 7,
+    "chars": 182,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 8,
+    "chars": 1113,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 9,
+    "chars": 1191,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 10,
+    "chars": 128,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 11,
+    "chars": 1326,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 12,
+    "chars": 1437,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 13,
+    "chars": 1081,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 14,
+    "chars": 822,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 15,
+    "chars": 955,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 16,
+    "chars": 110,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 17,
+    "chars": 661,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 18,
+    "chars": 452,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 19,
+    "chars": 834,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 20,
+    "chars": 2058,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 21,
+    "chars": 751,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 22,
+    "chars": 596,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 23,
+    "chars": 1179,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 24,
+    "chars": 909,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 25,
+    "chars": 1911,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 26,
+    "chars": 1200,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 27,
+    "chars": 1537,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 28,
+    "chars": 1073,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 29,
+    "chars": 1002,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 30,
+    "chars": 1978,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 31,
+    "chars": 1592,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 32,
+    "chars": 1628,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 33,
+    "chars": 1728,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 34,
+    "chars": 1152,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 35,
+    "chars": 2093,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 36,
+    "chars": 1059,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 37,
+    "chars": 2035,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 38,
+    "chars": 1632,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 39,
+    "chars": 1197,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 40,
+    "chars": 1717,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 41,
+    "chars": 1408,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 42,
+    "chars": 2015,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 43,
+    "chars": 1956,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 44,
+    "chars": 1869,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 45,
+    "chars": 1672,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 46,
+    "chars": 681,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 47,
+    "chars": 2311,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 48,
+    "chars": 1518,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 49,
+    "chars": 1548,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 50,
+    "chars": 2083,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 51,
+    "chars": 619,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 52,
+    "chars": 1315,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 53,
+    "chars": 940,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 54,
+    "chars": 913,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 55,
+    "chars": 1210,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 56,
+    "chars": 1596,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 57,
+    "chars": 1032,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 58,
+    "chars": 691,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 59,
+    "chars": 1476,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 60,
+    "chars": 885,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 61,
+    "chars": 765,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 62,
+    "chars": 1129,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 63,
+    "chars": 656,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 64,
+    "chars": 1615,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 65,
+    "chars": 1344,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 66,
+    "chars": 1250,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 67,
+    "chars": 1600,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 68,
+    "chars": 1067,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 69,
+    "chars": 1120,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 70,
+    "chars": 1320,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 71,
+    "chars": 1132,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 72,
+    "chars": 1398,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 73,
+    "chars": 1089,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 74,
+    "chars": 877,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 75,
+    "chars": 1678,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 76,
+    "chars": 1799,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 77,
+    "chars": 272,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 78,
+    "chars": 909,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 79,
+    "chars": 1491,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 80,
+    "chars": 650,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 81,
+    "chars": 584,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 82,
+    "chars": 1180,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 83,
+    "chars": 1473,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 84,
+    "chars": 1114,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 85,
+    "chars": 2132,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 86,
+    "chars": 862,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 87,
+    "chars": 2119,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 88,
+    "chars": 1450,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 89,
+    "chars": 839,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 90,
+    "chars": 1706,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 91,
+    "chars": 1187,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 92,
+    "chars": 1376,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 93,
+    "chars": 1314,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 94,
+    "chars": 1213,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 95,
+    "chars": 1545,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 96,
+    "chars": 813,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 97,
+    "chars": 1413,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 98,
+    "chars": 770,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 99,
+    "chars": 257,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 100,
+    "chars": 945,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 101,
+    "chars": 1110,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 102,
+    "chars": 1230,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 103,
+    "chars": 1625,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 104,
+    "chars": 1141,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 105,
+    "chars": 2082,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 106,
+    "chars": 1052,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 107,
+    "chars": 2023,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 108,
+    "chars": 1192,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 109,
+    "chars": 1660,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 110,
+    "chars": 1625,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 111,
+    "chars": 634,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 112,
+    "chars": 1991,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 113,
+    "chars": 1287,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 114,
+    "chars": 1321,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 115,
+    "chars": 1275,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 116,
+    "chars": 872,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 117,
+    "chars": 1310,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 118,
+    "chars": 1642,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 119,
+    "chars": 187,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 120,
+    "chars": 877,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 121,
+    "chars": 1272,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 122,
+    "chars": 1255,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 123,
+    "chars": 1453,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 124,
+    "chars": 1638,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 125,
+    "chars": 521,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 126,
+    "chars": 2311,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 127,
+    "chars": 1826,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 128,
+    "chars": 1123,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr940n",
+    "page": 129,
+    "chars": 869,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 1,
+    "chars": 79,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 2,
+    "chars": 860,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 3,
+    "chars": 1391,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 4,
+    "chars": 2164,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 5,
+    "chars": 1934,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 6,
+    "chars": 1058,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 7,
+    "chars": 894,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 8,
+    "chars": 1323,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 9,
+    "chars": 1540,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 10,
+    "chars": 2559,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 11,
+    "chars": 1901,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 12,
+    "chars": 1016,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 13,
+    "chars": 1299,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 14,
+    "chars": 1689,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 15,
+    "chars": 2024,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 16,
+    "chars": 2166,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 17,
+    "chars": 1943,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 18,
+    "chars": 1675,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 19,
+    "chars": 1769,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 20,
+    "chars": 1871,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 21,
+    "chars": 2149,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 22,
+    "chars": 2360,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 23,
+    "chars": 2358,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 24,
+    "chars": 1500,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 25,
+    "chars": 1044,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 26,
+    "chars": 1171,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 27,
+    "chars": 1558,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 28,
+    "chars": 915,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 29,
+    "chars": 1545,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 30,
+    "chars": 1634,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 31,
+    "chars": 831,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 32,
+    "chars": 1811,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 33,
+    "chars": 3111,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 34,
+    "chars": 1702,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 35,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-washer-1078547",
+    "page": 36,
+    "chars": 116,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 1,
+    "chars": 35,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 2,
+    "chars": 5128,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 3,
+    "chars": 4638,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 4,
+    "chars": 4052,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 5,
+    "chars": 1027,
+    "extractor": "pdfium-font-fallback",
+    "status": "excluded_undecoded_glyphs"
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 6,
+    "chars": 44,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 7,
+    "chars": 122,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 8,
+    "chars": 65,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 9,
+    "chars": 41,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 10,
+    "chars": 55,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 11,
+    "chars": 54,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 12,
+    "chars": 65,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 13,
+    "chars": 45,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 14,
+    "chars": 58,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 15,
+    "chars": 32,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2287622",
+    "page": 16,
+    "chars": 87,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 1,
+    "chars": 38,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 2,
+    "chars": 5352,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 3,
+    "chars": 5432,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 4,
+    "chars": 5283,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 5,
+    "chars": 3830,
+    "extractor": "pdfium-font-fallback",
+    "status": "excluded_undecoded_glyphs"
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 6,
+    "chars": 47,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 7,
+    "chars": 154,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 8,
+    "chars": 58,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 9,
+    "chars": 54,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 10,
+    "chars": 58,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 11,
+    "chars": 35,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 12,
+    "chars": 65,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 13,
+    "chars": 76,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 14,
+    "chars": 59,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 15,
+    "chars": 38,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "billy-2545292",
+    "page": 16,
+    "chars": 90,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 1,
+    "chars": 80,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 2,
+    "chars": 5583,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 3,
+    "chars": 5251,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 4,
+    "chars": 3187,
+    "extractor": "pdfium-font-fallback",
+    "status": "excluded_undecoded_glyphs"
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 5,
+    "chars": 73,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 6,
+    "chars": 208,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 7,
+    "chars": 123,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 8,
+    "chars": 125,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 9,
+    "chars": 83,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 10,
+    "chars": 98,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 11,
+    "chars": 84,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 12,
+    "chars": 87,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 13,
+    "chars": 84,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 14,
+    "chars": 97,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 15,
+    "chars": 74,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 16,
+    "chars": 97,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 17,
+    "chars": 74,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 18,
+    "chars": 126,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 19,
+    "chars": 84,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 20,
+    "chars": 87,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 21,
+    "chars": 152,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 22,
+    "chars": 87,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 23,
+    "chars": 94,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 24,
+    "chars": 97,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 25,
+    "chars": 105,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 26,
+    "chars": 114,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 27,
+    "chars": 166,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2335189",
+    "page": 28,
+    "chars": 129,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 1,
+    "chars": 65,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 2,
+    "chars": 5139,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 3,
+    "chars": 5033,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 4,
+    "chars": 3817,
+    "extractor": "pdfium-font-fallback",
+    "status": "excluded_undecoded_glyphs"
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 5,
+    "chars": 58,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 6,
+    "chars": 227,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 7,
+    "chars": 116,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 8,
+    "chars": 81,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 9,
+    "chars": 69,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 10,
+    "chars": 82,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 11,
+    "chars": 69,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 12,
+    "chars": 82,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 13,
+    "chars": 59,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 14,
+    "chars": 130,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 15,
+    "chars": 69,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 16,
+    "chars": 147,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 17,
+    "chars": 79,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 18,
+    "chars": 124,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 19,
+    "chars": 86,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "kallax-2334145",
+    "page": 20,
+    "chars": 160,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 1,
+    "chars": 4,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 2,
+    "chars": 14,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 3,
+    "chars": 17,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 4,
+    "chars": 24,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 5,
+    "chars": 16,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 6,
+    "chars": 14,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 7,
+    "chars": 3,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 8,
+    "chars": 14,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 9,
+    "chars": 1,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 10,
+    "chars": 27,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 11,
+    "chars": 14,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 12,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 13,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 14,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 15,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 16,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 17,
+    "chars": 4,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 18,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 19,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 20,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 21,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 22,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 23,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 24,
+    "chars": 17,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 25,
+    "chars": 4,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 26,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 27,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 28,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 29,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 30,
+    "chars": 15,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 31,
+    "chars": 2,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 32,
+    "chars": 23,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 33,
+    "chars": 10,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 34,
+    "chars": 75,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 35,
+    "chars": 62,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-bed",
+    "page": 36,
+    "chars": 57,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 1,
+    "chars": 115,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 2,
+    "chars": 4388,
+    "extractor": "pdfium-font-fallback",
+    "status": "excluded_undecoded_glyphs"
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 3,
+    "chars": 187,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 4,
+    "chars": 142,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 5,
+    "chars": 279,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 6,
+    "chars": 151,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 7,
+    "chars": 179,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 8,
+    "chars": 152,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 9,
+    "chars": 160,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 10,
+    "chars": 143,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 11,
+    "chars": 164,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 12,
+    "chars": 150,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 13,
+    "chars": 140,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 14,
+    "chars": 183,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 15,
+    "chars": 140,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 16,
+    "chars": 150,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 17,
+    "chars": 137,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 18,
+    "chars": 126,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 19,
+    "chars": 154,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 20,
+    "chars": 167,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 21,
+    "chars": 147,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 22,
+    "chars": 160,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 23,
+    "chars": 144,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 24,
+    "chars": 136,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 25,
+    "chars": 133,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 26,
+    "chars": 136,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 27,
+    "chars": 113,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 28,
+    "chars": 137,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 29,
+    "chars": 116,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 30,
+    "chars": 242,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 31,
+    "chars": 130,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "malm-drawers",
+    "page": 32,
+    "chars": 173,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 1,
+    "chars": 67,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 2,
+    "chars": 540,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 3,
+    "chars": 2307,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 4,
+    "chars": 1839,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 5,
+    "chars": 1100,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 6,
+    "chars": 142,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 7,
+    "chars": 1103,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 8,
+    "chars": 4416,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 9,
+    "chars": 4692,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 10,
+    "chars": 1324,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 11,
+    "chars": 537,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 12,
+    "chars": 1943,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 13,
+    "chars": 1529,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 14,
+    "chars": 1228,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 15,
+    "chars": 1515,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 16,
+    "chars": 1909,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 17,
+    "chars": 115,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 18,
+    "chars": 1460,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 19,
+    "chars": 1299,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 20,
+    "chars": 786,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 21,
+    "chars": 1119,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 22,
+    "chars": 1254,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 23,
+    "chars": 1010,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 24,
+    "chars": 936,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 25,
+    "chars": 1645,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 26,
+    "chars": 543,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 27,
+    "chars": 533,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 28,
+    "chars": 349,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 29,
+    "chars": 1582,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 30,
+    "chars": 1397,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 31,
+    "chars": 892,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 32,
+    "chars": 1636,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 33,
+    "chars": 1406,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 34,
+    "chars": 1703,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 35,
+    "chars": 1430,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 36,
+    "chars": 1754,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 37,
+    "chars": 1488,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 38,
+    "chars": 1083,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 39,
+    "chars": 2602,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 40,
+    "chars": 1226,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 41,
+    "chars": 1048,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 42,
+    "chars": 2430,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 43,
+    "chars": 2035,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 44,
+    "chars": 900,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 45,
+    "chars": 1290,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 46,
+    "chars": 1700,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 47,
+    "chars": 1150,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 48,
+    "chars": 1401,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 49,
+    "chars": 1804,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 50,
+    "chars": 1472,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 51,
+    "chars": 1388,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 52,
+    "chars": 1440,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 53,
+    "chars": 1279,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 54,
+    "chars": 1514,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 55,
+    "chars": 1534,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 56,
+    "chars": 1411,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 57,
+    "chars": 1677,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 58,
+    "chars": 1590,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 59,
+    "chars": 1191,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 60,
+    "chars": 1714,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 61,
+    "chars": 1444,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 62,
+    "chars": 1910,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 63,
+    "chars": 1390,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 64,
+    "chars": 1948,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 65,
+    "chars": 1525,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 66,
+    "chars": 1482,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 67,
+    "chars": 1409,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 68,
+    "chars": 1239,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 69,
+    "chars": 1461,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 70,
+    "chars": 1036,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 71,
+    "chars": 1907,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 72,
+    "chars": 1661,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 73,
+    "chars": 1345,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 74,
+    "chars": 1064,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 75,
+    "chars": 1443,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 76,
+    "chars": 1010,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 77,
+    "chars": 1423,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 78,
+    "chars": 1379,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 79,
+    "chars": 1300,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 80,
+    "chars": 1272,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 81,
+    "chars": 772,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 82,
+    "chars": 1146,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 83,
+    "chars": 1603,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 84,
+    "chars": 1174,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 85,
+    "chars": 788,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 86,
+    "chars": 959,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 87,
+    "chars": 781,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 88,
+    "chars": 761,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 89,
+    "chars": 954,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 90,
+    "chars": 1145,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 91,
+    "chars": 1318,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 92,
+    "chars": 1266,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 93,
+    "chars": 1022,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 94,
+    "chars": 1124,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 95,
+    "chars": 1643,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 96,
+    "chars": 1432,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 97,
+    "chars": 1285,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 98,
+    "chars": 1411,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 99,
+    "chars": 1228,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 100,
+    "chars": 1477,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 101,
+    "chars": 1559,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 102,
+    "chars": 763,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 103,
+    "chars": 1414,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 104,
+    "chars": 1577,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 105,
+    "chars": 1288,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 106,
+    "chars": 187,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 107,
+    "chars": 1370,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 108,
+    "chars": 1618,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 109,
+    "chars": 766,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 110,
+    "chars": 1083,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 111,
+    "chars": 918,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 112,
+    "chars": 685,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 113,
+    "chars": 383,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 114,
+    "chars": 590,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 115,
+    "chars": 61,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 116,
+    "chars": 1371,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 117,
+    "chars": 2499,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "tplink-wr740n-v5",
+    "page": 118,
+    "chars": 1041,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 1,
+    "chars": 44,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 2,
+    "chars": 5459,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 3,
+    "chars": 2657,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 4,
+    "chars": 2508,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 5,
+    "chars": 2893,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 6,
+    "chars": 1355,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 7,
+    "chars": 3509,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 8,
+    "chars": 3101,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 9,
+    "chars": 1974,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 10,
+    "chars": 3931,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 11,
+    "chars": 3224,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 12,
+    "chars": 3203,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 13,
+    "chars": 4498,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 14,
+    "chars": 3403,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 15,
+    "chars": 3251,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 16,
+    "chars": 3472,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 17,
+    "chars": 1785,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 18,
+    "chars": 0,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 19,
+    "chars": 0,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-microwave-hmt84",
+    "page": 20,
+    "chars": 125,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 1,
+    "chars": 161,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 2,
+    "chars": 3555,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 3,
+    "chars": 914,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 4,
+    "chars": 757,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 5,
+    "chars": 876,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 6,
+    "chars": 483,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 7,
+    "chars": 1068,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 8,
+    "chars": 842,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 9,
+    "chars": 871,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 10,
+    "chars": 875,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 11,
+    "chars": 555,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 12,
+    "chars": 649,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 13,
+    "chars": 645,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 14,
+    "chars": 629,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 15,
+    "chars": 280,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 16,
+    "chars": 503,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 17,
+    "chars": 563,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 18,
+    "chars": 673,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 19,
+    "chars": 1576,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 20,
+    "chars": 876,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 21,
+    "chars": 1482,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 22,
+    "chars": 1836,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 23,
+    "chars": 1437,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 24,
+    "chars": 1314,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 25,
+    "chars": 894,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 26,
+    "chars": 533,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 27,
+    "chars": 1054,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "panasonic-gm333w",
+    "page": 28,
+    "chars": 331,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 1,
+    "chars": 92,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 2,
+    "chars": 25,
+    "extractor": "pdfium-font-fallback",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 3,
+    "chars": 2594,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 4,
+    "chars": 2402,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 5,
+    "chars": 1765,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 6,
+    "chars": 1916,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 7,
+    "chars": 1861,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 8,
+    "chars": 1300,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 9,
+    "chars": 940,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 10,
+    "chars": 1649,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 11,
+    "chars": 1494,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 12,
+    "chars": 1016,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 13,
+    "chars": 1821,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 14,
+    "chars": 706,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 15,
+    "chars": 1713,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 16,
+    "chars": 1771,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 17,
+    "chars": 781,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 18,
+    "chars": 738,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 19,
+    "chars": 846,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 20,
+    "chars": 1014,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 21,
+    "chars": 1476,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 22,
+    "chars": 1844,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 23,
+    "chars": 1849,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 24,
+    "chars": 1380,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 25,
+    "chars": 1133,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 26,
+    "chars": 1541,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 27,
+    "chars": 1856,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 28,
+    "chars": 2247,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 29,
+    "chars": 1889,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 30,
+    "chars": 1750,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 31,
+    "chars": 2118,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 32,
+    "chars": 1272,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 33,
+    "chars": 1402,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 34,
+    "chars": 920,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 35,
+    "chars": 1578,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": true
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 36,
+    "chars": 1824,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 37,
+    "chars": 1849,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 38,
+    "chars": 1891,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 39,
+    "chars": 2383,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 40,
+    "chars": 1986,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 41,
+    "chars": 1252,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 42,
+    "chars": 1837,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 43,
+    "chars": 1883,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 44,
+    "chars": 1762,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 45,
+    "chars": 1294,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 46,
+    "chars": 1204,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 47,
+    "chars": 1,
+    "extractor": "pdfplumber",
+    "status": "sparse_or_image_page",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 48,
+    "chars": 1296,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "emsd-gas-appliances",
+    "page": 1,
+    "chars": 3224,
+    "extractor": "pdfium-font-fallback",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "emsd-gas-appliances",
+    "page": 2,
+    "chars": 4763,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 1,
+    "chars": 1208,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 2,
+    "chars": 2618,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 3,
+    "chars": 2584,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 4,
+    "chars": 3257,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 5,
+    "chars": 2772,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 6,
+    "chars": 320,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 7,
+    "chars": 1543,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 8,
+    "chars": 896,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 9,
+    "chars": 572,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 10,
+    "chars": 4222,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 11,
+    "chars": 763,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 12,
+    "chars": 1167,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 13,
+    "chars": 2686,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 14,
+    "chars": 417,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 15,
+    "chars": 3320,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 16,
+    "chars": 3448,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 17,
+    "chars": 2106,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 18,
+    "chars": 2778,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 19,
+    "chars": 3342,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 20,
+    "chars": 2101,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 21,
+    "chars": 1806,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 22,
+    "chars": 4223,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 23,
+    "chars": 2217,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 24,
+    "chars": 985,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 25,
+    "chars": 1527,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 26,
+    "chars": 930,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 27,
+    "chars": 489,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 28,
+    "chars": 361,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 29,
+    "chars": 3100,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 30,
+    "chars": 1305,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 31,
+    "chars": 2093,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 32,
+    "chars": 425,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 33,
+    "chars": 3537,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 34,
+    "chars": 2717,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 35,
+    "chars": 603,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 36,
+    "chars": 749,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 37,
+    "chars": 1454,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 38,
+    "chars": 736,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 39,
+    "chars": 1191,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 40,
+    "chars": 1652,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 41,
+    "chars": 1467,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 42,
+    "chars": 931,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 43,
+    "chars": 1464,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "page": 44,
+    "chars": 1407,
+    "extractor": "pdfplumber",
+    "status": "text_extracted",
+    "visual_correction": false
+  }
+]
