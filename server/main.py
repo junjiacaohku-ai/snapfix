@@ -12,11 +12,17 @@ from pathlib import Path
 from session_store import SessionStore
 
 from fastapi import FastAPI, HTTPException, UploadFile
-from pydantic import BaseModel
+import sqlite3
+from typing import Annotated, Literal
 
+from pydantic import BaseModel, Field
+from diagnosis_service import diagnose_manual_data
+from report_service import build_report
+from retrieval_service import search_manuals
+from translation_service import TranslationError
 app = FastAPI(title="SnapFix API", version="0.1.0")
 
-MOCK_MODE = not os.environ.get("GEMINI_API_KEY")
+MOCK_MODE = True  # 当前没有接通真实模型 provider。
 
 # ---------- 数据模型(对齐 PRD 第 9 节,先内存实现,BE-2 负责落 SQLite) ----------
 
@@ -45,10 +51,22 @@ class ManualDiagnoseRequest(BaseModel):
     error_code: str
 
 class FeedbackRequest(BaseModel):
-    feedback: str  # done / not_useful / skipped
+    feedback: Literal["done", "not_useful", "skipped"]
 
 class ReportRequest(BaseModel):
-    lang: str = "zh"  # zh / en
+    lang: Literal["zh", "en"] = "zh"
+    photo_refs: list[Annotated[str, Field(min_length=1, max_length=120)]] = Field(
+        default_factory=list, max_length=5,
+    )
+
+class ManualSearchRequest(BaseModel):
+    query: str = Field(min_length=1, max_length=500)
+    category: str = ""
+    category_hint: str = ""
+    brand: str = ""
+    error_code: str = ""
+    manual_id: str = ""
+    limit: int = Field(default=3, ge=1, le=10)
 
 DB = SessionStore(
     os.environ.get(
@@ -62,22 +80,15 @@ DB = SessionStore(
 
 def _mock_e24() -> Session:
     return Session(
-        id=str(uuid.uuid4()),
-        device_category="washing_machine",
-        brand="Bosch", model=None, error_code="E24",
-        decision="diy",
-        decision_reason="排水泵滤网堵塞,非破坏性操作,工具只需一枚硬币,约 15 分钟。",
-        steps=[
-            Step(id=str(uuid.uuid4()), idx=1,
-                 content="断电并关闭水龙头,在机器右下角找到排水泵检修口。",
-                 citation_manual="Bosch 洗衣机用户手册", citation_section="§7.2"),
-            Step(id=str(uuid.uuid4()), idx=2,
-                 content="用硬币逆时针旋开滤网盖,垫毛巾接住残水。",
-                 citation_manual="Bosch 洗衣机用户手册", citation_section="§7.3"),
-            Step(id=str(uuid.uuid4()), idx=3,
-                 content="取出滤网清除异物,装回后通电试运行脱水程序。",
-                 citation_manual="Bosch 洗衣机用户手册", citation_section="§7.4"),
-        ],
+        id=str(uuid.uuid4()), device_category="dishwasher",
+        brand="Bosch", model=None, error_code="E24", decision="professional",
+        decision_reason="离线演示数据：请核对完整型号，不提供未经核实的维修步骤。",
+        steps=[Step(
+            id=str(uuid.uuid4()), idx=1,
+            content="记录设备完整型号和错误码，联系品牌售后核对适用说明书。",
+            citation_manual="mock 演示内容（未核验实际型号）",
+            citation_section="无已核实引用",
+        )],
         created_at=datetime.now(timezone.utc).isoformat(),
     )
 
@@ -98,6 +109,24 @@ def health():
     return {"status": "ok", "mock": MOCK_MODE,
             "provider": "mock" if MOCK_MODE else "gemini"}
 
+@app.post("/api/manuals/search")
+def search_manuals_endpoint(req: ManualSearchRequest):
+    if not req.query.strip():
+        raise HTTPException(status_code=422, detail="query must not be blank")
+    try:
+        matches = search_manuals(
+            DB.path, req.query, category=req.category,
+            category_hint=req.category_hint,
+            brand=req.brand,
+            error_code=req.error_code, manual_id=req.manual_id, limit=req.limit,
+        )
+    except (sqlite3.Error, OSError):
+        raise HTTPException(status_code=503, detail="Manual database unavailable; check corpus import.")
+    return {
+        "matched": bool(matches), "matches": matches,
+        "message": "找到候选片段，请核对型号。" if matches else "未找到匹配说明书，当前无可用引用。",
+    }
+
 @app.post("/api/analyze/image", response_model=Session)
 async def analyze_image(file: UploadFile):
     # mock:按文件名关键词路由到场景;真实管线:质量门→vision→检索→安全门→生成
@@ -112,11 +141,13 @@ async def analyze_image(file: UploadFile):
 
 @app.post("/api/diagnose/manual", response_model=Session)
 def diagnose_manual(req: ManualDiagnoseRequest):
-    code = req.error_code.strip().upper()
-    if req.brand.lower() in {"bosch", "博世"} and code == "E24":
-        session = _mock_e24()
-    else:
-        session = _mock_e24()  # mock 兜底,真实管线走检索
+    if not req.brand.strip() or not req.error_code.strip():
+        raise HTTPException(status_code=422, detail="brand and error_code must not be blank")
+    try:
+        data = diagnose_manual_data(DB.path, req.brand, req.error_code)
+    except (sqlite3.Error, OSError):
+        raise HTTPException(status_code=503, detail="Manual database unavailable; check corpus import.")
+    session = Session.model_validate(data)
     DB[session.id] = session
     return session
 
@@ -158,19 +189,19 @@ def step_feedback(
 
 @app.post("/api/sessions/{session_id}/report")
 def generate_report(session_id: str, req: ReportRequest):
-    s = get_session(session_id)
-    if req.lang == "en":
-        tried = ", ".join(f"step {st.idx}" for st in s.steps if st.feedback == "done") or "none"
-        content = (f"Repair request: {s.device_category}"
-                   f"{f' ({s.brand})' if s.brand else ''}"
-                   f"{f', error code {s.error_code}' if s.error_code else ''}. "
-                   f"Steps already tried: {tried}. "
-                   f"Please attach a photo when sending this request. Please advise.")
-    else:
-        tried = "、".join(f"步骤{st.idx}" for st in s.steps if st.feedback == "done") or "无"
-        content = (f"报修申请:{s.device_category}"
-                   f"{f'({s.brand})' if s.brand else ''}"
-                   f"{f',错误码 {s.error_code}' if s.error_code else ''}。"
-                   f"已尝试步骤:{tried}。发送时请另附照片,烦请安排处理,谢谢。")
+    session = get_session(session_id)
+
+    try:
+        content = build_report(session, req.lang, req.photo_refs)
+    except TranslationError as exc:
+        raise HTTPException(
+            status_code=503,
+            detail=str(exc),
+        ) from exc
+
     DB.save_report(session_id, req.lang, content)
-    return {"lang": req.lang, "content": content}
+
+    return {
+        "lang": req.lang,
+        "content": content,
+    }
