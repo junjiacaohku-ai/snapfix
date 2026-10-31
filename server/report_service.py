@@ -1,4 +1,15 @@
-from translation_service import translate_texts
+from translation_service import TranslationError, translate_texts
+
+
+CATEGORY_ZH = {
+    "dishwasher": "洗碗机",
+    "washing_machine": "洗衣机",
+    "router": "路由器",
+    "microwave": "微波炉",
+    "furniture": "家具",
+    "ikea_furniture": "宜家家具",
+    "unknown": "未知",
+}
 
 
 def build_report(session, lang: str, photo_refs=()) -> str:
@@ -6,24 +17,43 @@ def build_report(session, lang: str, photo_refs=()) -> str:
         raise ValueError("Unsupported report language")
 
     completed = [
-        step.content
+        step
         for step in sorted(session.steps, key=lambda step: step.idx)
         if step.feedback == "done"
     ]
-
-    # 设备类别与已完成步骤一起转换；其他设备标识保持原值。
-    translated = translate_texts(
-        [session.device_category, *completed],
-        lang,
-    )
-    category = translated[0]
-    tried = "\n".join(
-        f"- {text}"
-        for text in translated[1:]
-    )
     photos = "; ".join(photo_refs)
 
     if lang == "en":
+        # 保留旧版能力：无密钥时也能生成英文报告。
+        category = session.device_category.replace("_", " ")
+        tried = "\n".join(
+            f"- Step {step.idx} (marked complete)."
+            for step in completed
+        )
+        note = ""
+
+        # 翻译只是增强功能，失败不能阻止报告生成。
+        if completed:
+            try:
+                translated = translate_texts(
+                    [
+                        session.device_category,
+                        *[step.content for step in completed],
+                    ],
+                    "en",
+                )
+                category = translated[0]
+                tried = "\n".join(
+                    f"- {text}"
+                    for text in translated[1:]
+                )
+            except TranslationError:
+                note = (
+                    "Step descriptions were not translated. "
+                    "Completed step numbers are listed above; "
+                    "please refer to the original diagnosis for details.\n"
+                )
+
         return (
             "Repair request\n"
             f"Device: {category}\n"
@@ -32,10 +62,21 @@ def build_report(session, lang: str, photo_refs=()) -> str:
             f"Error code: {session.error_code or 'Not provided'}\n"
             "Steps already tried:\n"
             f"{tried or '- No completed steps recorded.'}\n"
+            f"{note}"
             f"Photo references: {photos or 'Not provided'}\n"
             "Please attach the actual photos when sending this request.\n"
             "Please advise or arrange an inspection."
         )
+
+    # 中文沿用诊断原文，不需要 Gemini。
+    category = CATEGORY_ZH.get(
+        session.device_category,
+        session.device_category,
+    )
+    tried = "\n".join(
+        f"- {step.content}"
+        for step in completed
+    )
 
     return (
         "报修申请\n"

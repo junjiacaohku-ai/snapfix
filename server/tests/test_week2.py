@@ -132,3 +132,89 @@ def test_reference_retriever_keeps_confirmed_filters():
             row("c", "E24 drain issue", "router")]
     found = Retriever(rows).search("drain E24", category="dishwasher", error_code="E24")
     assert [r["id"] for r in found] == ["b"]
+
+
+@pytest.mark.parametrize("lang", ["zh", "en"])
+def test_report_without_key_still_saves(client, monkeypatch, lang):
+    import translation_service
+
+    monkeypatch.setenv("GEMINI_API_KEY", "")
+    network_calls = []
+
+    def forbid_network(*args, **kwargs):
+        network_calls.append(True)
+        raise AssertionError("没有密钥时不应调用 Gemini 客户端")
+
+    monkeypatch.setattr(
+        translation_service.genai,
+        "Client",
+        forbid_network,
+    )
+
+    session = api._mock_e24()
+    session.steps[0].feedback = "done"
+    api.DB[session.id] = session
+
+    response = client.post(
+        f"/api/sessions/{session.id}/report",
+        json={
+            "lang": lang,
+            "photo_refs": ["bosch-dishwasher-1.jpg"],
+        },
+    )
+
+    assert response.status_code == 200
+    assert network_calls == []
+    content = response.json()["content"]
+    assert "Bosch" in content
+    assert "E24" in content
+    assert "bosch-dishwasher-1.jpg" in content
+
+    if lang == "en":
+        assert "Step 1 (marked complete)." in content
+        assert "Step descriptions were not translated." in content
+    else:
+        assert session.steps[0].content in content
+
+    with api.DB.connection() as db:
+        row = db.execute(
+            "SELECT lang, content FROM reports WHERE session_id=?",
+            (session.id,),
+        ).fetchone()
+
+    assert row["lang"] == lang
+    assert row["content"] == content
+
+
+def test_report_translation_failure_still_saves(client, monkeypatch):
+    from translation_service import TranslationError
+
+    def fail_translation(*args, **kwargs):
+        raise TranslationError("Simulated service failure")
+
+    monkeypatch.setattr(
+        report_service,
+        "translate_texts",
+        fail_translation,
+    )
+
+    session = api._mock_e24()
+    session.steps[0].feedback = "done"
+    api.DB[session.id] = session
+
+    response = client.post(
+        f"/api/sessions/{session.id}/report",
+        json={"lang": "en"},
+    )
+
+    assert response.status_code == 200
+    content = response.json()["content"]
+    assert "Step 1 (marked complete)." in content
+
+    with api.DB.connection() as db:
+        saved = db.execute(
+            "SELECT content FROM reports WHERE session_id=?",
+            (session.id,),
+        ).fetchone()
+
+    assert saved["content"] == content
