@@ -2,92 +2,139 @@
 
 > 先搞懂，再决定。 / Snap it. Fix it. Or report it.
 
-项目目标：拍照或手动输入设备故障信息，查询说明书并提供诊断、处理决策和报修支持。
-
 HKU COMP7506A Group Project · Flutter + FastAPI · 演示 2026-11-19 · 截止交付 2026-11-30（组内目标 11-29）
+
+项目目标：拍照或手动输入设备故障信息，查询说明书并提供诊断、处理决策和报修支持。
 
 ## 当前版本
 
-本 README 描述当前 BE-2 分支，macOS 和 Windows 均可配置后端。各队友尚未合并分支的功能不视为本分支已实现。
+本文描述当前 `feature/be2-storage-retrieval` 分支。其他队友尚未合并的功能不视为本分支已实现。最新分工和验收标准以 [四周冲刺计划](docs/2026-10-22%20SnapFix%20四周冲刺计划.md) 为准。
 
 | 部分 | 当前状态 |
 |---|---|
-| FastAPI 后端 | 诊断仍为 mock；已接入 SQLite 档案、步骤反馈和报修草稿存储 |
-| 说明书语料 | 已接收 16 份资料、2032 个切块，提供 JSON 导入脚本 |
-| 检索与真实识别 | BM25 尚未接入诊断流程；真实 vision、完整安全门和引用校验待整合 |
-| Flutter App | 本分支 `app/` 目前只有说明文档，尚未初始化 Flutter 工程 |
+| SQLite | 诊断、步骤反馈、报修草稿持久化；删除诊断时级联删除步骤和草稿 |
+| 说明书语料 | 16 份资料、2032 个切块，使用现成 JSON 导入 |
+| BM25 | 已实现检索端点、类别提示加权、错误码加权，以及品牌别名和错误码归一化 |
+| 手动错误码诊断 | 已调用真实语料检索；无召回明确提示无引用；目前不生成维修步骤 |
+| 图片诊断 | 仍按文件名返回 E24／微波炉演示场景，尚未接入真实图片识别管线 |
+| 报修 | 中文直接使用已完成步骤原文；英文可选 Gemini 翻译，无 key 或调用失败时仍可生成报告 |
+| Flutter App | 本分支 `app/` 只有说明文档，前端工程待整合 |
 | 展示页 | `landing/index.html` 为静态项目展示页 |
 
-运行说明与实际测试记录应区分：本文提供跨平台操作步骤，不代表已完成 macOS／Windows 双平台、手机或真实识别验收。完整后端说明见 [server/README.md](server/README.md)。
+完整后端安装、接口和验收说明见 [server/README.md](server/README.md)。本文同时提供 macOS 和 Windows 命令；Windows 实机、手机流程及真实图片管线尚未完成联合验收。
 
 ## 目录结构
 
 ```text
-app/       Flutter App（本分支待初始化）
-server/    FastAPI、SQLite 存储、语料 JSON 和导入程序
-  data/    manuals.json、chunks.json，以及本机生成的数据库
-  README.md
-  main.py
-  corpus_store.py
-  session_store.py
-docs/      项目计划、需求、调研与交付材料
-landing/   静态项目展示页
+app/                         Flutter App 说明，工程待整合
+docs/                        需求、分工、四周冲刺计划和调研
+landing/                     静态展示页
+server/
+  main.py                    API 和请求校验
+  corpus_store.py            JSON 语料导入
+  session_store.py           SQLite 诊断、反馈和报告存储
+  retrieval.py               BM25、归一化和加权排序
+  retrieval_service.py       数据库读取与检索索引缓存
+  diagnosis_service.py       手动错误码检索流程
+  safety_gate.py             本分支使用的安全规则
+  report_service.py          中英模板与翻译失败降级
+  translation_service.py     可选 Gemini 翻译
+  requirements.txt           运行依赖
+  requirements-dev.txt       测试依赖
+  tests/                     自动化测试
+  data/                      manuals.json、chunks.json 和本机数据库
 ```
 
 ## 环境要求
 
-- 后端：Python **3.11 或以上**，使用 Python 自带 SQLite，无需安装数据库服务器。
-- macOS：终端或 VS Code 内置 zsh/bash；Windows：PowerShell 或 cmd。
-- 团队协作：Git。使用 VS Code 时可安装 Python 扩展。
-- 前端开发另需 Flutter SDK 及目标平台工具；只做后端无需安装 Flutter、Xcode 或 Android Studio。
+- Python **3.11 或以上**；SQLite 使用 Python 标准库，无需另装数据库服务器。
+- macOS 使用终端或 VS Code 内置 zsh/bash；Windows 使用 PowerShell 或 cmd。
+- Git 用于协作；后端开发无需安装 Flutter、Xcode 或 Android Studio。
+- 首次安装依赖需要网络。安装完成后，检索、档案、mock 诊断和基础报修无需 API key；英文步骤正文在线翻译需要有效 key 和网络。
 
 ## 快速开始：后端
 
-先在 VS Code 打开整个仓库。以下命令从**项目根目录**开始，逐行执行；已经位于 `server` 时跳过 `cd server`。
+从同时包含 `app`、`docs`、`landing`、`server` 的项目根目录执行。若已在 `server`，跳过 `cd server`；已有 `.venv` 时跳过创建，重新激活即可。
 
 ### macOS（zsh/bash）
 
-先用 `python3 --version` 确认版本为 3.11 或以上。
-
 ```bash
+python3 --version
 cd server
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python corpus_store.py --database data/snapfix.db
+python -X utf8 corpus_store.py --database data/snapfix.db
 python -m uvicorn main:app --reload
 ```
 
 ### Windows（PowerShell）
 
-先用 `python --version` 确认版本为 3.11 或以上。
-
 ```powershell
+python --version
 cd server
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-python corpus_store.py --database data/snapfix.db
+python -X utf8 corpus_store.py --database data/snapfix.db
 python -m uvicorn main:app --reload
 ```
 
-cmd 的激活命令为 `.venv\Scripts\activate.bat`，其他后续 Python 命令相同。若 PowerShell 阻止激活，无需修改系统执行策略，可直接用 `.\.venv\Scripts\python.exe` 替代后续命令中的 `python`。Python Launcher、直接运行方式等详见 [后端安装说明](server/README.md#2-安装)。
+确认 Python 版本不低于 3.11。Windows 可用 `py -3` 创建环境；cmd 的激活命令为 `.venv\Scripts\activate.bat`。PowerShell 禁止激活脚本时，可直接用 `.\.venv\Scripts\python.exe` 替代后续命令中的 `python`，无需更改执行策略。
 
-`.venv` 只创建一次。以后在 `server` 中重新激活环境并启动即可；依赖或语料更新后再安装依赖或重新导入。当前交接版本的导入结果应为 16 份资料、2032 个切块。
+当前导入代码尚未明确指定文件编码，因此语料导入和测试命令使用 `-X utf8`，避免依赖电脑默认编码。语料导入预期输出为 `{"manuals": 16, "chunks": 2032}`。
 
-### 打开接口页面
+看到 `Application startup complete` 后打开 [Swagger UI](http://127.0.0.1:8000/docs)。保持终端运行；停止服务按 Control+C（macOS）或 Ctrl+C（Windows）。根地址 `/` 未定义，返回 404 时请改为访问 `/docs`。
 
-看到 `Application startup complete` 后打开 [Swagger UI](http://127.0.0.1:8000/docs)。这是 FastAPI 集成的后端接口调试界面，手机 App 界面由 Flutter 实现。
+- 默认数据库：`server/data/snapfix.db`；自定义数据库必须让导入路径与服务路径一致。
+- 更新语料时先停止服务，导入完成后重新启动，确保检索索引刷新。
+- [健康接口](http://127.0.0.1:8000/api/health) 当前返回图片诊断的 mock 状态，不能用于判断报修翻译是否已调用 Gemini。
 
-- 健康检查：[GET /api/health](http://127.0.0.1:8000/api/health)。
-- `/` 首页未定义，访问根地址返回 404 时，请改为打开 `/docs`。
-- 默认数据库：`server/data/snapfix.db`。自定义 `SNAPFIX_DB` 时，导入路径和服务路径必须一致。
-- 停止服务：macOS 按 Control+C，Windows 按 Ctrl+C。终端需保持运行才能接收请求。
-- 当前无需 API key；本分支尚未接入真实 Gemini 调用，健康接口的 provider 标记不能作为已调用模型的证据。
+### 报修与可选密钥
+
+没有 `.env` 或没有密钥也能启动并生成中英文报告：
+
+| 报告情形 | 当前行为 |
+|---|---|
+| 中文 | 使用本地模板和已完成步骤原文，不调用 Gemini |
+| 英文，翻译成功 | 使用英文模板及翻译后的已完成步骤正文 |
+| 英文，无密钥／翻译失败 | 返回已完成步骤编号，并明确注明正文未翻译 |
+| 没有已完成步骤 | 明确显示暂无已完成步骤，不编造操作 |
+
+照片引用是文字，发送报修时需要另附实际照片。无密钥的英文降级报告不代表已完成任意步骤正文的英文翻译。
+
+需要在线翻译时，在 `server/.env` 中配置，已有文件不要覆盖：
+
+```dotenv
+GEMINI_API_KEY=替换为你自己的真实密钥
+GEMINI_MODEL=gemini-3.5-flash-lite
+```
+
+`translation_service.py` 会加载 `server/.env`，已有进程环境变量优先；修改后停止并重新启动服务。真实密钥不提交 Git，`OPENAI_API_KEY` 当前只是预留配置。配置密钥不会启用真实图片诊断。详细说明见 [后端文档](server/README.md#35-报修和可选-gemini-配置)。
+
+## 测试与验收
+
+在已激活环境的 `server` 目录执行，macOS 与 Windows 命令相同：
+
+```sh
+python -m pip install -r requirements-dev.txt
+python -X utf8 -m pytest -q
+```
+
+2026-10-31 在本机 macOS、Python 3.14 环境记录的结果为 **29 passed, 1 warning**。警告为测试依赖弃用提示；这不是 Windows 或手机实测结果。测试使用临时数据库，翻译分支通过替代函数检查，不调用真实 Gemini。
+
+人工验收见 [后端测试说明](server/README.md#4-测试与验收)：
+
+1. 检索 `Bosch E24`，确认正确手册 PDF 第 35 页进入 Top3；未知错误码返回空召回。
+2. 上传演示图片创建含步骤记录，提交 `done` 反馈，生成中英报告；无密钥时两种语言均应成功。
+3. 停止并重启服务，查询原诊断，检查反馈和已有报告仍保留。
+4. 删除测试诊断，确认关联步骤、报告一起删除，语料不受影响。
+
+真实图片识别→检索→生成→引用校验仍需与 BE-1 联调；手机预览、复制和分享需与前端联调。Windows 实机复测、六场景检索评估及全组离线演示切换待后续完成。
 
 ## 前端与展示页
 
-Flutter 工程由前端负责人按 [app/README.md](app/README.md) 初始化。不要在尚未整合前端工程的本分支直接运行 `flutter run`。拿到已初始化的工程并配置 SDK 后，从项目根目录执行（两种系统相同）：
+本分支没有可运行的 Flutter 工程，说明见 [app/README.md](app/README.md)。整合前端工程并配置 SDK 后，从项目根目录执行：
 
 ```sh
 cd app
@@ -95,22 +142,9 @@ flutter pub get
 flutter run
 ```
 
-Android 模拟器在 macOS 和 Windows 上均可使用；iOS Simulator 仅在 macOS 配合 Xcode 使用。本机接口地址为 `http://127.0.0.1:8000`，Android Emulator 访问宿主机使用 `http://10.0.2.2:8000`。真实手机需另行配置可达的后端地址，不能用手机自身的 `127.0.0.1` 指代电脑。
+Android Emulator 访问电脑后端使用 `http://10.0.2.2:8000`；真实手机需配置可达的后端地址。手机自己的 `127.0.0.1` 不指向电脑。iOS Simulator 仅在 macOS 配合 Xcode 使用。
 
-展示页可直接用浏览器打开 [landing/index.html](landing/index.html)。
-
-## 测试与验收
-
-完整操作见 [后端测试说明](server/README.md#4-测试与验收)，macOS 和 Windows 使用同一套接口验收步骤：
-
-1. 导入 JSON，检查说明书／切块数量、重复导入和外键关联。
-2. 在 `/docs` 创建 mock 诊断，记录诊断 ID；提交步骤反馈，生成中英报修草稿。
-3. 停止并重启服务，按原 ID 查询，确认诊断、步骤、反馈和草稿仍保留。
-4. 删除专门创建的测试诊断，确认关联步骤、报修草稿一起删除，语料不受影响。
-
-当前分支尚未加入自动化测试目录。真实识别、检索生成和手机全流程应另行验收；不要用 mock 或其他分支的测试结果代替。当前 E24 mock 仍有旧设备类别／引用示例，需与 BE-1、张帆的数据版本统一。
-
-SQLite 存储模块、导入程序及 JSON 语料接收自张帆的数据分支，BE-2 完成后端存储接入。具体贡献以 Git、PR 和实际验收记录为准。
+展示页可直接打开 [landing/index.html](landing/index.html)。
 
 ## 分工(详见 docs/2026-09-17 SnapFix 执行包)
 
