@@ -1,0 +1,9 @@
+scenario,input,observed,status,scope
+1 router,public-01.jpg named router.jpg,quality checked and router demo returned,PASS,device classification is offline
+2 Bosch E24,manual Bosch E:24,dishwasher professional referral,PASS,actual device model unknown
+3 BILLY,public-03.jpg named billy.jpg,tools and anti-tip guidance,PASS,offline scenario with manufacturer citation
+4 microwave,public-05.jpg named microwave.jpg,safety rule refused with no steps,PASS,rules executed before response
+5 dark image,public-09.jpg named router.jpg,422 retake message from pixel brightness,PASS,independent of filename
+6 report,router diagnosis plus done feedback,Chinese and English draft saved,PASS,photo attached by sender separately
+storage,real server restart,feedback and report preserved then cascade deletion verified,PASS,isolated SQLite database
+live vision and phone,real capture and share flow,not run,PENDING,requires live pipeline and phone verification

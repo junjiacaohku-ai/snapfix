@@ -1,0 +1,17 @@
+[
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "page": 35,
+    "source_sha256": "6d80200e949633f398281cecb605f834a2fc438d25f9f002c4f2b099cd062e5d",
+    "method": "visual verification of rendered original PDF page 35; only display font error codes corrected",
+    "replacements": {
+      "“:‹ˆ": "E:07",
+      "“:‚ƒ": "E:12",
+      "“:‚‰": "E:18",
+      "“:ƒƒ": "E:22",
+      "“:ƒ…": "E:24",
+      "“:ƒ†": "E:25",
+      "“:ƒˆ": "E:27"
+    }
+  }
+]
