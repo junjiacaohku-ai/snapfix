@@ -17,7 +17,7 @@ HKU COMP7506A Group Project · Flutter + FastAPI · 演示 2026-11-19 · 截止�
 | 图片诊断 | 有实际图片质量检查和六场景 mock；按文件名路由，尚不是真实视觉识别 |
 | 安全门 | 高危类别拒答，安全回归用例与离线演示共用同一套规则 |
 | 报修 | 中文本地模板；英文可选 Gemini 翻译，无 key 或翻译失败仍可生成基础报告 |
-| Flutter App | 前端工程在 PR #2，待整合到本基线 |
+| Flutter App | 已整合 W1 主题组件和首页/扫描/预览骨架；真实 API 主链路待接入 |
 | 展示页 | `landing/index.html` 为静态项目展示页 |
 
 真实图片识别 → 检索 → 生成 → 引用校验仍待接入。配置 Gemini key 目前只会影响可选报修翻译，不会让图片 mock 自动变成真实识别。详细边界见[后端文档](server/README.md)和[数据交接说明](docs/data-handoff.md)。
@@ -25,7 +25,7 @@ HKU COMP7506A Group Project · Flutter + FastAPI · 演示 2026-11-19 · 截止�
 ## 目录结构
 
 ```text
-app/                         Flutter App（待整合 PR #2）
+app/                         Flutter App（W1 骨架，见 app/README.md）
 docs/                        需求、契约、分工、验收和演示素材
 landing/                     静态展示页
 server/
