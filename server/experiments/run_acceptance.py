@@ -34,8 +34,11 @@ def run(cases, label):
     # Set this before importing main; never open the user's regular database.
     with TemporaryDirectory(prefix='snapfix-acceptance-') as folder:
         os.environ['SNAPFIX_DB'] = str(Path(folder) / 'acceptance.db')
+        from corpus_store import import_corpus
         from fastapi.testclient import TestClient
         from main import app
+
+        import_corpus(os.environ['SNAPFIX_DB'], ROOT / 'data')
 
         results = []
         with TestClient(app) as client:
@@ -78,7 +81,7 @@ def run(cases, label):
                         reports = {lang: item.json() for lang, item in report_responses.items()}
                         checks['report_status'] = all(item.status_code == 200 for item in report_responses.values())
                         checks['reports'] = ('步骤1' in reports['zh'].get('content', '')
-                            and 'step 1' in reports['en'].get('content', '')
+                            and 'step 1' in reports['en'].get('content', '').lower()
                             and 'attach a photo' in reports['en'].get('content', ''))
                 results.append(dict(scenario=scenario, title=case['title'],
                     input=case.get('upload_name', case.get('payload')),

@@ -37,7 +37,7 @@
 {"brand":"Bosch","error_code":"E:24"}
 ```
 
-预期返回 `dishwasher`、`professional`、`model: null`。`E240`或未知品牌返回404，不能误匹配成E24。报修草稿不自动附照片，手机分享时由使用者另附。
+预期返回 `dishwasher`、`professional`、`model: null`。`E240`或未知品牌返回200、空步骤和明确的无引用提示，不能误匹配成E24。报修草稿不自动附照片，手机分享时由使用者另附。
 
 ## 检查记录和复跑
 

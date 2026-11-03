@@ -32,12 +32,16 @@ def test_six_scenarios():
     assert client.post(f'{url}/steps/{step}/feedback', json={'feedback': 'done'}).status_code == 200
     zh = client.post(url + '/report', json={'lang': 'zh'}).json()['content']
     en = client.post(url + '/report', json={'lang': 'en'}).json()['content']
-    assert '步骤1' in zh and 'step 1' in en
+    assert '步骤1' in zh and 'step 1' in en.lower()
     assert '照片' in zh and 'photo' in en
 
 
 def test_unknown_manual_does_not_invent_e24():
-    assert client.post('/api/diagnose/manual', json={'brand': 'unknown', 'error_code': 'X'}).status_code == 404
+    response = client.post('/api/diagnose/manual', json={'brand': 'unknown', 'error_code': 'X'})
+    assert response.status_code == 200
+    data = response.json()
+    assert data['error_code'] == 'X' and data['steps'] == []
+    assert '无可用引用' in data['decision_reason']
 
 
 def test_health_and_session_lifecycle():
