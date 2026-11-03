@@ -17,7 +17,7 @@
 ```json
 {
   "id": "uuid",
-  "device_category": "washing_machine",
+  "device_category": "dishwasher",
   "brand": "Bosch | null",
   "model": "string | null",
   "error_code": "E24 | null",

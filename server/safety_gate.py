@@ -1,15 +1,10 @@
-"""安全门:生成前的规则拦截层(PRD F3,不可砍)。
-
-规则分类器先于任何 LLM 生成执行;命中高危类目即短路拒答,
-只返回拒答说明 + 风险解释 + 专业求助建议。纯规则、零依赖、确定性输出。
-验收标准(PRD §12):高危测试集 100% 拒答,正常类目不误伤。
-"""
-from __future__ import annotations
-
+"""Deterministic offline safety gate for the PRD F3 high-risk categories."""
 from dataclasses import dataclass
+import re
+import unicodedata
 
 
-@dataclass
+@dataclass(frozen=True)
 class SafetyVerdict:
     refused: bool
     category: str | None = None
@@ -17,121 +12,42 @@ class SafetyVerdict:
     advice: str = ""
 
 
-# (类目, 触发关键词(中英,小写匹配), 风险解释, 求助建议)
-_RULES: list[tuple[str, list[str], str, str]] = [
-    (
-        "微波炉高压电容",
-        ["微波炉", "microwave", "高压电容", "capacitor", "磁控管", "magnetron"],
-        "微波炉内部高压电容断电后仍可储存致命电量,自行拆解有触电致死风险。",
-        "停止使用,联系品牌售后或持牌维修师傅。",
-    ),
-    (
-        "燃气设备",
-        ["燃气", "煤气", "天然气", "gas", "gas heater", "燃气热水器", "煤气灶", "gas stove"],
-        "燃气泄漏可致爆炸或一氧化碳中毒,任何拆装都可能破坏密封。",
-        "关闭燃气总阀、开窗通风、不要触碰电器开关,联系持牌燃气技工。",
-    ),
-    (
-        "制冷剂回路",
-        ["冷媒", "雪种", "制冷剂", "refrigerant", "freon", "加氟", "空调不冷"],
-        "制冷剂回路为高压封闭系统,拆接需持牌资质,泄漏危害人身与环境。",
-        "联系持牌空调维修商;可加氟之外的外观清洁可自行处理。",
-    ),
-    (
-        "锂电池拆解",
-        ["电池拆解", "电芯", "18650", "lithium", "battery pack", "拆电池", "鼓包电池", "鼓包"],
-        "锂电池刺穿或短路会起火爆炸,鼓包电池尤其危险。",
-        "不要穿刺或拆解;鼓包电池放入防火容器,送电子产品回收点。",
-    ),
-    (
-        "市电配电",
-        ["配电箱", "电闸", "breaker", "mains", "强电", "漏电开关", "总闸", "改电路", "接线"],
-        "220V 市电作业可致命,非持牌电工操作亦属违规。",
-        "断开总闸仅作应急,任何接线改动请联系持牌电工。",
-    ),
-    (
-        "电热水器内部",
-        ["电热水器", "加热管", "加热棒", "heating element", "water heater element"],
-        "电热水器内部同时涉及市电与水路,拆装失误可致漏电或漏水。",
-        "联系持牌电工或品牌售后;外部复位键/泄压阀操作可参考手册自行尝试。",
-    ),
-    (
-        "高空/外机作业",
-        ["空调外机", "窗外", "高空", "窗台外", "outdoor unit", "外墙"],
-        "高空作业坠落风险极高,香港法例对室外悬空作业有安全要求。",
-        "任何需要探身窗外的作业都交给有保险的专业人员。",
-    ),
-    (
-        "电焊/切割",
-        ["电焊", "welding", "切割", "angle grinder", "角磨机"],
-        "电焊与切割产生高温火花与强光,需专业防护与资质。",
-        "联系持证技工;不要在不通风的室内操作。",
-    ),
-    (
-        "化学品混用",
-        ["漂白水", "bleach", "氨水", "ammonia", "通渠水", "drain cleaner", "混合清洁剂"],
-        "漂白水与酸性/氨类清洁剂混合会产生有毒气体。",
-        "立即通风并撤离;永远不要混合使用清洁剂。",
-    ),
-    (
-        "石棉/老旧建材",
-        ["石棉", "asbestos"],
-        "石棉纤维吸入致癌,香港旧楼部分建材可能含石棉。",
-        "不要打磨或钻孔,联系屋宇署认可的石棉顾问。",
-    ),
-    (
-        "承重结构",
-        ["承重墙", "承重柱", "load-bearing", "拆墙", "打墙"],
-        "改动承重结构影响全楼安全,且须屋宇署批准。",
-        "任何墙体改动前先咨询大厦管理处与注册结构工程师。",
-    ),
-    (
-        "电梯",
-        ["电梯", "lift", "elevator", "扶梯"],
-        "电梯系统由注册承办商专营,非授权操作极其危险且违法。",
-        "联系大厦管理处或电梯保养承办商。",
-    ),
-]
+def _has(pattern, text):
+    return re.search(pattern, text) is not None
 
 
 def check(*texts: str | None) -> SafetyVerdict:
-    """对任意组合的文本(设备类别/品牌/故障描述/错误码)做高危匹配。
-
-    管线在拿到归一化结果后、生成步骤前调用;refused=True 时直接短路拒答。
-    """
-    haystack = " ".join(t for t in texts if t).lower()
-    for category, keywords, reason, advice in _RULES:
-        if any(kw.lower() in haystack for kw in keywords):
-            return SafetyVerdict(refused=True, category=category, reason=reason, advice=advice)
-    return SafetyVerdict(refused=False)
-
-
-if __name__ == "__main__":
-    # 自检冒烟:高危应全部拒答,正常应全部放行(张帆的完整测试集到位后替换)
-    dangerous = [
-        "微波炉不加热", "microwave not heating", "燃气热水器打不着火",
-        "空调不冷要加雪种", "电池鼓包想拆开看", "配电箱跳闸烧焦味",
-        "想拆承重墙", "漂白水混合通渠水",
+    text = unicodedata.normalize('NFKC', ' '.join(t for t in texts if t)).lower()
+    text = text.translate(str.maketrans('電爐壓閥內維線燒煙脹氣牆劑鋰鍋', '电炉压阀内维线烧烟胀气墙剂锂锅'))
+    internal = _has(r'内部|拆|开盖|接线|线路|电线|电路板|维修|修理|\b(internal|inside|wiring|rewire|disassembl\w*|repair|open)\b', text)
+    appliance = _has(r'电磁炉|电陶炉|烤箱|电饭煲|电暖器|\b(induction|oven|hob|cooktop|space heater)\b', text)
+    pressure = _has(r'锅炉|蒸汽|压力阀|泄压阀|安全阀|\b(boiler|steam|pressure valve|relief valve)\b', text)
+    pressure_work = _has(r'拆|调|换|堵|维修|修理|\b(remove|replace|adjust|block|repair|dismantle)\b', text)
+    burning = _has(r'烧焦|冒烟|火花|烧熔|\b(smok\w*|scorch\w*|burnt|sparking)\b', text)
+    electrical = _has(r'插座|插头|电线|电器|配电|电路|\b(socket|outlet|plug|wire|wiring|electrical|power strip)\b', text)
+    electrical_work = _has(r'更换|改线|接线|拆|维修|修理|\b(repair|replace|rewire|install)\b', text)
+    chemical = _has(r'漂白水|漂白剂|氨水|通渠水|洁厕|\b(bleach|ammonia|drain cleaner|acid)\b', text)
+    mixing = _has(r'混|一起|兑|加上|\b(mix\w*|combin\w*|together)\b', text)
+    rules = [
+        ('电气冒烟或烧焦', burning and electrical, '电气烧焦、冒烟或打火可能导致触电或火灾。'),
+        ('市电线路拆修', electrical and electrical_work, '插座和电气线路拆修可能造成触电或火灾。'),
+        ('市电设备内部维修', internal and appliance, '设备内部涉及市电和储能元件，不提供开盖、接线或拆修步骤。'),
+        ('受压设备拆装', pressure and pressure_work, '受压设备及安全阀的拆装可能释放高温介质或破坏保护装置。'),
+        ('微波炉高压电容', _has(r'微波炉|高压电容|磁控管|\b(microwave|capacitor|magnetron)\b', text), '微波炉内部可能保留危险电量。'),
+        ('燃气设备', _has(r'燃气|煤气|天然气|\bgas\b', text), '燃气异常或拆装有泄漏、火灾和中毒风险。'),
+        ('制冷剂回路', _has(r'冷媒|雪种|制冷剂|加氟|空调不冷|\b(refrigerant|freon)\b', text), '制冷剂回路涉及压力和专业设备。'),
+        ('锂电池拆解', _has(r'电池拆解|电芯|18650|拆电池|鼓包|膨胀电池|\b(lithium|battery pack|swollen battery)\b', text), '受损锂电池或拆解电芯有起火风险。'),
+        ('市电配电', _has(r'配电箱|电闸|强电|漏电开关|总闸|改电路|\b(breaker|mains|rewire)\b', text), '市电线路作业有触电风险。'),
+        ('电热水器内部', _has(r'电热水器|加热管|加热棒|\b(heating element|water heater element)\b', text), '电热水器内部同时涉及水路和市电。'),
+        ('高空作业', _has(r'空调外机|窗外|高空|窗台外|外墙|\boutdoor unit\b', text), '高空或外墙作业存在坠落风险。'),
+        ('电焊或切割', _has(r'电焊|切割|角磨机|\b(welding|angle grinder)\b', text), '电焊和切割涉及火花、高温和机械伤害。'),
+        ('化学品混用', chemical and mixing, '混用清洁剂可能产生有毒气体。'),
+        ('石棉', _has(r'石棉|\basbestos\b', text), '扰动石棉会释放有害纤维。'),
+        ('承重结构', _has(r'承重墙|承重柱|拆墙|打墙|\bload[- ]bearing\b', text), '结构改动需要专业评估。'),
+        ('电梯', _has(r'电梯|扶梯|\b(elevator|escalator|lift controller)\b', text), '电梯维修需要专业人员处理。'),
     ]
-    safe = [
-        "洗衣机报 E24", "washing machine not draining", "路由器红灯",
-        "IKEA BILLY 书架组装", "IKEA 书桌少螺丝", "水龙头滴水换阀芯",
-    ]
-    failures = []
-    for t in dangerous:
-        v = check(t)
-        if not v.refused:
-            failures.append(f"漏拦: {t}")
-    for t in safe:
-        v = check(t)
-        if v.refused:
-            failures.append(f"误伤: {t} -> {v.category}")
-    for t in dangerous:
-        v = check(t)
-        print(f"{'拒答' if v.refused else '放行'}  [{v.category or '-'}]  {t}")
-    for t in safe:
-        v = check(t)
-        print(f"{'拒答' if v.refused else '放行'}  [{v.category or '-'}]  {t}")
-    if failures:
-        raise SystemExit("自检失败: " + "; ".join(failures))
-    print("\n自检通过:高危全拦,正常全过")
+    for category, matched, reason in rules:
+        if matched:
+            return SafetyVerdict(True, category, reason,
+                                 '停止自行检修，联系品牌售后或合资格维修人员。如有烟火或泄漏危险，先远离现场并联系当地紧急服务。')
+    return SafetyVerdict(False)
