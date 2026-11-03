@@ -31,9 +31,13 @@ flutter run -d emulator-5554
 flutter analyze
 flutter test
 flutter test integration_test -d emulator-5554
+# macOS + Xcode：先用 flutter devices 查询 iOS Simulator ID
+flutter test integration_test -d <ios-simulator-id>
 ```
 
 W1 验收路径：首页点击 **拍照诊断** → 扫描页 → **使用演示照片** → 预览页。相机与相册按钮走真实 `image_picker`；无可用媒体时可用演示照片完成静态链路验收。
+
+集成分支已在 Flutter 3.47.7、iPhone 17 Pro / iOS 26.3 Simulator 复测：静态检查 0 issues、2 项 Widget 测试和 1 项 iOS 集成测试通过。该结果只覆盖 W1 静态链路，不代表真实诊断 API、档案或报修流程已完成。
 
 ## 当前页面
 

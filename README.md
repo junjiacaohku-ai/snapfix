@@ -101,7 +101,7 @@ GEMINI_MODEL=gemini-2.5-flash
 
 ## 前端与展示页
 
-整合 PR #2 并配置 Flutter SDK 后：
+配置 Flutter SDK 后：
 
 ```sh
 cd app
@@ -111,7 +111,7 @@ flutter test
 flutter run
 ```
 
-Android Emulator 访问电脑后端使用 `http://10.0.2.2:8000`；iOS Simulator 使用电脑的局域网地址或按前端配置执行。真实手机需配置可达的后端地址，手机自己的 `127.0.0.1` 不指向电脑。展示页可直接打开 [landing/index.html](landing/index.html)。
+现有 W1 静态链路已在 iPhone 17 Pro / iOS 26.3 Simulator 通过集成测试；真实诊断 API、档案和报修页面仍待接入。Android Emulator 访问电脑后端使用 `http://10.0.2.2:8000`，iOS Simulator 默认使用 `http://127.0.0.1:8000`。真实手机需配置电脑的局域网地址，手机自己的 `127.0.0.1` 不指向电脑。展示页可直接打开 [landing/index.html](landing/index.html)。
 
 ## 分工
 

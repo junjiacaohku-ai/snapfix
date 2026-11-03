@@ -26,7 +26,7 @@ uvicorn main:app --reload
 
 ## 下一阶段对接
 
-三条后端分支已在本地 `integration/w2-backend` 合并并通过联合测试，尚未推送或直接合并到 `main`；PR #2 和手机全流程仍需另行整合验收。
+三条后端分支和 PR #2 已在本地 `integration/w2-backend` 合并并通过联合测试，尚未推送或直接合并到 `main`。W1 静态链路已通过 iOS Simulator 集成测试，真实 API 和手机全流程仍需验收。
 
 - **BE-2（史珺瑛）**：保留加权 `Retriever.search()`、SQLite 和双语报修集成，不再维护另一份安全门。
 - **BE-1（曹峻嘉）**：契约示例已改为 `dishwasher`。真实provider管线接通后，重跑安全、检索和手机端到端检查。

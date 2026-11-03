@@ -7,7 +7,7 @@ import 'package:snapfix/app.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('Android 模拟器 W1 主链路验收', (tester) async {
+  testWidgets('模拟器 W1 主链路验收', (tester) async {
     await tester.pumpWidget(const SnapFixApp());
     await tester.pumpAndSettle();
 
