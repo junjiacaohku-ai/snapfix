@@ -24,8 +24,11 @@ def evaluate():
     with TemporaryDirectory(prefix='snapfix-alternatives-') as folder:
         os.environ['SNAPFIX_DB'] = str(Path(folder) / 'checks.db')
         sys.path.insert(0, str(ROOT))
+        from corpus_store import import_corpus
         from fastapi.testclient import TestClient
         from main import app
+
+        import_corpus(os.environ['SNAPFIX_DB'], ROOT / 'data')
 
         results = []
         with TestClient(app) as client:
@@ -61,7 +64,7 @@ def evaluate():
                         reports = {lang: item.json() for lang, item in responses.items()}
                         checks['reports'] = (all(item.status_code == 200 for item in responses.values())
                             and '步骤1' in reports['zh'].get('content', '')
-                            and 'step 1' in reports['en'].get('content', '')
+                            and 'step 1' in reports['en'].get('content', '').lower()
                             and 'attach a photo' in reports['en'].get('content', ''))
                         archive = client.get('/api/sessions')
                         checks['archive_read'] = (archive.status_code == 200

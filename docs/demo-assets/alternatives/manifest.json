@@ -277,7 +277,7 @@
         "error_code": "E240"
       },
       "expected": {
-        "status": 404
+        "status": 200
       }
     },
     {
@@ -289,7 +289,7 @@
         "error_code": "E24"
       },
       "expected": {
-        "status": 404
+        "status": 200
       }
     },
     {

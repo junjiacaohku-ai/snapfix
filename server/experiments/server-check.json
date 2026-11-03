@@ -13,5 +13,5 @@
   "restart_preserves_report": true,
   "deletion_cascades": true,
   "sqlite_retrieval_page": 35,
-  "scope": "Real Uvicorn HTTP and SQLite restart; diagnosis still offline; no phone UI test"
+  "scope": "Real Uvicorn HTTP, manual SQLite retrieval and restart; image diagnosis offline; no live vision or phone UI test"
 }

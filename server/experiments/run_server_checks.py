@@ -34,6 +34,22 @@ def run():
             with urllib.request.urlopen(req, timeout=5) as response:
                 return json.load(response)
 
+        def upload(path, upload_name, source):
+            boundary = 'snapfix-http-check'
+            body = (
+                f'--{boundary}\r\n'
+                f'Content-Disposition: form-data; name="file"; filename="{upload_name}"\r\n'
+                'Content-Type: image/jpeg\r\n\r\n'
+            ).encode() + source.read_bytes() + f'\r\n--{boundary}--\r\n'.encode()
+            req = urllib.request.Request(
+                origin + path,
+                data=body,
+                method='POST',
+                headers={'Content-Type': f'multipart/form-data; boundary={boundary}'},
+            )
+            with urllib.request.urlopen(req, timeout=5) as response:
+                return json.load(response)
+
         def start():
             process = subprocess.Popen([sys.executable, '-m', 'uvicorn', 'main:app',
                                         '--host', '127.0.0.1', '--port', str(port)],
@@ -60,11 +76,15 @@ def run():
 
         process = start()
         try:
-            session = request('/api/diagnose/manual', {'brand':'Bosch','error_code':'E:24'})
+            manual = request('/api/diagnose/manual', {'brand':'Bosch','error_code':'E:24'})
+            assert manual['device_category'] == 'dishwasher' and manual['steps'] == []
+            assert '35' in manual['decision_reason']
+            source = ROOT.parent / 'docs/demo-assets/alternatives/bosch-dishwasher-1.jpg'
+            session = upload('/api/analyze/image', 'report.jpg', source)
             path = '/api/sessions/'+session['id']
             request(path+'/steps/'+session['steps'][0]['id']+'/feedback', {'feedback':'done'})
             report = request(path+'/report', {'lang':'en'})
-            assert 'step 1' in report['content']
+            assert 'step 1' in report['content'].lower()
             with urllib.request.urlopen(origin+'/docs', timeout=5) as response:
                 docs_status = response.status
         finally:
@@ -89,7 +109,7 @@ def run():
                        docs_http_status=docs_status, imported=imported,
                        restart_preserves_feedback=True, restart_preserves_report=True,
                        deletion_cascades=True, sqlite_retrieval_page=hits[0]['page'],
-                       scope='Real Uvicorn HTTP and SQLite restart; diagnosis still offline; no phone UI test')
+                       scope='Real Uvicorn HTTP, manual SQLite retrieval and restart; image diagnosis offline; no live vision or phone UI test')
         (ROOT/'experiments/server-check.json').write_text(json.dumps(results,indent=2)+'\n')
         print(json.dumps(results))
 
