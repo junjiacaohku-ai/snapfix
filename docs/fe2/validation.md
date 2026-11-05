@@ -7,6 +7,8 @@
 | Python 后端回归 | 45 passed，1 项第三方依赖弃用警告；含 BE-2 原 29 项和新增 16 项 |
 | Flutter 静态检查 | No issues found |
 | Flutter 测试 | 6 passed；含 FE-1 原 2 项和新增 4 项 |
+| Flutter Web 构建 | flutter build web 成功，包含 Wasm dry run |
+| 同源预览启动检查 | 使用临时空数据库与实际编译产物，HTML、main.dart.js、案例 API、演示创建全部通过 |
 
 后端新增测试覆盖照片像素与大小校验、未识别输入、四步 E24 样例、状态保存、反馈、续诊、安全限制、报修草稿与重置、v1 交接和数据持久化。Flutter 新增测试检查正式入口不自动进入演示、两条样例动作、步骤反馈与跨语言编辑、复制调用、安全拒答及网络失败分支。截图是此前完整交付版 Flutter Web 的实际画面，保留在 previews 供评审视觉参考。
 
