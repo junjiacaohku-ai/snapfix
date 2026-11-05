@@ -205,3 +205,7 @@ def generate_report(session_id: str, req: ReportRequest):
         "lang": req.lang,
         "content": content,
     }
+
+# FE-2 additive UI contract. Keep the team's existing v1 endpoints.
+from ui_api import install_ui_api
+install_ui_api(app, lambda: DB, lambda: bool(globals().get('MOCK_MODE', True)))

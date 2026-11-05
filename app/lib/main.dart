@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'app.dart';
+import 'product/product_app.dart';
 
 void main() {
-  runApp(const SnapFixApp());
+  runApp(const SnapFixProductApp());
 }
