@@ -1,0 +1,572 @@
+{
+  "version": 1,
+  "scope": "Offline integration/demo fixtures, not a real-fault recognition dataset. Filename selects mock diagnosis. Three Bosch views and three TP-Link views each share one source/device family. E24 in the photograph is not asserted.",
+  "assets": [
+    {
+      "id": "router-01",
+      "demo_name": "router-01.jpg",
+      "source_file": "docs/demo-assets/public/public-01.jpg",
+      "sha256": "8cb6001596b7c25bf269aa1f7d196425aa6ef07326b80e51ceaae3ed450620fa",
+      "artist": "Hayden Schiff",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS2.jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "router-02",
+      "demo_name": "router-02.jpg",
+      "source_file": "docs/demo-assets/public/public-02.jpg",
+      "sha256": "125551915eb126a3c1741122d5201a66715614d6d6a64791e97458fdf922d201",
+      "artist": "Hayden Schiff",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS5.jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "router-03",
+      "demo_name": "router-03.jpg",
+      "source_file": "docs/demo-assets/public/extra-3.jpg",
+      "sha256": "ab87180dbac96902a3eb545958223e86dc3c57f8860ec820c1b309288b8d57af",
+      "artist": "Hayden Schiff",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS4.jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "billy-01",
+      "demo_name": "billy-01.jpg",
+      "source_file": "docs/demo-assets/public/public-03.jpg",
+      "sha256": "4eef20060472b1a31ba51a7c982c55bf03933a929ef59c5352fb4b2f973925ee",
+      "artist": "Nathan Kramer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Billy_Bookcase.jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "billy-02",
+      "demo_name": "billy-02.jpg",
+      "source_file": "docs/demo-assets/public/public-04.jpg",
+      "sha256": "49ebeb579676af62f51c3e3cb135b51d02c00a42cbbc831f25a681f28e6536f4",
+      "artist": "Jakub Súkeník",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ikea_Billy_bookcase.jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "billy-03",
+      "demo_name": "billy-03.jpg",
+      "source_file": "docs/demo-assets/public/extra-8.jpg",
+      "sha256": "367089570694f8ce230d67e3fff948afd56d5fbd78397f81c67e8f1431fb7421",
+      "artist": "Magnus Bäck",
+      "license": "Public domain",
+      "license_url": null,
+      "source_page": "https://commons.wikimedia.org/wiki/File:IKEA_Billy_bookshelf_(80x106_cm_birch_veneer).jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "microwave-01",
+      "demo_name": "microwave-01.jpg",
+      "source_file": "docs/demo-assets/public/public-05.jpg",
+      "sha256": "08e5eae76f3bc8eff4fd8c69834c2d919d86846817108c80c98b750d86c66879",
+      "artist": "Srini297",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Microwave_Oven.jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "microwave-02",
+      "demo_name": "microwave-02.jpg",
+      "source_file": "docs/demo-assets/public/public-06.jpg",
+      "sha256": "304111db9f329cad682b14d39ac420fc7d815b1d6be5606afc08f3f85cb85fde",
+      "artist": "Wrightmt",
+      "license": "Public domain",
+      "license_url": null,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Microwave_oven_flashon.jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "microwave-03",
+      "demo_name": "microwave-03.jpg",
+      "source_file": "docs/demo-assets/public/public-07.jpg",
+      "sha256": "62f4142a1d8880db9b7adea86cd14d30115483caa56a66843d2515dbda9dbdbf",
+      "artist": "Dinkun Chen",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Panasonic_MICROWAVE_OVEN_NN-GM333W.jpg",
+      "processing": "Reused repository image; no new processing; source may be a Commons thumbnail",
+      "confirmed_fault": false
+    },
+    {
+      "id": "e24-01",
+      "demo_name": "e24-01.jpg",
+      "source_file": "docs/demo-assets/alternatives/bosch-dishwasher-1.jpg",
+      "sha256": "103b97dc87984b3d725e89659fcd7bcfccf581cd3213bf2e8826d25854863f7d",
+      "artist": "Yelderberry (talk)",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bosch_Dishwasher_2026-08-23_1.jpg",
+      "processing": "Wikimedia Commons 960px thumbnail; no local edits or added fault display",
+      "confirmed_fault": false
+    },
+    {
+      "id": "e24-02",
+      "demo_name": "e24-02.jpg",
+      "source_file": "docs/demo-assets/alternatives/bosch-dishwasher-2.jpg",
+      "sha256": "c04fab0c157951aff38ac52a529b3daaa2fe873c7feb23c9be070b97cd66f510",
+      "artist": "Yelderberry (talk)",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bosch_Dishwasher_2026-08-23_2.jpg",
+      "processing": "Wikimedia Commons 960px thumbnail; no local edits or added fault display",
+      "confirmed_fault": false
+    },
+    {
+      "id": "e24-03",
+      "demo_name": "e24-03.jpg",
+      "source_file": "docs/demo-assets/alternatives/bosch-dishwasher-3.jpg",
+      "sha256": "ff47b1ad9ccde03a065e2331f2d101cd0fdb4583709da1bb3f1c3cd48039330a",
+      "artist": "Yelderberry (talk)",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bosch_Dishwasher_2026-08-23_3.jpg",
+      "processing": "Wikimedia Commons 960px thumbnail; no local edits or added fault display",
+      "confirmed_fault": false
+    },
+    {
+      "id": "router-dark-01",
+      "demo_name": "router-dark-01.png",
+      "source_file": "docs/demo-assets/quality/public-01-dark.png",
+      "sha256": "8eeab3a9b8006b36bd20bd2afc4d1e7ead71793bc7b4b0e86f63e12c98a044fc",
+      "artist": "Hayden Schiff",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS2.jpg",
+      "processing": "RGB channel brightness factor 0.15; not physical camera exposure; EXIF orientation normalized; RGB; original dimensions; lossless PNG",
+      "confirmed_fault": false
+    },
+    {
+      "id": "router-blur-01",
+      "demo_name": "router-blur-01.png",
+      "source_file": "docs/demo-assets/quality/public-01-blur.png",
+      "sha256": "a5442c6bde49761b0bf9e0d74a9fada391a0c217eb3bde9486eab5c18d00a91b",
+      "artist": "Hayden Schiff",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS2.jpg",
+      "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions; EXIF orientation normalized; RGB; original dimensions; lossless PNG",
+      "confirmed_fault": false
+    },
+    {
+      "id": "router-dark-02",
+      "demo_name": "router-dark-02.png",
+      "source_file": "docs/demo-assets/quality/public-03-dark.png",
+      "sha256": "fa01b747298bbe330ebc6b739bd013fdf8a4ce1230cb97b178724bea60e30aba",
+      "artist": "Nathan Kramer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Billy_Bookcase.jpg",
+      "processing": "RGB channel brightness factor 0.15; not physical camera exposure; EXIF orientation normalized; RGB; original dimensions; lossless PNG",
+      "confirmed_fault": false
+    },
+    {
+      "id": "router-blur-02",
+      "demo_name": "router-blur-02.png",
+      "source_file": "docs/demo-assets/quality/public-03-blur.png",
+      "sha256": "8872716bbe2a93d8e1ae6faf7d8a0f6635ba0bfc8239e7110357f6759a8b2ed2",
+      "artist": "Nathan Kramer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Billy_Bookcase.jpg",
+      "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions; EXIF orientation normalized; RGB; original dimensions; lossless PNG",
+      "confirmed_fault": false
+    },
+    {
+      "id": "router-dark-03",
+      "demo_name": "router-dark-03.png",
+      "source_file": "docs/demo-assets/quality/public-05-dark.png",
+      "sha256": "1558eba0f9d2735b9e64c9dcb16f7d53b5c4a19e313ae0ba56aa38841a53da63",
+      "artist": "Srini297",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Microwave_Oven.jpg",
+      "processing": "RGB channel brightness factor 0.15; not physical camera exposure; EXIF orientation normalized; RGB; original dimensions; lossless PNG",
+      "confirmed_fault": false
+    },
+    {
+      "id": "router-blur-03",
+      "demo_name": "router-blur-03.png",
+      "source_file": "docs/demo-assets/quality/public-05-blur.png",
+      "sha256": "6e22000362237292019f52866b2b02ed751d4e78860905d8ed4c28bedc0e20df",
+      "artist": "Srini297",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Microwave_Oven.jpg",
+      "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions; EXIF orientation normalized; RGB; original dimensions; lossless PNG",
+      "confirmed_fault": false
+    }
+  ],
+  "cases": [
+    {
+      "id": "M-01",
+      "scenario": "manual-control",
+      "kind": "manual",
+      "payload": {
+        "brand": "Bosch",
+        "error_code": "E24"
+      },
+      "expected": {
+        "status": 200,
+        "device_category": "dishwasher",
+        "error_code": "E24",
+        "decision": "professional",
+        "model": null
+      }
+    },
+    {
+      "id": "M-02",
+      "scenario": "manual-control",
+      "kind": "manual",
+      "payload": {
+        "brand": "Bosch",
+        "error_code": "E:24"
+      },
+      "expected": {
+        "status": 200,
+        "device_category": "dishwasher",
+        "error_code": "E24",
+        "decision": "professional",
+        "model": null
+      }
+    },
+    {
+      "id": "M-03",
+      "scenario": "manual-control",
+      "kind": "manual",
+      "payload": {
+        "brand": "博世",
+        "error_code": "E24"
+      },
+      "expected": {
+        "status": 200,
+        "device_category": "dishwasher",
+        "error_code": "E24",
+        "decision": "professional",
+        "model": null
+      }
+    },
+    {
+      "id": "M-04",
+      "scenario": "manual-control",
+      "kind": "manual",
+      "payload": {
+        "brand": "Bosch",
+        "error_code": "E240"
+      },
+      "expected": {
+        "status": 200
+      }
+    },
+    {
+      "id": "M-05",
+      "scenario": "manual-control",
+      "kind": "manual",
+      "payload": {
+        "brand": "Unknown",
+        "error_code": "E24"
+      },
+      "expected": {
+        "status": 200
+      }
+    },
+    {
+      "id": "S1-01",
+      "scenario": "S1",
+      "kind": "image",
+      "asset": "router-01",
+      "expected": {
+        "status": 200,
+        "device_category": "router",
+        "brand": "TP-Link",
+        "decision": "diy",
+        "model": null
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S1-02",
+      "scenario": "S1",
+      "kind": "image",
+      "asset": "router-02",
+      "expected": {
+        "status": 200,
+        "device_category": "router",
+        "brand": "TP-Link",
+        "decision": "diy",
+        "model": null
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S1-03",
+      "scenario": "S1",
+      "kind": "image",
+      "asset": "router-03",
+      "expected": {
+        "status": 200,
+        "device_category": "router",
+        "brand": "TP-Link",
+        "decision": "diy",
+        "model": null
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S2-01",
+      "scenario": "S2",
+      "kind": "image",
+      "asset": "e24-01",
+      "expected": {
+        "status": 200,
+        "device_category": "dishwasher",
+        "brand": "Bosch",
+        "error_code": "E24",
+        "decision": "professional",
+        "model": null
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S2-02",
+      "scenario": "S2",
+      "kind": "image",
+      "asset": "e24-02",
+      "expected": {
+        "status": 200,
+        "device_category": "dishwasher",
+        "brand": "Bosch",
+        "error_code": "E24",
+        "decision": "professional",
+        "model": null
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S2-03",
+      "scenario": "S2",
+      "kind": "image",
+      "asset": "e24-03",
+      "expected": {
+        "status": 200,
+        "device_category": "dishwasher",
+        "brand": "Bosch",
+        "error_code": "E24",
+        "decision": "professional",
+        "model": null
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S3-01",
+      "scenario": "S3",
+      "kind": "image",
+      "asset": "billy-01",
+      "expected": {
+        "status": 200,
+        "device_category": "furniture",
+        "brand": "IKEA",
+        "decision": "diy"
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S3-02",
+      "scenario": "S3",
+      "kind": "image",
+      "asset": "billy-02",
+      "expected": {
+        "status": 200,
+        "device_category": "furniture",
+        "brand": "IKEA",
+        "decision": "diy"
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S3-03",
+      "scenario": "S3",
+      "kind": "image",
+      "asset": "billy-03",
+      "expected": {
+        "status": 200,
+        "device_category": "furniture",
+        "brand": "IKEA",
+        "decision": "diy"
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S4-01",
+      "scenario": "S4",
+      "kind": "image",
+      "asset": "microwave-01",
+      "expected": {
+        "status": 200,
+        "device_category": "microwave",
+        "decision": "refused",
+        "safety_refused": true,
+        "steps": []
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S4-02",
+      "scenario": "S4",
+      "kind": "image",
+      "asset": "microwave-02",
+      "expected": {
+        "status": 200,
+        "device_category": "microwave",
+        "decision": "refused",
+        "safety_refused": true,
+        "steps": []
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S4-03",
+      "scenario": "S4",
+      "kind": "image",
+      "asset": "microwave-03",
+      "expected": {
+        "status": 200,
+        "device_category": "microwave",
+        "decision": "refused",
+        "safety_refused": true,
+        "steps": []
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S5-01",
+      "scenario": "S5",
+      "kind": "image",
+      "asset": "router-dark-01",
+      "expected": {
+        "status": 422,
+        "retake": true
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S5-02",
+      "scenario": "S5",
+      "kind": "image",
+      "asset": "router-blur-01",
+      "expected": {
+        "status": 422,
+        "retake": true
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S5-03",
+      "scenario": "S5",
+      "kind": "image",
+      "asset": "router-dark-02",
+      "expected": {
+        "status": 422,
+        "retake": true
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S5-04",
+      "scenario": "S5",
+      "kind": "image",
+      "asset": "router-blur-02",
+      "expected": {
+        "status": 422,
+        "retake": true
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S5-05",
+      "scenario": "S5",
+      "kind": "image",
+      "asset": "router-dark-03",
+      "expected": {
+        "status": 422,
+        "retake": true
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S5-06",
+      "scenario": "S5",
+      "kind": "image",
+      "asset": "router-blur-03",
+      "expected": {
+        "status": 422,
+        "retake": true
+      },
+      "exercise_report": false
+    },
+    {
+      "id": "S6-01",
+      "scenario": "S6",
+      "kind": "image",
+      "asset": "router-01",
+      "expected": {
+        "status": 200,
+        "device_category": "router",
+        "brand": "TP-Link",
+        "decision": "diy",
+        "model": null
+      },
+      "exercise_report": true
+    },
+    {
+      "id": "S6-02",
+      "scenario": "S6",
+      "kind": "image",
+      "asset": "router-02",
+      "expected": {
+        "status": 200,
+        "device_category": "router",
+        "brand": "TP-Link",
+        "decision": "diy",
+        "model": null
+      },
+      "exercise_report": true
+    },
+    {
+      "id": "S6-03",
+      "scenario": "S6",
+      "kind": "image",
+      "asset": "router-03",
+      "expected": {
+        "status": 200,
+        "device_category": "router",
+        "brand": "TP-Link",
+        "decision": "diy",
+        "model": null
+      },
+      "exercise_report": true
+    }
+  ]
+}

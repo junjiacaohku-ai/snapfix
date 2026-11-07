@@ -1,0 +1,151 @@
+{
+  "unique_originals": 13,
+  "accepted": 12,
+  "retake": 1,
+  "scope": "Measurements of unchanged public photos; not a labelled accuracy benchmark",
+  "cases": [
+    {
+      "file": "public-01.jpg",
+      "sha256": "8cb6001596b7c25bf269aa1f7d196425aa6ef07326b80e51ceaae3ed450620fa",
+      "source": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS2.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 640,
+      "brightness": 156.14,
+      "sharpness": 319.55
+    },
+    {
+      "file": "public-02.jpg",
+      "sha256": "125551915eb126a3c1741122d5201a66715614d6d6a64791e97458fdf922d201",
+      "source": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS5.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 640,
+      "brightness": 143.6,
+      "sharpness": 1061.1
+    },
+    {
+      "file": "public-03.jpg",
+      "sha256": "4eef20060472b1a31ba51a7c982c55bf03933a929ef59c5352fb4b2f973925ee",
+      "source": "https://commons.wikimedia.org/wiki/File:Billy_Bookcase.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 1280,
+      "brightness": 101.46,
+      "sharpness": 519.39
+    },
+    {
+      "file": "public-04.jpg",
+      "sha256": "49ebeb579676af62f51c3e3cb135b51d02c00a42cbbc831f25a681f28e6536f4",
+      "source": "https://commons.wikimedia.org/wiki/File:Ikea_Billy_bookcase.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 1521,
+      "brightness": 140.8,
+      "sharpness": 781.88
+    },
+    {
+      "file": "public-05.jpg",
+      "sha256": "08e5eae76f3bc8eff4fd8c69834c2d919d86846817108c80c98b750d86c66879",
+      "source": "https://commons.wikimedia.org/wiki/File:Microwave_Oven.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 484,
+      "brightness": 155.6,
+      "sharpness": 565.11
+    },
+    {
+      "file": "public-06.jpg",
+      "sha256": "304111db9f329cad682b14d39ac420fc7d815b1d6be5606afc08f3f85cb85fde",
+      "source": "https://commons.wikimedia.org/wiki/File:Microwave_oven_flashon.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 817,
+      "height": 452,
+      "brightness": 91.63,
+      "sharpness": 615.36
+    },
+    {
+      "file": "public-07.jpg",
+      "sha256": "62f4142a1d8880db9b7adea86cd14d30115483caa56a66843d2515dbda9dbdbf",
+      "source": "https://commons.wikimedia.org/wiki/File:Panasonic_MICROWAVE_OVEN_NN-GM333W.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 656,
+      "brightness": 140.87,
+      "sharpness": 1473.6
+    },
+    {
+      "file": "public-08.jpg",
+      "sha256": "4238f107ac3f70e2b0020f345773a37ed0fa70400cd7372118282f904176c633",
+      "source": "https://commons.wikimedia.org/wiki/File:Lavatrice_Bosch.JPG",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 1280,
+      "brightness": 107.95,
+      "sharpness": 647.37
+    },
+    {
+      "file": "public-09.jpg",
+      "sha256": "54dc597999b12ac9808ec4074cc0b6c5d1736aac50a5b6c4aff30ade94de30a6",
+      "source": "https://commons.wikimedia.org/wiki/File:Open_top-loading_washing_machine.jpg",
+      "accepted": false,
+      "reason": "照片过暗，请补光后重拍。",
+      "width": 960,
+      "height": 1291,
+      "brightness": 30.81,
+      "sharpness": 1095.8
+    },
+    {
+      "file": "extra-3.jpg",
+      "sha256": "ab87180dbac96902a3eb545958223e86dc3c57f8860ec820c1b309288b8d57af",
+      "source": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS4.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 640,
+      "brightness": 145.16,
+      "sharpness": 1576.52
+    },
+    {
+      "file": "extra-7.jpg",
+      "sha256": "bff200c626d6284f87cd02bcb15f16db2e65a7f59aa0978b6ed9ab9bc7bc77e9",
+      "source": "https://commons.wikimedia.org/wiki/File:IKEA,_knihovna_Billy.jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 1625,
+      "brightness": 94.15,
+      "sharpness": 1059.46
+    },
+    {
+      "file": "extra-8.jpg",
+      "sha256": "367089570694f8ce230d67e3fff948afd56d5fbd78397f81c67e8f1431fb7421",
+      "source": "https://commons.wikimedia.org/wiki/File:IKEA_Billy_bookshelf_(80x106_cm_birch_veneer).jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 1440,
+      "brightness": 116.23,
+      "sharpness": 2487.51
+    },
+    {
+      "file": "extra-14.jpg",
+      "sha256": "1a9dc6fa2e0e3038034d8dbb46b6675a3ea2bfca73ed0fdc368cfab50c08a576",
+      "source": "https://commons.wikimedia.org/wiki/File:Panasonic_MICROWAVE_OVEN_NN-GM333W_(2).jpg",
+      "accepted": true,
+      "reason": "",
+      "width": 960,
+      "height": 541,
+      "brightness": 104.89,
+      "sharpness": 1405.11
+    }
+  ]
+}

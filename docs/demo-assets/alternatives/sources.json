@@ -1,0 +1,68 @@
+[
+  {
+    "file": "bosch-dishwasher-1.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bosch_Dishwasher_2026-08-23_1.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bosch_Dishwasher_2026-08-23_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Bosch_Dishwasher_2026-08-23_1.jpg/960px-Bosch_Dishwasher_2026-08-23_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_dimensions": [
+      4284,
+      5712
+    ],
+    "saved_dimensions": [
+      960,
+      1280
+    ],
+    "artist": "Yelderberry (talk)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sha256": "103b97dc87984b3d725e89659fcd7bcfccf581cd3213bf2e8826d25854863f7d",
+    "original_sha1": "5f86b43f2a7421fc925deb65544aece0a2172f1e",
+    "source_family": "yelderberry-bosch-2026-08-23",
+    "processing": "Wikimedia Commons 960px thumbnail; no local edits or added fault display",
+    "use": "device appearance only; E24 fault and exact model unverified"
+  },
+  {
+    "file": "bosch-dishwasher-2.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bosch_Dishwasher_2026-08-23_2.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Bosch_Dishwasher_2026-08-23_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Bosch_Dishwasher_2026-08-23_2.jpg/960px-Bosch_Dishwasher_2026-08-23_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_dimensions": [
+      4284,
+      5712
+    ],
+    "saved_dimensions": [
+      960,
+      1280
+    ],
+    "artist": "Yelderberry (talk)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sha256": "c04fab0c157951aff38ac52a529b3daaa2fe873c7feb23c9be070b97cd66f510",
+    "original_sha1": "ce9d06b88996534590cad16c33f5aad43ac3b19f",
+    "source_family": "yelderberry-bosch-2026-08-23",
+    "processing": "Wikimedia Commons 960px thumbnail; no local edits or added fault display",
+    "use": "device appearance only; E24 fault and exact model unverified"
+  },
+  {
+    "file": "bosch-dishwasher-3.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Bosch_Dishwasher_2026-08-23_3.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bosch_Dishwasher_2026-08-23_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Bosch_Dishwasher_2026-08-23_3.jpg/960px-Bosch_Dishwasher_2026-08-23_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_dimensions": [
+      4284,
+      5712
+    ],
+    "saved_dimensions": [
+      960,
+      1280
+    ],
+    "artist": "Yelderberry (talk)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sha256": "ff47b1ad9ccde03a065e2331f2d101cd0fdb4583709da1bb3f1c3cd48039330a",
+    "original_sha1": "6df79f7b16e58d82bd47db42c7510ce49ceb6ed1",
+    "source_family": "yelderberry-bosch-2026-08-23",
+    "processing": "Wikimedia Commons 960px thumbnail; no local edits or added fault display",
+    "use": "device appearance only; E24 fault and exact model unverified"
+  }
+]

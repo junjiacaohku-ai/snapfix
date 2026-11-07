@@ -1,0 +1,6 @@
+*.pdf binary
+server/data/chunks.json linguist-generated=true
+server/experiments/retrieval-results.json linguist-generated=true
+server/data/extraction-audit.json linguist-generated=true
+server/experiments/*-results.json linguist-generated=true
+docs/demo-assets/quality/manifest.json linguist-generated=true

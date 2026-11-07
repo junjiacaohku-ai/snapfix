@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "python": "3.12.14",
+  "pillow": "13.0.0",
+  "generator_sha256": "4f6586d1a4d09978d1f2f810f94d3325b146e1101d900fa3024588daa8a60086",
+  "detector_sha256": "edc48bc132fbb03166da8087a9a8c0a3ac116eb00dd4599769e887cb6ad38721",
+  "parameters": {
+    "brightness_factor": 0.15,
+    "gaussian_radius_px": 12,
+    "resize": false,
+    "orientation": "EXIF transpose",
+    "color_mode": "RGB",
+    "output": "lossless PNG",
+    "png_compress_level": 9
+  },
+  "thresholds_frozen_from": "837a5369afc0aaaf738990a686dcb3aeff29095f",
+  "unique_originals": 13,
+  "source_families": 10,
+  "variants": 26,
+  "excluded_duplicates": [
+    {
+      "file": "extra-17.jpg",
+      "duplicate_of": "public-09.jpg"
+    }
+  ],
+  "scope": "Fixed severe degradations; related views share a family; no independent-sample accuracy claim",
+  "originals": [
+    {
+      "source_file": "public-01.jpg",
+      "source_sha256": "8cb6001596b7c25bf269aa1f7d196425aa6ef07326b80e51ceaae3ed450620fa",
+      "source_family": "hayden-schiff-tl-wr740n",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS2.jpg",
+      "artist": "Hayden Schiff",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 640,
+        "brightness": 156.14,
+        "sharpness": 319.55
+      },
+      "variants": [
+        {
+          "file": "public-01-dark.png",
+          "kind": "dark",
+          "sha256": "8eeab3a9b8006b36bd20bd2afc4d1e7ead71793bc7b4b0e86f63e12c98a044fc",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-01-blur.png",
+          "kind": "blur",
+          "sha256": "a5442c6bde49761b0bf9e0d74a9fada391a0c217eb3bde9486eab5c18d00a91b",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "public-02.jpg",
+      "source_sha256": "125551915eb126a3c1741122d5201a66715614d6d6a64791e97458fdf922d201",
+      "source_family": "hayden-schiff-tl-wr740n",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS5.jpg",
+      "artist": "Hayden Schiff",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 640,
+        "brightness": 143.6,
+        "sharpness": 1061.1
+      },
+      "variants": [
+        {
+          "file": "public-02-dark.png",
+          "kind": "dark",
+          "sha256": "f8071d8adeb3379956f05c83f38a441ff294ba576bdaa00cb20c3625919d9d4f",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-02-blur.png",
+          "kind": "blur",
+          "sha256": "f48022c45fb5ca99ac5197c453403e72248eb4003a5fc2b36d2bb6d08f0a5920",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "public-03.jpg",
+      "source_sha256": "4eef20060472b1a31ba51a7c982c55bf03933a929ef59c5352fb4b2f973925ee",
+      "source_family": "4eef20060472b1a31ba51a7c982c55bf03933a929ef59c5352fb4b2f973925ee",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Billy_Bookcase.jpg",
+      "artist": "Nathan Kramer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 1280,
+        "brightness": 101.46,
+        "sharpness": 519.39
+      },
+      "variants": [
+        {
+          "file": "public-03-dark.png",
+          "kind": "dark",
+          "sha256": "fa01b747298bbe330ebc6b739bd013fdf8a4ce1230cb97b178724bea60e30aba",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-03-blur.png",
+          "kind": "blur",
+          "sha256": "8872716bbe2a93d8e1ae6faf7d8a0f6635ba0bfc8239e7110357f6759a8b2ed2",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "public-04.jpg",
+      "source_sha256": "49ebeb579676af62f51c3e3cb135b51d02c00a42cbbc831f25a681f28e6536f4",
+      "source_family": "49ebeb579676af62f51c3e3cb135b51d02c00a42cbbc831f25a681f28e6536f4",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ikea_Billy_bookcase.jpg",
+      "artist": "Jakub Súkeník",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 1521,
+        "brightness": 140.8,
+        "sharpness": 781.88
+      },
+      "variants": [
+        {
+          "file": "public-04-dark.png",
+          "kind": "dark",
+          "sha256": "452f1e49627a03b846be3e9135576e43951e79fa4061454428f49c8ffd2ac0e0",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-04-blur.png",
+          "kind": "blur",
+          "sha256": "113de5fdefa7033097eb76bb35c4a8ac9aa1b523bf55b0d38f955828cad3cc1c",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "public-05.jpg",
+      "source_sha256": "08e5eae76f3bc8eff4fd8c69834c2d919d86846817108c80c98b750d86c66879",
+      "source_family": "08e5eae76f3bc8eff4fd8c69834c2d919d86846817108c80c98b750d86c66879",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Microwave_Oven.jpg",
+      "artist": "Srini297",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 484,
+        "brightness": 155.6,
+        "sharpness": 565.11
+      },
+      "variants": [
+        {
+          "file": "public-05-dark.png",
+          "kind": "dark",
+          "sha256": "1558eba0f9d2735b9e64c9dcb16f7d53b5c4a19e313ae0ba56aa38841a53da63",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-05-blur.png",
+          "kind": "blur",
+          "sha256": "6e22000362237292019f52866b2b02ed751d4e78860905d8ed4c28bedc0e20df",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "public-06.jpg",
+      "source_sha256": "304111db9f329cad682b14d39ac420fc7d815b1d6be5606afc08f3f85cb85fde",
+      "source_family": "304111db9f329cad682b14d39ac420fc7d815b1d6be5606afc08f3f85cb85fde",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Microwave_oven_flashon.jpg",
+      "artist": "Wrightmt",
+      "license": "Public domain",
+      "license_url": null,
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 817,
+        "height": 452,
+        "brightness": 91.63,
+        "sharpness": 615.36
+      },
+      "variants": [
+        {
+          "file": "public-06-dark.png",
+          "kind": "dark",
+          "sha256": "3b9c4fc2062ec5c9bbaa2e287177ab6ebbccfff4371831ac9065e42964e2349e",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-06-blur.png",
+          "kind": "blur",
+          "sha256": "d706f237480293cf6152d3160855f5ab0c1c9bd7af3c57a805bde20fc7f87494",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "public-07.jpg",
+      "source_sha256": "62f4142a1d8880db9b7adea86cd14d30115483caa56a66843d2515dbda9dbdbf",
+      "source_family": "dinkun-chen-nn-gm333w",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Panasonic_MICROWAVE_OVEN_NN-GM333W.jpg",
+      "artist": "Dinkun Chen",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 656,
+        "brightness": 140.87,
+        "sharpness": 1473.6
+      },
+      "variants": [
+        {
+          "file": "public-07-dark.png",
+          "kind": "dark",
+          "sha256": "e1564be78fa7d57b0dc2ca64e59303bebd81b1fccc21b062abc85e60582ab14f",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-07-blur.png",
+          "kind": "blur",
+          "sha256": "2a30409c2a69a8748aa71d1b1f3b6e3c54f272552699a47c1ffffce1877e9a69",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "public-08.jpg",
+      "source_sha256": "4238f107ac3f70e2b0020f345773a37ed0fa70400cd7372118282f904176c633",
+      "source_family": "4238f107ac3f70e2b0020f345773a37ed0fa70400cd7372118282f904176c633",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lavatrice_Bosch.JPG",
+      "artist": "Antonio Mette",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 1280,
+        "brightness": 107.95,
+        "sharpness": 647.37
+      },
+      "variants": [
+        {
+          "file": "public-08-dark.png",
+          "kind": "dark",
+          "sha256": "82eb76d32ec305bb9dddba188d2d1f17ee5530f46c408d4a722d96e09b8f1707",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-08-blur.png",
+          "kind": "blur",
+          "sha256": "655ca8edf95f119d43eec127b02e0d969fd2ac16f1d668a9e5673575eb8ec62c",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "public-09.jpg",
+      "source_sha256": "54dc597999b12ac9808ec4074cc0b6c5d1736aac50a5b6c4aff30ade94de30a6",
+      "source_family": "54dc597999b12ac9808ec4074cc0b6c5d1736aac50a5b6c4aff30ade94de30a6",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Open_top-loading_washing_machine.jpg",
+      "artist": "W.carter",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "baseline": {
+        "accepted": false,
+        "reason": "照片过暗，请补光后重拍。",
+        "width": 960,
+        "height": 1291,
+        "brightness": 30.81,
+        "sharpness": 1095.8
+      },
+      "variants": [
+        {
+          "file": "public-09-dark.png",
+          "kind": "dark",
+          "sha256": "6cc63d55596704321a1e812a403cfa6407bb797a6f403192affb13cd072adbe4",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "public-09-blur.png",
+          "kind": "blur",
+          "sha256": "3135388d371db8a319d2127a9313e35381d489d51920fb65cbbb56ebd491206a",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        }
+      ]
+    },
+    {
+      "source_file": "extra-3.jpg",
+      "source_sha256": "ab87180dbac96902a3eb545958223e86dc3c57f8860ec820c1b309288b8d57af",
+      "source_family": "hayden-schiff-tl-wr740n",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS4.jpg",
+      "artist": "Hayden Schiff",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 640,
+        "brightness": 145.16,
+        "sharpness": 1576.52
+      },
+      "variants": [
+        {
+          "file": "extra-3-dark.png",
+          "kind": "dark",
+          "sha256": "5779f89698fcc429e5300f4396aab22bb96557fa906e046e3d38736b4a9decb9",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "extra-3-blur.png",
+          "kind": "blur",
+          "sha256": "40b0fb1953de31b8212725fb87ea9f05bf1db8ff0d2f8659d222c59636f8a459",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "extra-7.jpg",
+      "source_sha256": "bff200c626d6284f87cd02bcb15f16db2e65a7f59aa0978b6ed9ab9bc7bc77e9",
+      "source_family": "bff200c626d6284f87cd02bcb15f16db2e65a7f59aa0978b6ed9ab9bc7bc77e9",
+      "source_url": "https://commons.wikimedia.org/wiki/File:IKEA,_knihovna_Billy.jpg",
+      "artist": "Jan Polák",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 1625,
+        "brightness": 94.15,
+        "sharpness": 1059.46
+      },
+      "variants": [
+        {
+          "file": "extra-7-dark.png",
+          "kind": "dark",
+          "sha256": "7820d49f1e63818ec323b86258ee6fda1a842e64215d52f8ef6916262aaea1f6",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "extra-7-blur.png",
+          "kind": "blur",
+          "sha256": "18e229e833cb5cba5cfe086a82f07041c62d9587a689bc295ad5c33607da542f",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "extra-8.jpg",
+      "source_sha256": "367089570694f8ce230d67e3fff948afd56d5fbd78397f81c67e8f1431fb7421",
+      "source_family": "367089570694f8ce230d67e3fff948afd56d5fbd78397f81c67e8f1431fb7421",
+      "source_url": "https://commons.wikimedia.org/wiki/File:IKEA_Billy_bookshelf_(80x106_cm_birch_veneer).jpg",
+      "artist": "Magnus Bäck",
+      "license": "Public domain",
+      "license_url": null,
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 1440,
+        "brightness": 116.23,
+        "sharpness": 2487.51
+      },
+      "variants": [
+        {
+          "file": "extra-8-dark.png",
+          "kind": "dark",
+          "sha256": "432c17727a5e66ba59f2332ed6862fc5cd059ab0cbef1792b0ab384c43cf2da9",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "extra-8-blur.png",
+          "kind": "blur",
+          "sha256": "316f31571c316df4c2d73aade0aabd691825294a9d30422a496e6bc36b331b1d",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    },
+    {
+      "source_file": "extra-14.jpg",
+      "source_sha256": "1a9dc6fa2e0e3038034d8dbb46b6675a3ea2bfca73ed0fdc368cfab50c08a576",
+      "source_family": "dinkun-chen-nn-gm333w",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Panasonic_MICROWAVE_OVEN_NN-GM333W_(2).jpg",
+      "artist": "Dinkun Chen",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "baseline": {
+        "accepted": true,
+        "reason": "",
+        "width": 960,
+        "height": 541,
+        "brightness": 104.89,
+        "sharpness": 1405.11
+      },
+      "variants": [
+        {
+          "file": "extra-14-dark.png",
+          "kind": "dark",
+          "sha256": "02c9f2f5f62fcc1bbdb1348028ac955e4feb0698125c96560ba0043d812895b0",
+          "processing": "RGB channel brightness factor 0.15; not physical camera exposure",
+          "expected_retake": true,
+          "blur_only_eligible": false
+        },
+        {
+          "file": "extra-14-blur.png",
+          "kind": "blur",
+          "sha256": "6c5ea9ef29203b94e67c797b57d873dc77f2dfddae6bf5929e63de84c4eb396a",
+          "processing": "Pillow GaussianBlur radius 12 pixels at original dimensions",
+          "expected_retake": true,
+          "blur_only_eligible": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "health": {
+    "status": "ok",
+    "mock": true,
+    "provider": "mock"
+  },
+  "docs_http_status": 200,
+  "imported": {
+    "manuals": 16,
+    "chunks": 2032
+  },
+  "restart_preserves_feedback": true,
+  "restart_preserves_report": true,
+  "deletion_cascades": true,
+  "sqlite_retrieval_page": 35,
+  "scope": "Real Uvicorn HTTP, manual SQLite retrieval and restart; image diagnosis offline; no live vision or phone UI test"
+}
