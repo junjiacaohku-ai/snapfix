@@ -187,7 +187,7 @@ def install_ui_api(app, get_legacy_store, legacy_is_mock=lambda: True):
 
     @app.get('/api/fe2/capabilities')
     def capabilities():
-        return {'real_vision_connected': False, 'unsupported_message': LEARNING,
+        return {'real_vision_connected': not legacy_is_mock(), 'unsupported_message': LEARNING,
                 'persistence': 'sqlite', 'draft_recipients': ['landlord', 'technician', 'after_sales']}
 
     @app.get('/api/fe2/cases')

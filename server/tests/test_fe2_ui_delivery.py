@@ -185,6 +185,7 @@ def test_v1_bridge_keeps_session_and_does_not_reset_saved_work(tmp_path):
                     citation_manual='User guide',citation_section='Connections',feedback=None)]))
     app=FastAPI();install_ui_api(app,lambda:LegacyStore(),lambda:False)
     with TestClient(app) as client:
+        assert client.get('/api/fe2/capabilities').json()['real_vision_connected'] is True
         imported=client.post('/api/fe2/import/original').json();path='/api/fe2/sessions/'+imported['id']
         assert imported['mode']=='live' and imported['model']=='ABC-1'
         assert imported['revisions'][0]['steps'][0]['source']['snippet'] is None

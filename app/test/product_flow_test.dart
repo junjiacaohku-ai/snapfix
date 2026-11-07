@@ -98,7 +98,10 @@ void main() {
     await tap(tester, '立即分析');
     expect(find.text('还在学习该维修技能中！'), findsOneWidget);
     expect(find.textContaining('开始自行排查'), findsNothing);
-    expect(calls.single['path'], '/api/fe2/diagnose');
+    expect(calls.map((call) => call['path']), [
+      '/api/fe2/capabilities',
+      '/api/fe2/diagnose',
+    ]);
     expect(tester.takeException(), isNull);
   });
   testWidgets('预览单入口→步骤反馈→报修编辑跨语言保留→真实复制调用', (tester) async {
@@ -185,5 +188,46 @@ void main() {
         ),
       ),
     );
+  });
+
+  test('真实能力开启时照片与错误码统一走 v1 并导入 UI 记录', () async {
+    final paths = <String>[];
+    final s = fixture();
+    final api = ProductApi(
+      baseUrl: 'http://localhost',
+      client: MockClient((request) async {
+        final path = request.url.path;
+        paths.add(path);
+        Object result;
+        if (path == '/api/fe2/capabilities') {
+          result = {'real_vision_connected': true};
+        } else if (path == '/api/analyze/image' ||
+            path == '/api/diagnose/manual') {
+          result = {'id': 'v1-session'};
+        } else if (path == '/api/fe2/import/v1-session') {
+          result = s;
+        } else {
+          fail('意外请求: $path');
+        }
+        return http.Response(
+          jsonEncode(result),
+          200,
+          headers: {'content-type': 'application/json; charset=utf-8'},
+        );
+      }),
+    );
+    addTearDown(api.close);
+
+    await api.photo(base64Decode('aW1hZ2U='), 'router.jpg');
+    await api.diagnose(brand: 'Bosch', code: 'E24');
+
+    expect(paths, [
+      '/api/fe2/capabilities',
+      '/api/analyze/image',
+      '/api/fe2/import/v1-session',
+      '/api/fe2/capabilities',
+      '/api/diagnose/manual',
+      '/api/fe2/import/v1-session',
+    ]);
   });
 }

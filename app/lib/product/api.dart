@@ -24,6 +24,7 @@ class ProductApi {
       ? 'http://10.0.2.2:8000'
       : 'http://127.0.0.1:8000';
   Uri uri(String path) => Uri.parse('$origin/api/fe2$path');
+  Uri v1Uri(String path) => Uri.parse('$origin/api$path');
   Future<dynamic> decode(Future<http.Response> work) async {
     try {
       final response = await work.timeout(const Duration(seconds: 35));
@@ -45,11 +46,26 @@ class ProductApi {
     }
   }
 
-  Future<dynamic> request(String method, String path, [Json? body]) {
-    final request = http.Request(method, uri(path));
+  Future<dynamic> send(
+    String method,
+    Uri url, [
+    Json? body,
+  ]) {
+    final request = http.Request(method, url);
     request.headers['Content-Type'] = 'application/json';
     if (body != null) request.body = jsonEncode(body);
     return decode(client.send(request).then(http.Response.fromStream));
+  }
+
+  Future<dynamic> request(String method, String path, [Json? body]) =>
+      send(method, uri(path), body);
+  Future<dynamic> requestV1(String method, String path, [Json? body]) =>
+      send(method, v1Uri(path), body);
+  Future<bool> realVisionAvailable() async {
+    final capabilities = Json.from(
+      await request('GET', '/capabilities') as Map,
+    );
+    return capabilities['real_vision_connected'] == true;
   }
 
   Future<List<Json>> list({String? mode}) async => (await request(
@@ -77,23 +93,41 @@ class ProductApi {
     String category = '',
     String code = '',
     String note = '',
-  }) async => Json.from(
-    await request('POST', '/diagnose', {
-      'brand': brand,
-      'category': category,
-      'error_code': code,
-      'note': note,
-    }) as Map,
-  );
+  }) async {
+    if (note.trim().isEmpty &&
+        code.trim().isNotEmpty &&
+        await realVisionAvailable()) {
+      final legacy = Json.from(
+        await requestV1('POST', '/diagnose/manual', {
+          'brand': brand,
+          'error_code': code,
+        }) as Map,
+      );
+      return importV1(legacy['id'] as String);
+    }
+    return Json.from(
+      await request('POST', '/diagnose', {
+        'brand': brand,
+        'category': category,
+        'error_code': code,
+        'note': note,
+      }) as Map,
+    );
+  }
+
   Future<Json> photo(Uint8List bytes, String name) async {
     if (bytes.length > 5 * 1024 * 1024) {
       throw const ProductFailure('请选择不超过 5MB 的照片。');
     }
-    final req = http.MultipartRequest('POST', uri('/diagnose/photo'))
-      ..files.add(http.MultipartFile.fromBytes('file', bytes, filename: name));
-    return Json.from(
+    final realVision = await realVisionAvailable();
+    final req = http.MultipartRequest(
+      'POST',
+      realVision ? v1Uri('/analyze/image') : uri('/diagnose/photo'),
+    )..files.add(http.MultipartFile.fromBytes('file', bytes, filename: name));
+    final result = Json.from(
       await decode(client.send(req).then(http.Response.fromStream)) as Map,
     );
+    return realVision ? importV1(result['id'] as String) : result;
   }
 
   Future<Json> feedback(String id, String step, String value) async =>
