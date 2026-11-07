@@ -19,6 +19,7 @@ def diagnose_manual_data(database, brand: str, error_code: str):
         brand=canonical_brand or None, model=None, error_code=code or None,
         decision="professional", decision_reason="", steps=[],
         safety_refused=False, created_at=datetime.now(timezone.utc).isoformat(),
+        source_mode="retrieval",
     )
     verdict = check(brand, error_code)
     if verdict.refused:

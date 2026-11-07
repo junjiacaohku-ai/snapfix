@@ -14,13 +14,13 @@ HKU COMP7506A Group Project · Flutter + FastAPI · 演示 2026-11-19 · 截止�
 | 说明书语料 | 16 份资料、2032 个切块，使用 JSON 导入 |
 | BM25 检索 | 支持品牌别名、错误码归一化、严格类别筛选和类别提示加权 |
 | 手动错误码诊断 | 查询真实语料；无召回时明确提示无引用，不编造维修步骤 |
-| 图片诊断 | 有实际图片质量检查和六场景 mock；按文件名路由，尚不是真实视觉识别 |
-| 安全门 | 高危类别拒答，安全回归用例与离线演示共用同一套规则 |
+| 图片诊断 | 已实现 Gemini 视觉 → BM25 → 安全门 → 生成 → 引用校验；无 key 时使用明确六场景 mock |
+| 安全门 | 高危类别拒答，真实管线、FE-2 与离线演示共用同一套规则 |
 | 报修 | 中文本地模板；英文可选 Gemini 翻译，无 key 或翻译失败仍可生成基础报告 |
-| Flutter App | 已整合 W1 主题组件和首页/扫描/预览骨架；真实 API 主链路待接入 |
+| Flutter App | FE-1 基础工程与 FE-2 产品 UI 已整合；拍照和手动错误码在能力可用时统一走 v1 API |
 | 展示页 | `landing/index.html` 为静态项目展示页 |
 
-真实图片识别 → 检索 → 生成 → 引用校验仍待接入。配置 Gemini key 目前只会影响可选报修翻译，不会让图片 mock 自动变成真实识别。详细边界见[后端文档](server/README.md)和[数据交接说明](docs/data-handoff.md)。
+真实管线代码已实现并通过替代 provider 测试；在线 Gemini 调用仍需有效 key 单独验收。`source_mode` 区分 mock、retrieval 和 gemini，回退不会冒充真实识别。原始照片不写入 SQLite。详细边界见[后端文档](server/README.md)和[数据交接说明](docs/data-handoff.md)。
 
 ## 目录结构
 
@@ -111,7 +111,7 @@ flutter test
 flutter run
 ```
 
-现有 W1 静态链路已在 iPhone 17 Pro / iOS 26.3 Simulator 通过集成测试；真实诊断 API、档案和报修页面仍待接入。Android Emulator 访问电脑后端使用 `http://10.0.2.2:8000`，iOS Simulator 默认使用 `http://127.0.0.1:8000`。真实手机需配置电脑的局域网地址，手机自己的 `127.0.0.1` 不指向电脑。展示页可直接打开 [landing/index.html](landing/index.html)。
+W1 静态链路已在 iPhone 17 Pro / iOS 26.3 Simulator 通过集成测试；FE-2 产品 UI、档案、反馈和报修已整合，拍照与错误码在真实能力可用时统一调用 v1 API。Android Emulator 访问电脑后端使用 `http://10.0.2.2:8000`，iOS Simulator 默认使用 `http://127.0.0.1:8000`。真实手机需配置电脑的局域网地址，手机自己的 `127.0.0.1` 不指向电脑。展示页可直接打开 [landing/index.html](landing/index.html)。
 
 ## 分工
 

@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field
 
 from diagnosis_service import diagnose_manual_data
 from image_quality import MAX_BYTES, check_image
+from pipeline import diagnose_image
 from report_service import build_report
 from retrieval_service import search_manuals
 from safety_gate import check as check_safety
@@ -19,8 +20,17 @@ from translation_service import TranslationError
 
 app = FastAPI(title="SnapFix API", version="0.1.0")
 
-# Gemini is currently used only for optional report translation, not image diagnosis.
-MOCK_MODE = True
+
+def _mock_mode():
+    forced = os.environ.get("SNAPFIX_MOCK", "").strip().lower()
+    if forced in {"1", "true", "yes", "on"}:
+        return True
+    if forced in {"0", "false", "no", "off"} and os.environ.get("GEMINI_API_KEY"):
+        return False
+    return not os.environ.get("GEMINI_API_KEY")
+
+
+MOCK_MODE = _mock_mode()
 
 
 class Step(BaseModel):
@@ -43,6 +53,7 @@ class Session(BaseModel):
     steps: list[Step] = []
     safety_refused: bool = False
     created_at: str
+    source_mode: Literal["mock", "retrieval", "gemini"] = "mock"
 
 
 class ManualDiagnoseRequest(BaseModel):
@@ -180,7 +191,11 @@ def _mock_billy():
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "mock": MOCK_MODE, "provider": "mock"}
+    return {
+        "status": "ok",
+        "mock": MOCK_MODE,
+        "provider": "mock" if MOCK_MODE else "gemini",
+    }
 
 
 @app.post("/api/manuals/search")
@@ -213,11 +228,26 @@ def search_manuals_endpoint(req: ManualSearchRequest):
 @app.post("/api/analyze/image", response_model=Session)
 async def analyze_image(file: UploadFile):
     name = (file.filename or "").lower()
+    mime_type = file.content_type or "image/jpeg"
     data = await file.read(MAX_BYTES + 1)
     await file.close()
     quality = check_image(data)
     if not quality.accepted:
         raise HTTPException(status_code=422, detail=quality.reason)
+
+    if not MOCK_MODE:
+        try:
+            live = diagnose_image(data, DB.path, mime_type)
+        except (sqlite3.Error, OSError) as exc:
+            raise HTTPException(
+                status_code=503,
+                detail="Manual database unavailable; check corpus import.",
+            ) from exc
+        if live is not None:
+            session = Session.model_validate(live)
+            DB[session.id] = session
+            return session
+
     if "router" in name or "tp-link" in name:
         session = _mock_router()
     elif "billy" in name or "ikea" in name:
@@ -233,7 +263,7 @@ async def analyze_image(file: UploadFile):
     else:
         raise HTTPException(
             status_code=422,
-            detail="未匹配演示场景，请使用文档约定的 mock 文件名；当前未启用真实识别。",
+            detail="真实识别暂不可用，且未匹配演示场景。请重试、手动输入错误码，或使用约定的 mock 文件名。",
         )
     session = _apply_safety(session)
     DB[session.id] = session

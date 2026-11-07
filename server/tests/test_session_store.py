@@ -1,3 +1,5 @@
+import sqlite3
+
 from main import Session, _mock_router
 from session_store import SessionStore
 
@@ -22,3 +24,25 @@ def test_feedback_and_reports_survive_reopen_and_delete_cascades(tmp_path):
         for table in ['sessions', 'steps', 'reports']:
             assert db.execute(f'SELECT count(*) FROM {table}').fetchone()[0] == 0
         assert not db.execute('PRAGMA foreign_key_check').fetchall()
+
+
+def test_old_database_gains_source_mode_without_losing_records(tmp_path):
+    path = tmp_path / 'old.db'
+    with sqlite3.connect(path) as db:
+        db.execute('''CREATE TABLE sessions(
+            id TEXT PRIMARY KEY, device_category TEXT NOT NULL, brand TEXT, model TEXT,
+            error_code TEXT, decision TEXT NOT NULL, decision_reason TEXT NOT NULL,
+            safety_refused INTEGER NOT NULL, created_at TEXT NOT NULL)''')
+        db.execute('''INSERT INTO sessions VALUES(
+            'old-session','router','TP-Link',NULL,NULL,'professional','Legacy',
+            0,'2026-01-01T00:00:00+00:00')''')
+
+    store = SessionStore(path, Session.model_validate)
+    assert store['old-session'].source_mode == 'mock'
+    session = _mock_router()
+    session.source_mode = 'gemini'
+    store[session.id] = session
+
+    reopened = SessionStore(path, Session.model_validate)
+    assert reopened['old-session'].decision_reason == 'Legacy'
+    assert reopened[session.id].source_mode == 'gemini'

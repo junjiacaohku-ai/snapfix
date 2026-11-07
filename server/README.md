@@ -1,6 +1,6 @@
 # SnapFix Server · FastAPI 后端
 
-本文描述三条后端分支集成后的实际行为。图片诊断目前仍是带质量门的离线场景；手动错误码检索、SQLite、反馈和报修使用真实实现。
+本文描述后端与产品 UI 集成后的实际行为。真实图片管线已实现质量门、Gemini 视觉、BM25、安全门、结构化生成和引用校验；在线 Gemini 调用需有效 key 单独验收。手动错误码检索、SQLite、反馈和报修使用真实实现，mock 始终可用于离线演示。
 
 ## 1. 环境要求
 
@@ -44,7 +44,7 @@ PowerShell 禁止激活脚本时，直接使用 `.\.venv\Scripts\python.exe` 替
 - [Swagger UI](http://127.0.0.1:8000/docs)
 - [健康接口](http://127.0.0.1:8000/api/health)
 
-`GET /api/health` 当前返回 `mock: true`、`provider: "mock"`，因为真实图片识别尚未接入。该状态不代表可选报修翻译是否调用了 Gemini。
+`GET /api/health` 在无 key 或 `SNAPFIX_MOCK=1` 时返回 `mock: true`、`provider: "mock"`；配置有效 key 且未强制 mock 时返回 `provider: "gemini"`。该状态表示配置，不保证每次在线调用成功；每条 Session 的 `source_mode` 才区分实际结果为 mock、retrieval 或 gemini。
 
 ## 3. 数据库与语料
 
@@ -94,9 +94,13 @@ PowerShell 禁止激活脚本时，直接使用 `.\.venv\Scripts\python.exe` 替
 
 `POST /api/diagnose/manual` 可提交 `{"brand":"博世","error_code":"E:24"}`，错误码会归一化为 `E24`。目前只返回候选手册和转专业建议，`steps` 为空；未知品牌或错误码同样明确提示无引用。空白输入返回 422，数据库不可用返回 503。
 
-### 图片 mock 与质量门
+### 真实图片管线与 mock 降级
 
-演示文件名：
+真实管线依次执行图片质量门、Gemini 视觉提取、归一化、BM25、安全门、结构化生成和引用校验。低置信度、空召回、型号未核实或无有效引用时不提供 DIY 步骤；高危结果直接拒答。在线调用失败可回退到明确标记的 mock，Session 的 `source_mode` 不得变成 `gemini`。
+
+必须上传有效图片。过暗、模糊、分辨率不足、无法读取或超过大小限制会返回 422；质量判断依据图片内容，不是文件名。原始照片不写入 SQLite。
+
+离线演示文件名：
 
 - `router.jpg`：TP-Link 路由器
 - `e24.jpg`：Bosch 洗碗机 E24
@@ -104,7 +108,7 @@ PowerShell 禁止激活脚本时，直接使用 `.\.venv\Scripts\python.exe` 替
 - `microwave.jpg`：安全拒答
 - `report.jpg`：报修场景
 
-必须上传有效图片。过暗、模糊、分辨率不足、无法读取或超过大小限制会返回 422；质量判断依据图片内容，不是文件名。未知演示文件名同样返回 422，不编造诊断。文件名路由不是实际视觉识别。
+文件名路由只用于 mock，不是实际视觉识别。真实调用失败且文件名不匹配演示场景时返回 422，不编造诊断。
 
 ### 反馈与报修
 
@@ -158,7 +162,7 @@ python experiments/package_demo_assets.py --output ../snapfix-demo-inputs.zip
 
 ## 6. 联合开发边界
 
-- BE-1 继续接入真实图片识别、生成和引用校验；不能让 key 的存在改变健康接口的虚假状态。
+- BE-1 已实现真实图片识别、生成和引用校验；在线 key 调用与端到端耗时仍需实测，健康配置不能替代每条记录的 `source_mode`。
 - BE-2 负责检索、存储和报修；安全规则统一使用 `safety_gate.py`，不另建分支副本。
 - FE 对接反馈、报修和档案时，必须处理重拍、型号为空、安全拒答、未知错误码和无引用状态。
 - 未确认完整型号时不假定手册适用；候选手册命中不等于真实故障已识别。

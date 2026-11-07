@@ -17,7 +17,8 @@ class SessionStore(MutableMapping):
                 CREATE TABLE IF NOT EXISTS sessions(
                     id TEXT PRIMARY KEY, device_category TEXT NOT NULL, brand TEXT, model TEXT,
                     error_code TEXT, decision TEXT NOT NULL, decision_reason TEXT NOT NULL,
-                    safety_refused INTEGER NOT NULL, created_at TEXT NOT NULL);
+                    safety_refused INTEGER NOT NULL, created_at TEXT NOT NULL,
+                    source_mode TEXT NOT NULL DEFAULT 'mock');
                 CREATE TABLE IF NOT EXISTS steps(
                     id TEXT PRIMARY KEY, session_id TEXT NOT NULL REFERENCES sessions(id) ON DELETE CASCADE,
                     idx INTEGER, content TEXT, citation_manual TEXT, citation_section TEXT, feedback TEXT);
@@ -25,6 +26,9 @@ class SessionStore(MutableMapping):
                     id TEXT PRIMARY KEY, session_id TEXT NOT NULL REFERENCES sessions(id) ON DELETE CASCADE,
                     lang TEXT, content TEXT, created_at TEXT);
             ''')
+            columns = {row['name'] for row in db.execute('PRAGMA table_info(sessions)')}
+            if 'source_mode' not in columns:
+                db.execute("ALTER TABLE sessions ADD COLUMN source_mode TEXT NOT NULL DEFAULT 'mock'")
 
     @contextmanager
     def connection(self):
@@ -53,12 +57,15 @@ class SessionStore(MutableMapping):
         if key != data['id']:
             raise ValueError('session ID mismatch')
         with self.connection() as db, db:
-            db.execute('''INSERT INTO sessions VALUES(
-                :id,:device_category,:brand,:model,:error_code,:decision,:decision_reason,:safety_refused,:created_at)
+            db.execute('''INSERT INTO sessions(
+                id,device_category,brand,model,error_code,decision,decision_reason,
+                safety_refused,created_at,source_mode)
+                VALUES(:id,:device_category,:brand,:model,:error_code,:decision,
+                :decision_reason,:safety_refused,:created_at,:source_mode)
                 ON CONFLICT(id) DO UPDATE SET device_category=excluded.device_category,
                 brand=excluded.brand,model=excluded.model,error_code=excluded.error_code,
                 decision=excluded.decision,decision_reason=excluded.decision_reason,
-                safety_refused=excluded.safety_refused''', data)
+                safety_refused=excluded.safety_refused,source_mode=excluded.source_mode''', data)
             db.execute('DELETE FROM steps WHERE session_id=?', (key,))
             db.executemany('''INSERT INTO steps VALUES(
                 :id,:session_id,:idx,:content,:citation_manual,:citation_section,:feedback)''',

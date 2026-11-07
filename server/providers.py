@@ -64,6 +64,66 @@ def gemini_extract(image_bytes: bytes, mime_type: str = "image/jpeg") -> VisionR
         return None
 
 
+class GeneratedStep(BaseModel):
+    content: str
+    citation_chunk_id: str
+
+
+class GeneratedDiagnosis(BaseModel):
+    decision: str
+    decision_reason: str
+    steps: list[GeneratedStep] = []
+
+
+def gemini_generate(vision: VisionResult, matches: list[dict]) -> GeneratedDiagnosis | None:
+    """Generate a decision and steps constrained to retrieved manual chunks."""
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key or not matches:
+        return None
+    manuals = [
+        {
+            "chunk_id": row["id"],
+            "title": row["title"],
+            "manual_id": row["manual_id"],
+            "page": row["page"],
+            "section": row.get("section") or row.get("chapter") or "",
+            "content": row["content"],
+        }
+        for row in matches
+    ]
+    prompt = (
+        "你是家电故障处置助手。只能依据给定手册片段生成答案，不得补充常识性拆修步骤。"
+        "输出 decision=diy/landlord/professional、一句话 decision_reason 和 steps。"
+        "每个 step 必须包含 content 和来自输入的 citation_chunk_id。"
+        "如果设备完整 model 为 null、手册型号不匹配、资料不足或需要拆机，decision 必须为 professional，steps 为空。"
+        "燃气、市电、高压电容、制冷剂、锂电池、压力设备等高危作业不得给出 DIY。"
+        "租住房屋且非用户所有的设备可建议 landlord。不要声称已执行任何操作。\n\n"
+        "视觉提取："
+        + json.dumps(vision.model_dump(), ensure_ascii=False)
+        + "\n手册片段："
+        + json.dumps(manuals, ensure_ascii=False)
+    )
+    try:
+        from google import genai
+        from google.genai import types
+
+        with genai.Client(
+            api_key=key,
+            http_options=types.HttpOptions(timeout=25000),
+        ) as client:
+            resp = client.models.generate_content(
+                model=os.environ.get("GEMINI_MODEL", _GEMINI_MODEL),
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=GeneratedDiagnosis,
+                ),
+            )
+        return GeneratedDiagnosis.model_validate(json.loads(resp.text))
+    except Exception:
+        return None
+
+
 def status() -> dict:
     """供 /api/health 汇报 provider 配置状态(只报有无,绝不报 key 本体)。"""
     return {

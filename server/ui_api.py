@@ -302,6 +302,8 @@ def install_ui_api(app, get_legacy_store, legacy_is_mock=lambda: True):
             data = get_legacy_store()[legacy_id].model_dump()
         except KeyError:
             raise HTTPException(404, '诊断记录不存在。')
+        if data.get('source_mode', 'retrieval') == 'mock':
+            raise HTTPException(409, '该记录是离线演示数据，不能作为真实诊断导入。')
         session = pending(DiagnoseInput(brand=data.get('brand') or '', model=data.get('model') or '',
             category=data['device_category'], error_code=data.get('error_code') or ''))
         session.update(id=sid, legacy_session_id=legacy_id, diagnosis_status='available', created_at=data['created_at'])

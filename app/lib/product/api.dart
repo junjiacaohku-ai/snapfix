@@ -127,6 +127,9 @@ class ProductApi {
     final result = Json.from(
       await decode(client.send(req).then(http.Response.fromStream)) as Map,
     );
+    if (realVision && result['source_mode'] == 'mock') {
+      throw const ProductFailure('真实识别暂不可用，请稍后重试或使用明确的流程预览。');
+    }
     return realVision ? importV1(result['id'] as String) : result;
   }
 
