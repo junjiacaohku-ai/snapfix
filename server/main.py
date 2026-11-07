@@ -293,3 +293,8 @@ def generate_report(session_id: str, req: ReportRequest):
         raise HTTPException(status_code=503, detail=str(exc)) from exc
     DB.save_report(session_id, req.lang, content)
     return {"lang": req.lang, "content": content}
+
+
+from ui_api import install_ui_api
+
+install_ui_api(app, lambda: DB, lambda: bool(globals().get("MOCK_MODE", True)))

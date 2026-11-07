@@ -25,7 +25,7 @@ HKU COMP7506A Group Project · Flutter + FastAPI · 演示 2026-11-19 · 截止�
 ## 目录结构
 
 ```text
-app/                         Flutter App（W1 骨架，见 app/README.md）
+app/                         Flutter App（FE-1 基础工程 + FE-2 产品交互）
 docs/                        需求、契约、分工、验收和演示素材
 landing/                     静态展示页
 server/
@@ -101,7 +101,7 @@ GEMINI_MODEL=gemini-2.5-flash
 
 ## 前端与展示页
 
-配置 Flutter SDK 后：
+本分支包含 Flutter 工程，说明见 [app/README.md](app/README.md)。配置 SDK 后，从项目根目录执行：
 
 ```sh
 cd app

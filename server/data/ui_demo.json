@@ -1,0 +1,315 @@
+{
+  "cases": [
+    {
+      "id": "case_bosch_e24",
+      "title": "博世洗碗机 E24 排水故障排查实录",
+      "brand": "Bosch / 博世",
+      "appliance": "洗碗机",
+      "model": "SilencePlus 60cm 嵌入式 (SMI46MS00E)",
+      "error_code": "E24",
+      "image_url": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80",
+      "problem_description": "洗碗程序运行到最后15分钟时报警停机，面板频繁显示 E24 错误代码，腔体底部积水未排出。",
+      "cause_analysis": "E24 在博世洗碗机系统中代表“排水循环受阻”。最常见诱因不是排水泵损坏，而是底部细密微孔滤网被油垢菜叶糊住，或白色排水泵白色护盖松脱导致泵叶轮锁死。",
+      "solution_summary": "旋下微孔滤网清水冲洗，卸下排水泵白色卡扣护盖，挑出缠绕在叶轮上的硬质鱼刺，装回扣紧后恢复正常。",
+      "is_resolved": true,
+      "resolved_evidence": "来源于维修记录归档：清洁泵叶轮并复位白色卡扣后，单次快洗排水测试顺利排出冷水。",
+      "sources": [
+        {
+          "manual_title": "Bosch Dishwasher Service Handbook (Series 4/6)",
+          "chapter": "Section 4.2 Error Code Reference: E24 / E25",
+          "page": 38,
+          "snippet": "E24 indicates drain pump issue. Verify filter basket cleanliness and ensure pump impeller cover is firmly snapped into lock position.",
+          "is_verified": true
+        }
+      ],
+      "steps": [
+        {
+          "id": "c_step_1",
+          "step_number": 1,
+          "title": "拔掉电源断电并吸出底部积水",
+          "description": "必须先拔下洗碗机电源插头确保安全。用海绵或杯子将底座凹槽处残留的污水舀出，露出圆形微滤网组件。",
+          "caution": "切勿在带电状态下手伸入底部积水区。"
+        },
+        {
+          "id": "c_step_2",
+          "step_number": 2,
+          "title": "逆时针旋转取出圆柱微孔滤网",
+          "description": "抓住圆柱形粗滤网，向左逆时针旋转1/4圈，连同底部的平底不锈钢筛网一同提起。用温水和废旧牙刷彻底刷去油垢。",
+          "caution": "注意微滤网是否有破损，如有破洞异物容易再次落入泵腔。"
+        },
+        {
+          "id": "c_step_3",
+          "step_number": 3,
+          "title": "打开排水泵白色护盖，检查叶轮转动",
+          "description": "在滤网槽左下方有一个带提手的白色塑料小护盖。用茶匙轻撬或用手捏住拉手往内侧提起，露出黑色四叶泵叶轮。用手指轻轻拨动叶轮，确认能顺畅转动且无牙签、玻璃渣卡壳。",
+          "caution": "内可能有碎玻璃渣，建议戴防护手套或使用棉签拨动。"
+        },
+        {
+          "id": "c_step_4",
+          "step_number": 4,
+          "title": "重新卡紧白色护盖（听到咔哒声）并复位滤网",
+          "description": "护盖必须完全卡紧（听到清晰咔哒声），否则排水时形成负压泄漏仍会报 E24。放回滤网并顺时针锁紧。重新通电开机运行预冲洗程序验证。"
+        }
+      ]
+    },
+    {
+      "id": "case_siemens_e15",
+      "title": "西门子洗碗机 E15 龙头闪烁底盘漏水保护",
+      "brand": "Siemens / 西门子",
+      "appliance": "洗碗机",
+      "model": "IQ300 系列 (SC73M810TI)",
+      "error_code": "E15",
+      "image_url": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+      "problem_description": "机器蜂鸣报警，水龙头图标一直狂闪，按关机键关不掉，底盘排水泵一直嗡嗡空转抽水。",
+      "cause_analysis": "E15 是西门子/博世 AquaStop 防漏水保护触发。底盘接水托盘里的浮子开关检测到积水并浮起，强制启动保护性排空，并锁死面板。",
+      "solution_summary": "断电后切断进水角阀，将机器向后倾斜45度倒出底盘残留少量冷凝水，彻底擦干后等待1小时浮子复位。",
+      "is_resolved": true,
+      "resolved_evidence": "按倾斜吸干底盘方案操作后，浮子降回原位，水龙头灯熄灭，恢复正常待机。",
+      "sources": [
+        {
+          "manual_title": "Siemens Home Appliances Technical Guide",
+          "chapter": "AquaStop Safety Mechanism",
+          "page": 52,
+          "snippet": "Error E15: Base tray water detection triggered float switch. Machine will continuously run drain pump until sensor dry.",
+          "is_verified": true
+        }
+      ],
+      "steps": [
+        {
+          "id": "cs_1",
+          "step_number": 1,
+          "title": "拔掉插头，关闭进水角阀",
+          "description": "机器持续抽水是防止家中浸泡，立即拔除插头切断主电。"
+        },
+        {
+          "id": "cs_2",
+          "step_number": 2,
+          "title": "移出机体并倾斜吸水",
+          "description": "轻轻向后倾斜机器，底盘缝隙会流出少量水。用干毛巾吸干，通风晾干数小时让传感器海绵彻底脱水。"
+        }
+      ]
+    },
+    {
+      "id": "case_dyson_pulsing",
+      "title": "戴森吸尘器按压开关蓝灯闪烁不工作",
+      "brand": "Dyson / 戴森",
+      "appliance": "吸尘器",
+      "model": "V10 / V11 Absolute",
+      "image_url": "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80",
+      "problem_description": "扣动扳机时主机发出“咔哒咔哒”脉冲喘息声，气道图标或蓝灯闪烁多次后自动断电，无法吸尘。",
+      "cause_analysis": "机身内置气道压力传感器感应到气流阻力过大，触发保护性脉冲断电。80%为可拆卸后置 HEPA 滤网吸附过厚粉尘，或尘桶进气翻板被发夹团块卡死。",
+      "solution_summary": "旋转拆下尾部滤筒冷水彻底冲洗并自然阴干24小时，清空气道杂物。",
+      "is_resolved": true,
+      "resolved_evidence": "清洗晾干滤网装回后，气流恢复畅通，脉冲保护解除。",
+      "sources": [
+        {
+          "manual_title": "Dyson Cordless Vacuum Cleaner Operating Manual",
+          "chapter": "Washing the filter unit monthly",
+          "page": 14,
+          "snippet": "Motor pulses when an obstruction or dirty filter restricts airflow. Wash with cold water only.",
+          "is_verified": true
+        }
+      ],
+      "steps": [
+        {
+          "id": "ds_1",
+          "step_number": 1,
+          "title": "逆时针旋转拧下紫色后置滤芯",
+          "description": "握住机身尾部紫色滤筒，逆时针旋转1/4圈并轻拔拆出。"
+        },
+        {
+          "id": "ds_2",
+          "step_number": 2,
+          "title": "冷水单向冲洗内部褶皱滤纸",
+          "description": "在自来水龙头下冲洗，轻敲滤芯排出浑水，禁止使用洗洁精或洗衣机烘干。"
+        },
+        {
+          "id": "ds_3",
+          "step_number": 3,
+          "title": "务必阴干至少24小时方可装回",
+          "description": "未彻底干燥装回会导致电机进水烧毁。确认完全干燥后对准卡槽拧紧。"
+        }
+      ]
+    },
+    {
+      "id": "case_joyoung_e02",
+      "title": "九阳破壁机启动报错 E02 开关蜂鸣",
+      "brand": "Joyoung / 九阳",
+      "appliance": "破壁料理机",
+      "model": "Y912 多功能冷热破壁机",
+      "error_code": "E02",
+      "image_url": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=800&q=80",
+      "problem_description": "杯体放好食材盖上盖子，旋转选择豆浆功能后按启动键，屏幕显示 E02 并连续嘀嘀报警，电机不转。",
+      "cause_analysis": "E02 代表“上盖磁控安全感应未就位”。杯盖手柄内部埋有磁控感应磁铁，若未对准杯体把手边缘的卡扣凹槽拧到极限，微动开关无法闭合。",
+      "solution_summary": "右手顺时针用力旋紧上盖把手，使盖上手柄与杯身把手完全对齐重合，听见嗒的一声磁吸到位。",
+      "is_resolved": true,
+      "resolved_evidence": "旋正杯盖后，E02 自动消失恢复待机状态，顺利制浆。",
+      "sources": [
+        {
+          "manual_title": "九阳破壁机通用说明书及故障代码表",
+          "chapter": "常见故障排查：E02",
+          "page": 22,
+          "snippet": "E02 故障原因：杯盖未盖好或未旋转到位。排除方法：将杯盖旋至把手正上方完全合槽。",
+          "is_verified": true
+        }
+      ],
+      "steps": [
+        {
+          "id": "jy_1",
+          "step_number": 1,
+          "title": "检查杯盖防溢硅胶圈是否装反",
+          "description": "取下杯盖查看黑色硅胶圈是否平整贴合，如有凸起翘曲会导致盖子高度不够而无法旋转到位。"
+        },
+        {
+          "id": "jy_2",
+          "step_number": 2,
+          "title": "握住杯体把手，顺时针旋转旋紧",
+          "description": "双手配合，顺时针旋转上盖，直至上盖小凸点与把手上方的卡扣指示标完全对齐对正。"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "id": "sess_bosch_101",
+      "created_at": "2026-11-03 18:20",
+      "updated_at": "2026-11-04 09:15",
+      "device_name": "博世洗碗机 E24 排水故障",
+      "brand": "Bosch / 博世",
+      "model": "SilencePlus (待确认具体尾缀)",
+      "error_code": "E24",
+      "category": "洗碗机",
+      "status": "investigating",
+      "primary_image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
+      "current_revision_index": 0,
+      "revisions": [
+        {
+          "revision_id": "rev_1",
+          "revision_number": 1,
+          "created_at": "2026-11-03 18:22",
+          "problem_summary": "洗碗机工作中断，报警提示 E24 错误代码，腔体底部排水不畅。",
+          "explanation": "E24 代表排水泵受阻或微滤网堵塞。建议先检查底部的微孔滤网与水泵黑色叶轮是否有食物残渣或硬物缠绕。",
+          "suggestion": "self_check",
+          "confidence": "high",
+          "is_high_risk": false,
+          "steps": [
+            {
+              "id": "s1",
+              "step_number": 1,
+              "title": "拔掉洗碗机主电源插头",
+              "description": "切断电源以确保安全，避免在拆卸滤网时触电。",
+              "caution": "严禁带电进行机器内部检查。",
+              "feedback": "done",
+              "feedback_at": "2026-11-03 18:25"
+            },
+            {
+              "id": "s2",
+              "step_number": 2,
+              "title": "逆时针拧出滤网组件并刷洗",
+              "description": "旋下圆柱形滤网与平板金属筛网，在水龙头下用软毛刷清除沉淀物。",
+              "feedback": "done",
+              "feedback_at": "2026-11-03 18:30"
+            },
+            {
+              "id": "s3",
+              "step_number": 3,
+              "title": "检查左侧排水泵白色护盖与叶轮",
+              "description": "取下白色卡扣小盖，拨动泵叶轮检查是否有牙签或硬物卡住。",
+              "feedback": "not_useful",
+              "feedback_at": "2026-11-04 09:10"
+            }
+          ]
+        }
+      ],
+      "reports": {}
+    },
+    {
+      "id": "sess_ac_102",
+      "created_at": "2026-11-02 14:05",
+      "updated_at": "2026-11-03 11:00",
+      "device_name": "大金空调室内机 U4 通信故障",
+      "brand": "Daikin / 大金",
+      "model": "VRV 室内天花机 (FXFP71LVC)",
+      "error_code": "U4",
+      "category": "空调",
+      "status": "awaiting_repair",
+      "primary_image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
+      "current_revision_index": 0,
+      "revisions": [
+        {
+          "revision_id": "rev_ac1",
+          "revision_number": 1,
+          "created_at": "2026-11-02 14:08",
+          "problem_summary": "遥控器开机无冷风，自检代码显示 U4。",
+          "explanation": "U4 代表室内机与室外机信号传输线路故障。属于外机主板供电或通信屏蔽线断路，个人自行检修难度与高空坠落风险极高。",
+          "suggestion": "contact_landlord",
+          "confidence": "high",
+          "is_high_risk": false,
+          "steps": [
+            {
+              "id": "ac_s1",
+              "step_number": 1,
+              "title": "记录线控器完整故障码与室外机位置",
+              "description": "拍照记录显示屏 U4 代码，准备提供给房东或物业报修。",
+              "feedback": "done",
+              "feedback_at": "2026-11-02 14:15"
+            }
+          ]
+        }
+      ],
+      "reports": {
+        "landlord_zh": {
+          "recipient_type": "landlord",
+          "language": "zh",
+          "title": "租户空调故障报修说明（大金U4代码）",
+          "content": "房东您好，我是租客。房间客厅的大金中央空调开机无法制冷，线控面板自检显示故障代码【U4】。\n我已查阅大金官方技术说明，U4 表示内外机通信线路或外机主控板供电异常，需专业空调维修师傅带万用表上门检查外机主板及配线。\n由于室外机挂在建筑外墙，租户无法自行拆修，烦请协助联系维修师傅预约上门检修时间，感谢！",
+          "updated_at": "2026-11-02 14:30",
+          "is_customized": false
+        }
+      }
+    },
+    {
+      "id": "sess_router_103",
+      "created_at": "2026-10-28 10:00",
+      "updated_at": "2026-10-28 10:25",
+      "device_name": "TP-Link 双频路由器红灯断网",
+      "brand": "TP-Link / 普联",
+      "model": "Archer AX3000",
+      "category": "网络设备",
+      "status": "resolved",
+      "primary_image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+      "current_revision_index": 0,
+      "revisions": [
+        {
+          "revision_id": "rev_r1",
+          "revision_number": 1,
+          "created_at": "2026-10-28 10:02",
+          "problem_summary": "路由器 Internet 指示灯常亮橙红色，手机连接 Wi-Fi 显示无网络连接。",
+          "explanation": "WAN 口物理链路接通但上层 PPPoE / DHCP 握手未完成，多为光猫重启导致 IP 租期未同步或水晶头松脱。",
+          "suggestion": "self_check",
+          "confidence": "high",
+          "is_high_risk": false,
+          "steps": [
+            {
+              "id": "r_s1",
+              "step_number": 1,
+              "title": "拔掉光猫与路由器电源，静置1分钟",
+              "description": "清除宽带机房旧会话缓存，重新同步上下行时钟。",
+              "feedback": "done",
+              "feedback_at": "2026-10-28 10:10"
+            },
+            {
+              "id": "r_s2",
+              "step_number": 2,
+              "title": "重新插紧光猫与 WAN 口网线（听见咔嗒声）",
+              "description": "确保网线水晶头簧片无氧化与松动。",
+              "feedback": "done",
+              "feedback_at": "2026-10-28 10:15"
+            }
+          ]
+        }
+      ],
+      "reports": {}
+    }
+  ]
+}

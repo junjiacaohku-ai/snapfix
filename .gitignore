@@ -32,3 +32,12 @@ app/android/local.properties
 
 # Local validation screenshots
 artifacts/
+
+# FE-2 local runtime files
+**/.env
+**/.env.*
+!**/.env.example
+**/*.db
+**/*.db-wal
+**/*.db-shm
+**/local.properties

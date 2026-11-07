@@ -1,0 +1,109 @@
+[
+  {
+    "id": "demo-router",
+    "device_category": "router",
+    "brand": "TP-Link",
+    "model": null,
+    "error_code": null,
+    "decision": "diy",
+    "decision_reason": "演示场景：先进行外部检查，无法恢复时联系网络运营商，不拆机。",
+    "safety_refused": false,
+    "created_at": "2026-11-03T10:00:00Z",
+    "steps": [
+      {
+        "id": "demo-router-step-1",
+        "idx": 1,
+        "content": "检查外置电源与网线是否插牢，不拆机。",
+        "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+        "citation_section": "PDF p.11–12",
+        "feedback": null
+      },
+      {
+        "id": "demo-router-step-2",
+        "idx": 2,
+        "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
+        "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+        "citation_section": "PDF p.121",
+        "feedback": null
+      },
+      {
+        "id": "demo-router-step-3",
+        "idx": 3,
+        "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
+        "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
+        "citation_section": "PDF p.120–122",
+        "feedback": null
+      }
+    ]
+  },
+  {
+    "id": "demo-billy",
+    "device_category": "furniture",
+    "brand": "IKEA",
+    "model": null,
+    "error_code": null,
+    "decision": "diy",
+    "decision_reason": "演示场景：BILLY 组装检查，须以实际型号说明书为准。",
+    "safety_refused": false,
+    "created_at": "2026-11-03T10:00:00Z",
+    "steps": [
+      {
+        "id": "demo-billy-step-1",
+        "idx": 1,
+        "content": "先确认实际型号，阅读并遵循该型号说明书的每一步要求。",
+        "citation_manual": "IKEA BILLY AA-2289105-4",
+        "citation_section": "PDF p.2",
+        "feedback": null
+      },
+      {
+        "id": "demo-billy-step-2",
+        "idx": 2,
+        "content": "使用说明书要求的防倾倒连接件；墙体固定螺钉和膨胀件须适配墙体。",
+        "citation_manual": "IKEA BILLY AA-2289105-4",
+        "citation_section": "PDF p.2",
+        "feedback": null
+      },
+      {
+        "id": "demo-billy-step-3",
+        "idx": 3,
+        "content": "无法确定墙体材料或固定方法时，请寻求专业人员建议。",
+        "citation_manual": "IKEA BILLY AA-2289105-4",
+        "citation_section": "PDF p.2",
+        "feedback": null
+      }
+    ]
+  },
+  {
+    "id": "demo-e24",
+    "device_category": "dishwasher",
+    "brand": "Bosch",
+    "model": null,
+    "error_code": "E24",
+    "decision": "professional",
+    "decision_reason": "演示场景：Bosch 洗碗机 E24 排水异常。完整型号尚未确认，请联系品牌售后核实。",
+    "safety_refused": false,
+    "created_at": "2026-11-03T10:00:00Z",
+    "steps": [
+      {
+        "id": "demo-e24-step-1",
+        "idx": 1,
+        "content": "记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
+        "citation_manual": "Bosch dishwasher SM/SB 9001014024 B",
+        "citation_section": "PDF p.35（故障表；未确认用户型号）",
+        "feedback": null
+      }
+    ]
+  },
+  {
+    "id": "demo-microwave",
+    "device_category": "microwave",
+    "brand": null,
+    "model": null,
+    "error_code": null,
+    "decision": "refused",
+    "decision_reason": "演示场景：微波炉内部高压部件可能在断电后仍存有危险，不提供拆解步骤，请联系专业人员。",
+    "safety_refused": true,
+    "created_at": "2026-11-03T10:00:00Z",
+    "steps": []
+  }
+]
