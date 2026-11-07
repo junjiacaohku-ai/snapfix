@@ -19,7 +19,7 @@
       },
       "passed": true,
       "response": {
-        "id": "c4c22c44-f0fa-4de5-9dbf-a35aefe43cbd",
+        "id": "14cff137-90ef-4d5c-8ceb-4eeabab676ce",
         "device_category": "dishwasher",
         "brand": "bosch",
         "model": null,
@@ -28,10 +28,11 @@
         "decision_reason": "已检索到候选说明书：Bosch dishwasher SM/SB instruction manual 9001014024 B，PDF 第 35 页。这是候选资料，设备完整型号尚未核实；当前仅完成检索接入，不生成维修步骤。请核对实际型号，必要时联系专业人员。",
         "steps": [],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.558810+00:00"
+        "created_at": "2026-11-07T09:50:09.472616+00:00",
+        "source_mode": "retrieval"
       },
       "reports": {},
-      "elapsed_ms": 91.18
+      "elapsed_ms": 87.84
     },
     {
       "case": "M-02",
@@ -46,7 +47,7 @@
       },
       "passed": true,
       "response": {
-        "id": "af3600a7-bfdd-491d-a689-fab21f3a369c",
+        "id": "a62f755e-40c9-49a2-b99d-a8ddba3b5d25",
         "device_category": "dishwasher",
         "brand": "bosch",
         "model": null,
@@ -55,10 +56,11 @@
         "decision_reason": "已检索到候选说明书：Bosch dishwasher SM/SB instruction manual 9001014024 B，PDF 第 35 页。这是候选资料，设备完整型号尚未核实；当前仅完成检索接入，不生成维修步骤。请核对实际型号，必要时联系专业人员。",
         "steps": [],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.649224+00:00"
+        "created_at": "2026-11-07T09:50:09.560069+00:00",
+        "source_mode": "retrieval"
       },
       "reports": {},
-      "elapsed_ms": 4.88
+      "elapsed_ms": 4.31
     },
     {
       "case": "M-03",
@@ -73,7 +75,7 @@
       },
       "passed": true,
       "response": {
-        "id": "859631ea-5046-445d-86f1-eda2bc39bdc7",
+        "id": "5b43f9e9-a1f4-4a26-b603-6e8a6e2d28e2",
         "device_category": "dishwasher",
         "brand": "bosch",
         "model": null,
@@ -82,10 +84,11 @@
         "decision_reason": "已检索到候选说明书：Bosch dishwasher SM/SB instruction manual 9001014024 B，PDF 第 35 页。这是候选资料，设备完整型号尚未核实；当前仅完成检索接入，不生成维修步骤。请核对实际型号，必要时联系专业人员。",
         "steps": [],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.654229+00:00"
+        "created_at": "2026-11-07T09:50:09.564358+00:00",
+        "source_mode": "retrieval"
       },
       "reports": {},
-      "elapsed_ms": 4.96
+      "elapsed_ms": 4.74
     },
     {
       "case": "M-04",
@@ -96,7 +99,7 @@
       },
       "passed": true,
       "response": {
-        "id": "e235ad7b-c707-46f0-ab6c-be523ea5d799",
+        "id": "289accc6-eaee-4ec9-b133-72752deaf066",
         "device_category": "unknown",
         "brand": "bosch",
         "model": null,
@@ -105,10 +108,11 @@
         "decision_reason": "未找到匹配说明书，当前无可用引用。请核对设备类别、完整型号和错误码，或联系品牌售后；不提供未经核实的维修步骤。",
         "steps": [],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.659142+00:00"
+        "created_at": "2026-11-07T09:50:09.569134+00:00",
+        "source_mode": "retrieval"
       },
       "reports": {},
-      "elapsed_ms": 4.73
+      "elapsed_ms": 4.88
     },
     {
       "case": "M-05",
@@ -119,7 +123,7 @@
       },
       "passed": true,
       "response": {
-        "id": "1f585429-ac25-4e1e-9ca8-10478378705b",
+        "id": "5ec8bfc3-74df-4e36-92a6-3c171257bac6",
         "device_category": "unknown",
         "brand": "unknown",
         "model": null,
@@ -128,10 +132,11 @@
         "decision_reason": "未找到匹配说明书，当前无可用引用。请核对设备类别、完整型号和错误码，或联系品牌售后；不提供未经核实的维修步骤。",
         "steps": [],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.663657+00:00"
+        "created_at": "2026-11-07T09:50:09.574021+00:00",
+        "source_mode": "retrieval"
       },
       "reports": {},
-      "elapsed_ms": 4.18
+      "elapsed_ms": 4.13
     },
     {
       "case": "S1-01",
@@ -146,7 +151,7 @@
       },
       "passed": true,
       "response": {
-        "id": "8703b204-9a8d-492e-9551-82964ef61dbb",
+        "id": "a09cffd7-39d8-4f01-8eab-b42ea0ea6781",
         "device_category": "router",
         "brand": "TP-Link",
         "model": null,
@@ -155,7 +160,7 @@
         "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
         "steps": [
           {
-            "id": "c2fe72aa-1261-4b25-9b00-f767aa3990cc",
+            "id": "2af3db12-74af-4bfb-bb59-34b5e50c69e6",
             "idx": 1,
             "content": "检查外置电源与网线是否插牢，不拆机。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -163,7 +168,7 @@
             "feedback": null
           },
           {
-            "id": "cd44093a-e488-4295-80ea-11bb8d171c52",
+            "id": "8990b885-8f41-4ff4-983a-32a270fbcc50",
             "idx": 2,
             "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -171,7 +176,7 @@
             "feedback": null
           },
           {
-            "id": "690c372c-8138-4a59-8724-2a50dcb3fa35",
+            "id": "b18b0181-4751-401b-b750-1f3bb569dc03",
             "idx": 3,
             "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -180,10 +185,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.683536+00:00"
+        "created_at": "2026-11-07T09:50:09.586851+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 18.23
+      "elapsed_ms": 11.32
     },
     {
       "case": "S1-02",
@@ -198,7 +204,7 @@
       },
       "passed": true,
       "response": {
-        "id": "7127c0f3-d571-42c3-b1e7-332c28838048",
+        "id": "8c172020-dfb0-4f94-bfc3-7af093e42eed",
         "device_category": "router",
         "brand": "TP-Link",
         "model": null,
@@ -207,7 +213,7 @@
         "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
         "steps": [
           {
-            "id": "563dbda1-7c5a-470a-bbc5-091140274c76",
+            "id": "233b1784-0c7e-40e6-97be-b68ef4ee1e3c",
             "idx": 1,
             "content": "检查外置电源与网线是否插牢，不拆机。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -215,7 +221,7 @@
             "feedback": null
           },
           {
-            "id": "35b933cd-64db-4f60-940b-a9dfa8913132",
+            "id": "259817d6-bd2a-41d1-a7ca-235ee4eade0c",
             "idx": 2,
             "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -223,7 +229,7 @@
             "feedback": null
           },
           {
-            "id": "fae150ee-b4d2-49a1-8e2a-5c357caf5714",
+            "id": "c8936830-dfde-40ae-b9af-64f981887f5f",
             "idx": 3,
             "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -232,10 +238,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.690262+00:00"
+        "created_at": "2026-11-07T09:50:09.593470+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 6.4
+      "elapsed_ms": 6.09
     },
     {
       "case": "S1-03",
@@ -250,7 +257,7 @@
       },
       "passed": true,
       "response": {
-        "id": "33bd8442-f84e-4324-970e-a8c141f77281",
+        "id": "747919b3-1376-4eba-8770-b7d1e46bce28",
         "device_category": "router",
         "brand": "TP-Link",
         "model": null,
@@ -259,7 +266,7 @@
         "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
         "steps": [
           {
-            "id": "c511762e-cdd3-410c-8560-bcfc75200bbe",
+            "id": "d785bb1b-1ea7-464d-82f1-1416aa5adb28",
             "idx": 1,
             "content": "检查外置电源与网线是否插牢，不拆机。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -267,7 +274,7 @@
             "feedback": null
           },
           {
-            "id": "5268c417-d902-4bea-b68b-655471bf0955",
+            "id": "12fc0038-9cd6-42a9-8fe4-73c9877a36d7",
             "idx": 2,
             "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -275,7 +282,7 @@
             "feedback": null
           },
           {
-            "id": "8c34f7d5-a4bf-4a53-b3f5-66ea48d0d7e5",
+            "id": "4f4b3dc7-4a06-4443-8779-a20e37a9f304",
             "idx": 3,
             "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -284,10 +291,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.696258+00:00"
+        "created_at": "2026-11-07T09:50:09.599227+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 5.93
+      "elapsed_ms": 5.97
     },
     {
       "case": "S2-01",
@@ -303,7 +311,7 @@
       },
       "passed": true,
       "response": {
-        "id": "4ce061ce-2f9e-489b-bf36-805b826fabe7",
+        "id": "99f428af-0018-4717-8742-519c1f3acc4e",
         "device_category": "dishwasher",
         "brand": "Bosch",
         "model": null,
@@ -312,7 +320,7 @@
         "decision_reason": "Bosch E24 演示：洗碗机排水异常。请先核对完整型号；未匹配具体手册前联系专业人员，不提供拆机指导。",
         "steps": [
           {
-            "id": "592bad04-562c-4e8a-a7ef-396e1a189877",
+            "id": "8e470917-2071-46ad-884b-9dda2994b2ea",
             "idx": 1,
             "content": "记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
             "citation_manual": "Bosch dishwasher SM/SB 9001014024 B",
@@ -321,10 +329,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.706628+00:00"
+        "created_at": "2026-11-07T09:50:09.609647+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 10.91
+      "elapsed_ms": 10.58
     },
     {
       "case": "S2-02",
@@ -340,7 +349,7 @@
       },
       "passed": true,
       "response": {
-        "id": "2a488bf0-ef1e-4ae5-a00e-1eb3599a814d",
+        "id": "84554142-01e3-4448-a3bf-c7571bdd4231",
         "device_category": "dishwasher",
         "brand": "Bosch",
         "model": null,
@@ -349,7 +358,7 @@
         "decision_reason": "Bosch E24 演示：洗碗机排水异常。请先核对完整型号；未匹配具体手册前联系专业人员，不提供拆机指导。",
         "steps": [
           {
-            "id": "798eb4a1-6b70-4e17-b0d6-8cf660c269d8",
+            "id": "c0aa7208-a228-421f-bfcf-cb57d5f740d7",
             "idx": 1,
             "content": "记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
             "citation_manual": "Bosch dishwasher SM/SB 9001014024 B",
@@ -358,10 +367,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.717015+00:00"
+        "created_at": "2026-11-07T09:50:09.619198+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 9.97
+      "elapsed_ms": 9.67
     },
     {
       "case": "S2-03",
@@ -377,7 +387,7 @@
       },
       "passed": true,
       "response": {
-        "id": "6f355505-a2ba-4f0b-8291-9145b3c6a427",
+        "id": "9678e220-86cb-4440-b9cc-6b57834070d8",
         "device_category": "dishwasher",
         "brand": "Bosch",
         "model": null,
@@ -386,7 +396,7 @@
         "decision_reason": "Bosch E24 演示：洗碗机排水异常。请先核对完整型号；未匹配具体手册前联系专业人员，不提供拆机指导。",
         "steps": [
           {
-            "id": "df28e3e6-91d7-48f2-b1e7-52d1e9cdc638",
+            "id": "88be46b4-8003-4f97-a9a8-d477337219d9",
             "idx": 1,
             "content": "记录设备完整型号和错误码，核对该型号官方说明书；在核验前不要拆机或旋开滤网。",
             "citation_manual": "Bosch dishwasher SM/SB 9001014024 B",
@@ -395,10 +405,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.726217+00:00"
+        "created_at": "2026-11-07T09:50:09.629106+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 9.26
+      "elapsed_ms": 9.77
     },
     {
       "case": "S3-01",
@@ -412,7 +423,7 @@
       },
       "passed": true,
       "response": {
-        "id": "1b58b8a5-d507-4d1b-823c-f4bbd61e87f8",
+        "id": "482658f1-cfaa-48e7-9494-9209a5b4e0db",
         "device_category": "furniture",
         "brand": "IKEA",
         "model": null,
@@ -421,7 +432,7 @@
         "decision_reason": "BILLY 组装检查演示，须以实际型号说明书为准。 工具：适配墙体的螺钉和膨胀件；其他工具以实际型号说明书为准",
         "steps": [
           {
-            "id": "d389e402-73f1-4869-9b38-75d2fb73a0eb",
+            "id": "36f54974-285c-4759-9a93-3d565285cf1f",
             "idx": 1,
             "content": "先确认实际型号，阅读并遵循该型号说明书的每一步要求。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -429,7 +440,7 @@
             "feedback": null
           },
           {
-            "id": "7461238d-2315-4b6f-8b5e-4ce32616ff49",
+            "id": "15472459-3823-4e59-972f-8058e8e06f9e",
             "idx": 2,
             "content": "使用说明书要求的防倾倒连接件；墙体固定螺钉和膨胀件须适配墙体。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -437,7 +448,7 @@
             "feedback": null
           },
           {
-            "id": "7d062c4d-3541-43a3-b535-7b109ff7d1b9",
+            "id": "8f43e6a6-8abf-408f-9d0d-4972972b87da",
             "idx": 3,
             "content": "无法确定墙体材料或固定方法时，请寻求专业人员建议。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -446,10 +457,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.735332+00:00"
+        "created_at": "2026-11-07T09:50:09.638261+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 9.13
+      "elapsed_ms": 9.29
     },
     {
       "case": "S3-02",
@@ -463,7 +475,7 @@
       },
       "passed": true,
       "response": {
-        "id": "4d7a9ace-3998-4521-aa1e-1c79b43ecfef",
+        "id": "fcedaae1-e0c3-4da9-8346-1a9dc3469b72",
         "device_category": "furniture",
         "brand": "IKEA",
         "model": null,
@@ -472,7 +484,7 @@
         "decision_reason": "BILLY 组装检查演示，须以实际型号说明书为准。 工具：适配墙体的螺钉和膨胀件；其他工具以实际型号说明书为准",
         "steps": [
           {
-            "id": "51cefd06-9eb5-4d65-af23-18384e33068a",
+            "id": "fa882047-d7c9-4afd-b081-8caa5a9cb476",
             "idx": 1,
             "content": "先确认实际型号，阅读并遵循该型号说明书的每一步要求。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -480,7 +492,7 @@
             "feedback": null
           },
           {
-            "id": "ae8100a8-0bbc-4299-a26f-9887edec96f7",
+            "id": "d9fa897b-1498-4113-8e1f-2a1b3f7693c0",
             "idx": 2,
             "content": "使用说明书要求的防倾倒连接件；墙体固定螺钉和膨胀件须适配墙体。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -488,7 +500,7 @@
             "feedback": null
           },
           {
-            "id": "1b6c8d39-aee0-4ff5-a2b1-6d5f0dc36e83",
+            "id": "af1dbb48-bcb4-467d-b108-9197b3510241",
             "idx": 3,
             "content": "无法确定墙体材料或固定方法时，请寻求专业人员建议。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -497,10 +509,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.745221+00:00"
+        "created_at": "2026-11-07T09:50:09.648366+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 9.8
+      "elapsed_ms": 9.76
     },
     {
       "case": "S3-03",
@@ -514,7 +527,7 @@
       },
       "passed": true,
       "response": {
-        "id": "f31e5729-a3ac-4c89-962b-f53cd35cb1b6",
+        "id": "3f3c190e-0440-4906-92bd-cf18c15d113e",
         "device_category": "furniture",
         "brand": "IKEA",
         "model": null,
@@ -523,7 +536,7 @@
         "decision_reason": "BILLY 组装检查演示，须以实际型号说明书为准。 工具：适配墙体的螺钉和膨胀件；其他工具以实际型号说明书为准",
         "steps": [
           {
-            "id": "2d84d586-bebc-42d6-b522-998b2545fa31",
+            "id": "55a9f89a-cf01-455c-9229-f3ed2cdd929e",
             "idx": 1,
             "content": "先确认实际型号，阅读并遵循该型号说明书的每一步要求。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -531,7 +544,7 @@
             "feedback": null
           },
           {
-            "id": "aa637186-aabd-4945-b1ee-beb67b0f0854",
+            "id": "c866088e-5c78-457a-9bbc-965a5573e833",
             "idx": 2,
             "content": "使用说明书要求的防倾倒连接件；墙体固定螺钉和膨胀件须适配墙体。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -539,7 +552,7 @@
             "feedback": null
           },
           {
-            "id": "a249a602-6a09-4507-87d0-770e3fecbcc7",
+            "id": "d1f1a97e-9774-465a-ba49-90758e715a7b",
             "idx": 3,
             "content": "无法确定墙体材料或固定方法时，请寻求专业人员建议。",
             "citation_manual": "IKEA BILLY AA-2289105-4",
@@ -548,10 +561,11 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.756100+00:00"
+        "created_at": "2026-11-07T09:50:09.658993+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 11.11
+      "elapsed_ms": 10.8
     },
     {
       "case": "S4-01",
@@ -566,7 +580,7 @@
       },
       "passed": true,
       "response": {
-        "id": "5a935dac-9503-4c76-b5ae-2718c306e192",
+        "id": "a8712039-19ce-4629-a08e-b209b6803af2",
         "device_category": "microwave",
         "brand": null,
         "model": null,
@@ -575,10 +589,11 @@
         "decision_reason": "微波炉内部可能保留危险电量。 停止自行检修，联系品牌售后或合资格维修人员。如有烟火或泄漏危险，先远离现场并联系当地紧急服务。",
         "steps": [],
         "safety_refused": true,
-        "created_at": "2026-11-03T04:39:03.762034+00:00"
+        "created_at": "2026-11-07T09:50:09.664809+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 5.5
+      "elapsed_ms": 5.85
     },
     {
       "case": "S4-02",
@@ -593,7 +608,7 @@
       },
       "passed": true,
       "response": {
-        "id": "383bd268-094a-4e47-841f-0f63f146868e",
+        "id": "2c200591-6e1f-4473-b2d0-0da2edc3b6dc",
         "device_category": "microwave",
         "brand": null,
         "model": null,
@@ -602,10 +617,11 @@
         "decision_reason": "微波炉内部可能保留危险电量。 停止自行检修，联系品牌售后或合资格维修人员。如有烟火或泄漏危险，先远离现场并联系当地紧急服务。",
         "steps": [],
         "safety_refused": true,
-        "created_at": "2026-11-03T04:39:03.768898+00:00"
+        "created_at": "2026-11-07T09:50:09.672141+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 7.48
+      "elapsed_ms": 7.33
     },
     {
       "case": "S4-03",
@@ -620,7 +636,7 @@
       },
       "passed": true,
       "response": {
-        "id": "d363c277-d40c-47f1-b3f9-7baecdeaaa80",
+        "id": "3268253a-c2cc-4d0e-8f97-424c93765f4d",
         "device_category": "microwave",
         "brand": null,
         "model": null,
@@ -629,10 +645,11 @@
         "decision_reason": "微波炉内部可能保留危险电量。 停止自行检修，联系品牌售后或合资格维修人员。如有烟火或泄漏危险，先远离现场并联系当地紧急服务。",
         "steps": [],
         "safety_refused": true,
-        "created_at": "2026-11-03T04:39:03.776095+00:00"
+        "created_at": "2026-11-07T09:50:09.679037+00:00",
+        "source_mode": "mock"
       },
       "reports": {},
-      "elapsed_ms": 6.72
+      "elapsed_ms": 6.68
     },
     {
       "case": "S5-01",
@@ -647,7 +664,7 @@
         "detail": "照片过暗，请补光后重拍。"
       },
       "reports": {},
-      "elapsed_ms": 10.79
+      "elapsed_ms": 10.75
     },
     {
       "case": "S5-02",
@@ -662,7 +679,7 @@
         "detail": "照片细节不清，请对焦并靠近设备重拍。"
       },
       "reports": {},
-      "elapsed_ms": 10.72
+      "elapsed_ms": 10.69
     },
     {
       "case": "S5-03",
@@ -677,7 +694,7 @@
         "detail": "照片过暗，请补光后重拍。"
       },
       "reports": {},
-      "elapsed_ms": 20.12
+      "elapsed_ms": 20.22
     },
     {
       "case": "S5-04",
@@ -692,7 +709,7 @@
         "detail": "照片细节不清，请对焦并靠近设备重拍。"
       },
       "reports": {},
-      "elapsed_ms": 19.31
+      "elapsed_ms": 19.34
     },
     {
       "case": "S5-05",
@@ -707,7 +724,7 @@
         "detail": "照片过暗，请补光后重拍。"
       },
       "reports": {},
-      "elapsed_ms": 9.38
+      "elapsed_ms": 9.37
     },
     {
       "case": "S5-06",
@@ -722,7 +739,7 @@
         "detail": "照片细节不清，请对焦并靠近设备重拍。"
       },
       "reports": {},
-      "elapsed_ms": 10.12
+      "elapsed_ms": 9.15
     },
     {
       "case": "S6-01",
@@ -740,7 +757,7 @@
       },
       "passed": true,
       "response": {
-        "id": "c0752edf-7803-4d1b-be0b-f0a75136ac00",
+        "id": "d1c5b6fa-e464-40fd-b760-3c313d4220e8",
         "device_category": "router",
         "brand": "TP-Link",
         "model": null,
@@ -749,7 +766,7 @@
         "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
         "steps": [
           {
-            "id": "9a36b4fd-64e4-4711-963a-5a471fc59b5c",
+            "id": "9930d3c8-b8d8-4b55-aa92-b0a576002c80",
             "idx": 1,
             "content": "检查外置电源与网线是否插牢，不拆机。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -757,7 +774,7 @@
             "feedback": null
           },
           {
-            "id": "3b9d331e-bdfd-492b-948c-0ea07bedafe7",
+            "id": "34061b10-442e-4701-8972-022fc163c512",
             "idx": 2,
             "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -765,7 +782,7 @@
             "feedback": null
           },
           {
-            "id": "ea78c219-d857-4cec-baf8-240706c2dcad",
+            "id": "8ae8f470-f019-4b56-a5b7-2e659b9565e9",
             "idx": 3,
             "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -774,7 +791,8 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.862696+00:00"
+        "created_at": "2026-11-07T09:50:09.764576+00:00",
+        "source_mode": "mock"
       },
       "reports": {
         "zh": {
@@ -786,7 +804,7 @@
           "content": "Repair request\nDevice: router\nBrand: TP-Link\nModel: Unknown\nError code: Not provided\nSteps already tried:\n- Step 1 (marked complete).\nStep descriptions were not translated. Completed step numbers are listed above; please refer to the original diagnosis for details.\nPhoto references: Not provided\nPlease attach a photo or photos when sending this request.\nPlease advise or arrange an inspection."
         }
       },
-      "elapsed_ms": 20.44
+      "elapsed_ms": 25.96
     },
     {
       "case": "S6-02",
@@ -804,7 +822,7 @@
       },
       "passed": true,
       "response": {
-        "id": "aa058516-d446-4812-84e4-b6d0ddd2b4dc",
+        "id": "187a0c48-1bf8-4850-b63b-d4c8efa851dc",
         "device_category": "router",
         "brand": "TP-Link",
         "model": null,
@@ -813,7 +831,7 @@
         "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
         "steps": [
           {
-            "id": "47583488-15e9-4879-99ee-06df1a58264f",
+            "id": "61c164b8-aaf6-4c07-ab59-724ee72f6df2",
             "idx": 1,
             "content": "检查外置电源与网线是否插牢，不拆机。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -821,7 +839,7 @@
             "feedback": null
           },
           {
-            "id": "f38f9792-157c-484c-a330-0cf163cc36b0",
+            "id": "9c93c348-f1c9-4135-9bd7-02ba8ed8d011",
             "idx": 2,
             "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -829,7 +847,7 @@
             "feedback": null
           },
           {
-            "id": "3c5d91d8-b673-413f-8f18-0bd3e9ffc74e",
+            "id": "a14bb8cb-17a2-451b-9584-45ed5923ebf8",
             "idx": 3,
             "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -838,7 +856,8 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.883362+00:00"
+        "created_at": "2026-11-07T09:50:09.790777+00:00",
+        "source_mode": "mock"
       },
       "reports": {
         "zh": {
@@ -850,7 +869,7 @@
           "content": "Repair request\nDevice: router\nBrand: TP-Link\nModel: Unknown\nError code: Not provided\nSteps already tried:\n- Step 1 (marked complete).\nStep descriptions were not translated. Completed step numbers are listed above; please refer to the original diagnosis for details.\nPhoto references: Not provided\nPlease attach a photo or photos when sending this request.\nPlease advise or arrange an inspection."
         }
       },
-      "elapsed_ms": 18.62
+      "elapsed_ms": 18.95
     },
     {
       "case": "S6-03",
@@ -868,7 +887,7 @@
       },
       "passed": true,
       "response": {
-        "id": "0e12d510-788a-4df2-99a9-408a4d0f3d95",
+        "id": "386a964d-2e68-463e-9b83-689a4df276b7",
         "device_category": "router",
         "brand": "TP-Link",
         "model": null,
@@ -877,7 +896,7 @@
         "decision_reason": "红灯可能表示上游连接异常；此为演示数据。 工具：无需工具",
         "steps": [
           {
-            "id": "76fc6290-a84f-4ae9-a4cf-5802e88886eb",
+            "id": "935fb246-6492-4010-94a8-6e3420ed5cd9",
             "idx": 1,
             "content": "检查外置电源与网线是否插牢，不拆机。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -885,7 +904,7 @@
             "feedback": null
           },
           {
-            "id": "27fd8e97-bc48-42a9-bc0c-7c51d0d3f605",
+            "id": "e24e59f5-7db3-41bc-b0d4-9f0938d9bb9c",
             "idx": 2,
             "content": "按设备用户指南重启，等待启动完成；不要恢复出厂设置。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -893,7 +912,7 @@
             "feedback": null
           },
           {
-            "id": "f4a2c2f3-f23f-426b-b04d-73e076f513a9",
+            "id": "4dbfbd09-8b31-4173-b39a-ca9ce375719d",
             "idx": 3,
             "content": "如仍无法联网，记录指示灯状态并联系网络运营商。",
             "citation_manual": "TP-Link TL-WR940N REV6.0.2（演示型号）",
@@ -902,7 +921,8 @@
           }
         ],
         "safety_refused": false,
-        "created_at": "2026-11-03T04:39:03.901707+00:00"
+        "created_at": "2026-11-07T09:50:09.809713+00:00",
+        "source_mode": "mock"
       },
       "reports": {
         "zh": {
@@ -914,7 +934,7 @@
           "content": "Repair request\nDevice: router\nBrand: TP-Link\nModel: Unknown\nError code: Not provided\nSteps already tried:\n- Step 1 (marked complete).\nStep descriptions were not translated. Completed step numbers are listed above; please refer to the original diagnosis for details.\nPhoto references: Not provided\nPlease attach a photo or photos when sending this request.\nPlease advise or arrange an inspection."
         }
       },
-      "elapsed_ms": 19.51
+      "elapsed_ms": 20.06
     }
   ],
   "timing_scope": "Local in-process test client, not mobile/network latency"

@@ -1,15 +1,31 @@
 # SnapFix App（Flutter）
 
-W1 已完成 Flutter 双端工程初始化，以及 FE-1 负责的 **首页 → 扫描 → 预览** 静态主链路。
+当前入口为 `lib/main.dart` 的 `SnapFixProductApp`，整合 FE-1 基础工程与 FE-2 产品交互。原 `lib/features/` 保留 W1 首页/扫描/预览骨架和对应测试，`lib/product/` 是当前产品 UI。
 
 ## 环境要求
 
-- Flutter 3.47.5 / Dart 3.13.4（当前开发环境）
-- Android SDK 36（Windows 队友使用 Android Emulator）
-- iOS 构建需在 macOS + Xcode 环境执行
-- 相机/相册依赖 `image_picker 1.2.4`，权限声明已补齐
+- Flutter 3.47+ / Dart 3.13+
+- Android Emulator 或 macOS + Xcode 的 iOS Simulator
+- 相机/相册：`image_picker`
+- 后端连接：`http`
+- 系统分享：`share_plus`
 
-## 安装与运行
+## 启动后端
+
+在项目根目录安装后端依赖并导入语料：
+
+```bash
+cd server
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt -r requirements-dev.txt
+python -X utf8 corpus_store.py --database data/snapfix.db
+python -m uvicorn main:app --host 127.0.0.1 --port 8000
+```
+
+无 key 时使用明确 mock；配置 `GEMINI_API_KEY` 后启用真实管线，`SNAPFIX_MOCK=1` 可强制离线。每条诊断的 `source_mode` 区分 mock、retrieval 和 gemini。
+
+## 启动 Flutter
 
 ```bash
 cd app
@@ -17,38 +33,32 @@ flutter pub get
 flutter run
 ```
 
-指定 Android 模拟器：
+默认地址：
 
-```bash
-flutter emulators
-flutter emulators --launch Medium_Phone
-flutter run -d emulator-5554
-```
+- Android Emulator：`http://10.0.2.2:8000`
+- iOS Simulator：`http://127.0.0.1:8000`
+- 真实手机：使用电脑局域网地址，手机的 `127.0.0.1` 不是电脑
 
-## 本地验证
+可用 `--dart-define=SNAPFIX_API=http://<host>:8000` 覆盖。Android 仅 debug 配置允许课堂本地 HTTP。
+
+## 当前流程
+
+- 相机首页、相册、错误码输入和预览使用流程。
+- 真实能力可用时，照片与错误码统一走 v1 API 并导入产品 UI；不可用时明确提示，不伪造识别。
+- E24 型号未核实前建议专业处理；路由器等外部操作用于步骤反馈演示。
+- 维修档案、维修状态、补充线索、双语报修、复制和系统分享调用。
+- 原始照片不写入 SQLite，只保存文件名引用。
+- 主题与 landing 统一：#0B1020 / #F5A623。
+
+## 验证
 
 ```bash
 flutter analyze
 flutter test
-flutter test integration_test -d emulator-5554
-# macOS + Xcode：先用 flutter devices 查询 iOS Simulator ID
-flutter test integration_test -d <ios-simulator-id>
+flutter devices
+flutter test integration_test -d <simulator-id>
 ```
 
-W1 验收路径：首页点击 **拍照诊断** → 扫描页 → **使用演示照片** → 预览页。相机与相册按钮走真实 `image_picker`；无可用媒体时可用演示照片完成静态链路验收。
+`integration_test/app_flow_test.dart` 覆盖 W1 静态链路；`integration_test/product_flow_test.dart` 需要本机后端运行，覆盖产品预览 → 步骤反馈 → 报修真实 HTTP 链路。
 
-集成分支已在 Flutter 3.47.7、iPhone 17 Pro / iOS 26.3 Simulator 复测：静态检查 0 issues、2 项 Widget 测试和 1 项 iOS 集成测试通过。该结果只覆盖 W1 静态链路，不代表真实诊断 API、档案或报修流程已完成。
-
-## 当前页面
-
-- 首页：扫描入口、错误码入口、维修档案入口
-- 扫描页：相机、相册、演示照片入口
-- 预览页：照片预览、质量提示、隐私说明、W2 衔接点
-- 档案/错误码：仅入口与占位，分别留给 FE-2 与 W2 接入
-
-## 对接后端
-
-- 默认本机：`http://127.0.0.1:8000`
-- Android Emulator：`http://10.0.2.2:8000`
-- 后端无 key 时自动 mock，前端可并行开发
-- 契约以 `server/main.py` 为准；改契约前先在群里同步
+当前集成分支在 iPhone 17 Pro / iOS 26.3 Simulator 上通过 7 项单元/Widget 测试和 2 项 iOS 集成测试。Android、真实手机拍照和系统分享仍需单独验收。

@@ -71,6 +71,9 @@ def test_demo_scenarios_explicit_and_isolated(client,scenario):
     if scenario=='microwave':
         assert a['category']=='微波炉' and a['revisions'][0]['is_high_risk']
         assert a['revisions'][0]['steps']==[]
+    elif scenario=='router':
+        assert a['brand']=='TP-Link' and a['model']=='TL-WR940N'
+        assert len(a['revisions'][0]['steps'])==3
 
 
 def test_feedback_reports_status_survive_reopen_and_delete(client):

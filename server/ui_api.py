@@ -259,7 +259,11 @@ def install_ui_api(app, get_legacy_store, legacy_is_mock=lambda: True):
         else:
             legacy = next(row for row in json.loads((Path(__file__).parent / 'data/demo_sessions.json').read_text(encoding='utf-8')) if row['id'] == 'demo-' + req.scenario)
             session = pending(DiagnoseInput(category={'router':'路由器','billy':'家具'}[req.scenario]))
-            session['device_name'] = {'router':'路由器外部检查','billy':'IKEA BILLY 组装检查'}[req.scenario]
+            session.update(
+                device_name={'router':'路由器外部检查','billy':'IKEA BILLY 组装检查'}[req.scenario],
+                brand={'router':'TP-Link','billy':'IKEA'}[req.scenario],
+                model={'router':'TL-WR940N','billy':'BILLY'}[req.scenario],
+            )
             rev = session['revisions'][0]
             rev.update(problem_summary=session['device_name'], explanation=legacy['decision_reason'], suggestion='self_check',
                        steps=[dict(id=str(uuid.uuid4()), step_number=i+1, title=s['content'],description=s['content'],
