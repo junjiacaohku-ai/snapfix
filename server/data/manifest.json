@@ -1,0 +1,162 @@
+[
+  {
+    "file": "manuals/bosch-washer.pdf",
+    "source_url": "https://media3.bosch-home.com/Documents/9000656120_A.pdf",
+    "brand": "Bosch",
+    "device_category": "washing_machine",
+    "title": "Bosch washer instructions 9000656120",
+    "manual_id": "bosch-washer",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/billy.pdf",
+    "source_url": "https://www.ikea.com/us/en/assembly_instructions/billy-bookcase-white__AA-2289105-4-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "BILLY AA-2289105-4",
+    "manual_id": "billy",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/tplink-wr940n.pdf",
+    "source_url": "https://static.tp-link.com/2019/201903/20190320/1910012391_TL-WR940N(EU)_UG_REV6.0.2.pdf",
+    "brand": "TP-Link",
+    "device_category": "router",
+    "title": "tplink-wr940n",
+    "manual_id": "tplink-wr940n",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/bosch-washer-1078547.pdf",
+    "source_url": "https://media3.bosch-home.com/Documents/9001078547_A.pdf",
+    "brand": "Bosch",
+    "device_category": "washing_machine",
+    "title": "bosch-washer-1078547",
+    "manual_id": "bosch-washer-1078547",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/billy-2287622.pdf",
+    "source_url": "https://www.ikea.com/ca/en/assembly_instructions/billy-bookcase-white__AA-2287622-4-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "billy-2287622",
+    "manual_id": "billy-2287622",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/billy-2545292.pdf",
+    "source_url": "https://www.ikea.com/be/en/assembly_instructions/billy-bookcase-white__AA-2545292-1-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "billy-2545292",
+    "manual_id": "billy-2545292",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/kallax-2335189.pdf",
+    "source_url": "https://www.ikea.com/ie/en/assembly_instructions/kallax-shelving-unit-black-brown__AA-2335189-6-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "kallax-2335189",
+    "manual_id": "kallax-2335189",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/kallax-2334145.pdf",
+    "source_url": "https://www.ikea.com/ie/en/assembly_instructions/kallax-shelving-unit-white__AA-2334145-5-100.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "kallax-2334145",
+    "manual_id": "kallax-2334145",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/malm-bed.pdf",
+    "source_url": "https://www.ikea.com/us/en/assembly_instructions/malm-seng__AA-772566-12_pub.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "malm-bed",
+    "manual_id": "malm-bed",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/malm-drawers.pdf",
+    "source_url": "https://www.ikea.com/th/th/assembly_instructions/malm-chest-of-6-drawers-white__AA-1972341-8-2.pdf",
+    "brand": "IKEA",
+    "device_category": "furniture",
+    "title": "malm-drawers",
+    "manual_id": "malm-drawers",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/tplink-wr740n-v5.pdf",
+    "source_url": "https://static.tp-link.com/res/down/doc/TL-WR740N_V5_UG.pdf",
+    "brand": "TP-Link",
+    "device_category": "router",
+    "title": "tplink-wr740n-v5",
+    "manual_id": "tplink-wr740n-v5",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/bosch-microwave-hmt84.pdf",
+    "source_url": "https://media3.bosch-home.com/Documents/9000696150_A.pdf",
+    "brand": "Bosch",
+    "device_category": "microwave",
+    "title": "bosch-microwave-hmt84",
+    "manual_id": "bosch-microwave-hmt84",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "file": "manuals/panasonic-gm333w.pdf",
+    "source_url": "https://home.panasonic.cn/support/attachments/microwave/NN-GT353M.pdf",
+    "brand": "Panasonic",
+    "device_category": "microwave",
+    "title": "panasonic-gm333w",
+    "manual_id": "panasonic-gm333w",
+    "document_type": "manufacturer_instructions",
+    "review_status": "text-extracted; sample pages reviewed only; exact model applicability must be checked"
+  },
+  {
+    "manual_id": "bosch-dishwasher-9001014024",
+    "file": "manuals/bosch-dishwasher-9001014024.pdf",
+    "title": "Bosch dishwasher SM/SB instruction manual 9001014024 B",
+    "source_url": "https://media3.bosch-home.com/Documents/9001014024_B.pdf",
+    "brand": "Bosch",
+    "device_category": "dishwasher",
+    "document_type": "manufacturer_instructions",
+    "review_status": "safety/reference only; not model-specific repair instructions"
+  },
+  {
+    "manual_id": "emsd-gas-appliances",
+    "file": "manuals/emsd-gas-appliances.pdf",
+    "title": "EMSD Domestic Gas Appliances Safety",
+    "source_url": "https://www.emsd.gov.hk/filemanager/en/content_284/gas_appliance.pdf",
+    "brand": "EMSD",
+    "device_category": "gas_water_heater",
+    "document_type": "government_safety_guidance",
+    "review_status": "safety/reference only; not model-specific repair instructions"
+  },
+  {
+    "manual_id": "rheem-hybrid-water-heater",
+    "file": "manuals/rheem-hybrid-water-heater.pdf",
+    "title": "Rheem Electric Residential Hybrid Water Heater Use & Care AP23657 Rev04",
+    "source_url": "https://files.rheem.com/blobazrheem/wp-content/uploads/sites/2/Use-Care-Manual.pdf",
+    "brand": "Rheem",
+    "device_category": "electric_water_heater",
+    "document_type": "manufacturer_instructions",
+    "review_status": "Safety pages 3-4 reviewed; US reference only; model and jurisdiction unverified; not DIY internal repair guidance"
+  }
+]

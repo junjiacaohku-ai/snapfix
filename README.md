@@ -1,88 +1,144 @@
 # SnapFix 随手修
 
-> 先搞懂,再决定。 / Snap it. Fix it. Or report it.
+> 先搞懂，再决定。 / Snap it. Fix it. Or report it.
 
-拍一张照片,告诉你东西哪坏了、能不能自己修、怎么修、修不了怎么报修。
-HKU COMP7506A Group Project · Flutter + FastAPI · 演示 2026-11-19 · 交付 2026-11-30
+HKU COMP7506A Group Project · Flutter + FastAPI · 演示 2026-11-19 · 截止交付 2026-11-30（组内目标 11-29）
+
+项目目标：拍照或手动输入设备故障信息，查询说明书并提供诊断、处理决策和报修支持。最新分工和验收标准以[四周冲刺计划](docs/2026-10-22%20SnapFix%20四周冲刺计划.md)为准。
+
+## 当前集成基线
+
+| 部分 | 当前状态 |
+|---|---|
+| SQLite | 保存诊断、步骤反馈和报修草稿；删除诊断时级联删除关联数据 |
+| 说明书语料 | 16 份资料、2032 个切块，使用 JSON 导入 |
+| BM25 检索 | 支持品牌别名、错误码归一化、严格类别筛选和类别提示加权 |
+| 手动错误码诊断 | 查询真实语料；无召回时明确提示无引用，不编造维修步骤 |
+| 图片诊断 | 有实际图片质量检查和六场景 mock；按文件名路由，尚不是真实视觉识别 |
+| 安全门 | 高危类别拒答，安全回归用例与离线演示共用同一套规则 |
+| 报修 | 中文本地模板；英文可选 Gemini 翻译，无 key 或翻译失败仍可生成基础报告 |
+| Flutter App | 已整合 W1 主题组件和首页/扫描/预览骨架；真实 API 主链路待接入 |
+| 展示页 | `landing/index.html` 为静态项目展示页 |
+
+真实图片识别 → 检索 → 生成 → 引用校验仍待接入。配置 Gemini key 目前只会影响可选报修翻译，不会让图片 mock 自动变成真实识别。详细边界见[后端文档](server/README.md)和[数据交接说明](docs/data-handoff.md)。
 
 ## 目录结构
 
-```
-/app      ← Flutter 双端 App(待 flutter create 初始化,见 app/README.md)
-/server   ← FastAPI 后端(mock 管线已可跑,见 server/README.md)
-/docs     ← 任务书、调研、PRD、执行包、会议纪要、最终交付文档
-/landing  ← 项目展示页(静态 HTML,可直接开浏览器看)
+```text
+app/                         Flutter App（W1 骨架，见 app/README.md）
+docs/                        需求、契约、分工、验收和演示素材
+landing/                     静态展示页
+server/
+  main.py                    API 和请求校验
+  providers.py               Gemini vision 适配层
+  safety_gate.py             离线安全规则
+  corpus_store.py            JSON 语料导入
+  session_store.py           SQLite 诊断、反馈和报告存储
+  retrieval.py               BM25、归一化和加权排序
+  retrieval_service.py       数据库读取与索引缓存
+  diagnosis_service.py       手动错误码检索流程
+  image_quality.py           图片质量门
+  report_service.py          中英模板与翻译失败降级
+  translation_service.py     可选 Gemini 翻译
+  tests/                     自动化测试
+  data/                      manuals.json、chunks.json 和本机数据库
 ```
 
-## 快速开始
+## 快速开始：后端
+
+要求 Python 3.11 或以上。首次安装依赖需要网络；SQLite 使用 Python 标准库，无需安装数据库服务器。
+
+### macOS（zsh/bash）
 
 ```bash
-# 后端(Python 3.11+)
 cd server
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn main:app --reload   # → http://127.0.0.1:8000/docs 可调式全部接口
-
-# 前端(需先装 Flutter SDK)
-cd app && flutter run
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt -r requirements-dev.txt
+python -X utf8 corpus_store.py --database data/snapfix.db
+python -m uvicorn main:app --reload
 ```
 
-无 API key 时后端自动走 **mock 确定性模式**,全流程可演示——这是课堂演示的兜底。
+### Windows（PowerShell）
 
-## 分工(详见 docs/2026-09-17 SnapFix 执行包)
+```powershell
+cd server
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt -r requirements-dev.txt
+python -X utf8 corpus_store.py --database data/snapfix.db
+python -m uvicorn main:app --reload
+```
+
+Windows 也可使用 `py -3` 创建环境；PowerShell 禁止激活脚本时，直接用 `.\.venv\Scripts\python.exe` 替代 `python`。
+
+语料导入预期输出 `{"manuals": 16, "chunks": 2032}`。启动后访问 [Swagger UI](http://127.0.0.1:8000/docs) 和[健康接口](http://127.0.0.1:8000/api/health)。默认数据库为 `server/data/snapfix.db`，可通过 `SNAPFIX_DB` 改路径；导入和服务必须指向同一数据库。
+
+## 测试与离线验收
+
+在 `server` 目录执行：
+
+```sh
+python -X utf8 -m pytest tests -q
+python experiments/run_acceptance.py
+python experiments/run_server_checks.py
+```
+
+测试使用独立临时数据库，不修改日常记录，也不依赖真实 API key。六场景验收只覆盖离线后端，不等于真实视觉或手机全流程通过。张帆的数据交付、验证和剩余事项见[完成记录](docs/review-audit.md)。
+
+## 报修与可选密钥
+
+没有 `.env` 或 key 也能生成中英文报告。英文翻译成功时使用已完成步骤的译文；无 key 或翻译失败时保留步骤编号并明确注明正文未翻译。照片引用只是文字，发送报修时仍需另附实际照片。
+
+需要在线翻译时，在 `server/.env` 配置，已有文件不要覆盖：
+
+```dotenv
+GEMINI_API_KEY=替换为你自己的真实密钥
+GEMINI_MODEL=gemini-2.5-flash
+```
+
+`.env`、数据库、`.venv` 和 API key 不提交 Git。修改配置后重启服务。
+
+## 前端与展示页
+
+配置 Flutter SDK 后：
+
+```sh
+cd app
+flutter pub get
+flutter analyze
+flutter test
+flutter run
+```
+
+现有 W1 静态链路已在 iPhone 17 Pro / iOS 26.3 Simulator 通过集成测试；真实诊断 API、档案和报修页面仍待接入。Android Emulator 访问电脑后端使用 `http://10.0.2.2:8000`，iOS Simulator 默认使用 `http://127.0.0.1:8000`。真实手机需配置电脑的局域网地址，手机自己的 `127.0.0.1` 不指向电脑。展示页可直接打开 [landing/index.html](landing/index.html)。
+
+## 分工
 
 | 线 | 人 | 责任 |
 |---|---|---|
-| BE-1 管线编排 | 曹峻嘉(组长) | API 契约、管线编排、provider 适配、安全门、部署 |
-| BE-2 检索与存储 | 史珺瑛 | 手册切块索引(BM25,张帆协助加权)、SQLite、报修端点;**readme 主笔** |
-| FE-1 扫描与诊断 | 朱雨泰民 | 相机/相册、分析中过程页、诊断结果页;录屏素材 |
-| FE-2 指导与档案 | 杨蕊嘉 | 分步指导交互、维修档案、报修助手页;**设计系统 + 视频剪辑** |
-| D 数据与内容 | 张帆 | 语料 ETL、6 场景 mock 数据、调研对比表、验收清单执行 |
+| BE-1 管线编排 | 曹峻嘉（组长） | API 契约、管线编排、provider、安全门、部署 |
+| BE-2 检索与存储 | 史珺瑛 | BM25、SQLite、报修端点、README |
+| FE-1 扫描与诊断 | 朱雨泰民 | 相机/相册、分析中、诊断结果、录屏素材 |
+| FE-2 指导与档案 | 杨蕊嘉 | 分步反馈、维修档案、报修助手、设计系统与视频 |
+| D 数据与内容 | 张帆 | 语料 ETL、六场景、调研和验收清单 |
 
-> FE 两人第一周先合出主题 + 共享组件库(杨蕊嘉主导视觉);互换预案:朱雨泰民 ↔ 杨蕊嘉。
-> 若史珺瑛 Python 基础弱:SQLite 上移至 BE-1,史珺瑛转 D 线协助张帆,检索由曹峻嘉+张帆合做。
+## Git 协作规则
 
-## Git 规则(一句话版)
+- `main` 永远可跑可演示；不直推 `main`，走 feature 分支、PR 和 1 人 review，使用 squash 合并。
+- 每天小步 push；改 `pubspec.yaml`、路由或 API 契约前先在群里同步。
+- review 对子：曹峻嘉 ↔ 史珺瑛；朱雨泰民 ↔ 杨蕊嘉；张帆的 PR 由曹峻嘉审。
+- 合并前本地跑通后端或前端，检查是否误提交 key、`.env` 或数据库。
+- 误推 `main` 不要 force push 掩盖；冲突时把最新 `main` 合回自己的分支再解决。
 
-- `main` 永远可跑可演示;**不直接 push main**,走 PR + 1 人 review,squash 合并
-- 短分支 `feature/xxx`、`fix/xxx`,活不过 3 天;PR 小步(<300 行)
-- 每天下班前 push;改 `pubspec.yaml` / 路由 / API 契约前群里喊
-- commit 前缀:`feat:` / `fix:` / `docs:` / `chore:`
+常用流程：
 
-## 协作流程(每人每天的循环)
-
-```bash
-git checkout main && git pull          # ① 开工前:同步最新 main
-git checkout -b feature/档案页列表      # ② 开短分支(自己的名字自己看得懂就行)
-# …写代码…
-git add -A && git commit -m "feat: 档案页列表接 /api/sessions"
-git push -u origin feature/档案页列表   # ③ 下班前必 push,没做完也推(WIP 不丢人,丢代码才丢人)
-gh pr create --fill                    # ④ 功能完成后发 PR(也可以在网页点 Compare & pull request)
+```sh
+git switch main
+git pull --ff-only origin main
+git switch -c feature/archive-list
+# 完成修改并检查后
+git add <相关文件>
+git commit -m "feat: connect archive list to sessions API"
+git push -u origin feature/archive-list
 ```
-
-PR 发出后:
-
-- **描述写两行**:做了什么 + 怎么验证(截图/录屏),review 的人 24h 内看
-- **review 对子**:曹峻嘉 ↔ 史珺瑛(BE 互审)、朱雨泰民 ↔ 杨蕊嘉(FE 互审)、张帆的 PR 曹峻嘉审
-- **review 只看三件事**:能跑吗?契约变了吗?有没有把 key/.env 提交进来?——4 周冲刺,不逐行抠风格
-- 通过后在网页点 **Squash and merge**,删分支,本地切回 main 重新 ①
-
-## 避坑清单(新人最容易踩的)
-
-1. **误推 main 了**:群里说一声就行,**别 force push 掩盖**,别人可能已基于它开发
-2. **冲突了别慌**:`git checkout main && git pull`,回自己分支 `git merge main`,逐个文件解冲突。分支活得越久冲突越多——所以分支活不过 3 天
-3. **`.env` / API key 永远不提交**(已被 .gitignore 拦着;review 时再人工兜底一眼)
-4. **改公共文件前群里喊**:`server/main.py` 的 API 结构、`app/pubspec.yaml`、路由表——别人正在依赖它们
-5. **合并前本地跑通**:后端 `uvicorn main:app` 起得来,前端 `flutter run` 不崩——main 的"永远可演示"靠这最后一眼
-
-## 压缩时间线(原计划已落后,按 4 周冲刺重排)
-
-| 周 | 目标 |
-|---|---|
-| W1(10/22–10/28) | 环境全通;mock 管线端到端;App 五屏骨架;语料开收(≥10 份手册) |
-| W2(10/29–11/4) | 真实 vision 接入;RAG 检索调通;决策/报修功能完成 |
-| W3(11/5–11/11) | 功能冻结;6 个验收场景全过;文档初稿;视频素材开录 |
-| W4(11/12–11/19) | 修 bug + 排练(掐表两遍);**11/19 课堂演示** |
-| 收尾(11/20–11/29) | 剪视频、补文档贡献节、readme 收尾;**11/29 提前交付** |
-
-验收场景与演示剧本见 PRD 第 12 节与执行包第 5 节。
