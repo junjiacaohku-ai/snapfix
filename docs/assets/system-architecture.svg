@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="820" viewBox="0 0 1120 820" role="img" aria-labelledby="title desc">
+  <title id="title">SnapFix 系统架构</title>
+  <desc id="desc">Flutter 前端通过 HTTP 访问 FastAPI。后端使用本地检索、安全规则、报修模板和 SQLite，并按需调用需要网络及密钥的 Gemini。App 档案与 v1 诊断分别存储。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#58718c"/></marker>
+    <marker id="gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#b27b18"/></marker>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif}
+      .title{font-size:24px;font-weight:700;fill:#152b43}
+      .body{font-size:19px;fill:#415a73}
+      .small{font-size:16px;fill:#60758a}
+      .code{font-family:'SFMono-Regular',Consolas,monospace;font-size:17px;fill:#45617e}
+      .line{fill:none;stroke:#58718c;stroke-width:2.5;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1120" height="820" rx="20" fill="#f5f7fb"/>
+  <path d="M20 0H1100Q1120 0 1120 20V94H0V20Q0 0 20 0Z" fill="#0b1020"/>
+  <rect x="40" y="27" width="5" height="37" rx="2" fill="#f5a623"/>
+  <text x="62" y="55" font-size="30" font-weight="700" fill="#fff">SnapFix</text>
+  <text x="207" y="54" font-size="23" fill="#dce5f1">系统架构</text>
+  <text x="1080" y="53" font-size="15" text-anchor="end" letter-spacing="1.5" fill="#b4c4d7">FLUTTER / FASTAPI / SQLITE</text>
+
+  <rect x="40" y="124" width="1040" height="104" rx="15" fill="#fff" stroke="#cfdae7"/>
+  <rect x="40" y="124" width="7" height="104" rx="3" fill="#4f78ac"/>
+  <text x="64" y="153" class="small">01 · 应用层</text>
+  <text x="64" y="190" class="title">Flutter App</text>
+  <text x="281" y="165" class="body">照片 / 错误码输入 → 诊断展示 → 步骤反馈 → 报修与档案</text>
+  <text x="281" y="199" class="small">Android · iOS · Web</text>
+
+  <path d="M560 228V274" class="line"/>
+  <text x="578" y="257" class="small">HTTP / JSON</text>
+
+  <rect x="40" y="278" width="1040" height="104" rx="15" fill="#edf3fb" stroke="#b5c9e2"/>
+  <text x="64" y="307" class="small">02 · 接口层</text>
+  <text x="64" y="345" class="title">FastAPI</text>
+  <rect x="281" y="300" width="350" height="60" rx="10" fill="#fff" stroke="#d3deed"/>
+  <text x="301" y="325" class="body">诊断与检索 API</text>
+  <text x="301" y="348" class="code">/api/*</text>
+  <rect x="653" y="300" width="400" height="60" rx="10" fill="#fff" stroke="#d3deed"/>
+  <text x="673" y="325" class="body">App 档案、反馈与报修 API</text>
+  <text x="673" y="348" class="code">/api/fe2/*</text>
+
+  <path d="M376 382V430" class="line"/>
+  <text x="394" y="413" class="small">本地处理</text>
+  <path d="M920 382V430" fill="none" stroke="#b27b18" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#gold)"/>
+  <text x="938" y="413" class="small">按需调用</text>
+
+  <rect x="40" y="434" width="672" height="146" rx="15" fill="#fff" stroke="#cfdae7"/>
+  <text x="64" y="463" class="small">03 · 处理层</text>
+  <text x="64" y="499" class="title">本地能力</text>
+  <text x="240" y="491" class="body">BM25 检索</text>
+  <text x="460" y="491" class="body">安全规则与质量门</text>
+  <text x="240" y="526" class="body">中英文报修模板</text>
+  <text x="460" y="526" class="body">mock 流程演示</text>
+  <text x="64" y="557" class="small">本地实现无需模型密钥；App 入口限制见正文。</text>
+
+  <rect x="744" y="434" width="336" height="146" rx="15" fill="#fff6e5" stroke="#d8af62"/>
+  <text x="768" y="466" font-size="16" font-weight="600" fill="#96650d">可选 · 在线服务</text>
+  <text x="768" y="501" class="title">Gemini</text>
+  <text x="768" y="532" class="body">视觉提取 · 建议生成 · 翻译</text>
+  <text x="768" y="559" font-size="16" fill="#96650d">需要网络及 API key</text>
+
+  <path d="M376 580V624" class="line"/>
+  <text x="394" y="608" class="small">读取 / 保存</text>
+
+  <rect x="40" y="628" width="1040" height="120" rx="15" fill="#eef6f2" stroke="#b7d2c5"/>
+  <text x="64" y="657" class="small">04 · 数据层</text>
+  <text x="64" y="697" class="title">SQLite</text>
+  <path d="M258 651V725M518 651V725M798 651V725" stroke="#c5dacf"/>
+  <text x="281" y="666" class="body">手册语料</text>
+  <text x="281" y="692" class="code">manuals / manual_chunks</text>
+  <text x="281" y="716" class="code">chunk_metadata</text>
+  <text x="541" y="666" class="body">v1 诊断与报告</text>
+  <text x="541" y="692" class="code">sessions / steps</text>
+  <text x="541" y="716" class="code">reports</text>
+  <text x="821" y="666" class="body">App 档案与草稿</text>
+  <text x="821" y="697" class="code">fe2_sessions (JSON)</text>
+
+  <text x="40" y="784" class="small">模块关系示意 · 两套记录共用数据库，导入副本后不双向同步 · 原始照片不持久化</text>
+</svg>
