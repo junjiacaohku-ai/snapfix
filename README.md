@@ -239,7 +239,7 @@ python run_fe2_preview.py
 
 停止服务时在终端 A 按 `Ctrl + C`（Mac 为 Control，不是 Command）。重新运行时使用上面的同一条启动命令。端口占用请按第 14 节处理，不要重复启动多个服务。
 
-### 手机应用：Android / iOS 编译与运行
+### （可选）手机应用：Android / iOS 编译与运行
 
 以下面向已经配置好 Xcode/iOS Simulator 或 Android Studio/Android Emulator 的用户，无需重复下载安装。只想体验界面与业务流程时，使用上面的浏览器版即可；相机、权限及系统分享仍需手机端单独验收。
 
